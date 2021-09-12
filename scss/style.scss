@@ -1,3 +1,168 @@
 @charset "utf-8";
 
 @import "reset.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+#header{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+
+    .top{
+        width: 1180px;
+        height: 30px;
+        margin: 0 auto;
+        padding: 0 30px;
+        position: relative;
+        background: #111;
+
+        
+
+        .left{
+            position:absolute;
+            top: 50%; left: 0;
+            transform: translateY(-50%);
+
+            &::after{
+                content:''; display:block; clear:both; 
+            }
+
+            li{
+                float: left;
+                color: #fff;
+                font: 12px/1 'poppins';
+                
+                &:last-child{
+                    padding-left: 10px;
+                }
+
+                a{
+                    display: block;
+                    color: #fff;
+                    border-right: 1px solid #fff;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .right{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0px;
+
+            &::after{
+                content:''; display:block; clear:both; 
+            }
+
+            li{
+                float: left;
+                a{
+                    display: block;
+                    font: 12px/1 'poppins';
+                    color: #fff;
+                    padding: 0 10px;
+                    transition: .4s;
+                }
+                &:hover:nth-of-type(1) a{
+                    color: rgb(66, 103, 178);
+                }
+                &:hover:nth-of-type(2) a{
+                    color: rgb(252, 204, 99);
+                }
+                &:hover:nth-of-type(3) a{
+                    color: rgb(	29,161, 242);
+                }
+            }
+        }
+    }
+    &::before{
+        content: '';
+        height: 30px;
+        position: absolute;
+        width: 100%;
+        background: #111;
+    }
+
+    .inner{
+        width: 1180px;
+        height: 80px;
+        margin: 0 auto;
+        position: relative;
+
+        >h1{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            a{
+                font: bold 42px/1 'Poppins';
+                color: #000;
+            }
+        }
+
+        .menuWeb{
+            #gnb{
+                position: absolute;
+                left: 20%;
+                top: 50%;
+                transform: translateY(-50%);
+    
+                &::after{
+                    content: ''; display: block; clear: both;
+                }
+                li{
+                    float: left;
+                    a{
+                        display: block;
+                        padding: 30px 29px 29px;
+                        color: #000;
+                        font: normal 18px/1 'Poppins';
+                        transition: .3s;
+                    }              
+                    &::after{
+                        content: '';
+                        width: 0px;
+                        height: 3px;
+                        display: block;
+                        margin: 0 auto;
+                        background: #000;
+
+                        transform: translateY(1px);
+                        transition: .3s;
+                    }        
+                    &:hover::after{
+                        width: 90%;
+                    }     
+                }
+            }
+
+            #util{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+
+                li{
+                    float: left;
+                    a{
+                        display: block;
+                        padding-right: 10px;
+                        margin-right: 10px;
+                        color: #555;
+                        font: normal 13px/1 'Poppins';
+                        // border-right: 1px solid #a5a5a5;
+                        transition: .4s;
+                        &:hover{
+                            color: #000;
+                            font-weight: bold;
+                            transform: scale(1.1);
+                        }
+                    }              
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -18,5 +19,124 @@ a {
   position: absolute;
   top: -9999px;
   opacity: 0; }
+
+#header {
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
+  #header .top {
+    width: 1180px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+    background: #111; }
+    #header .top .left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%); }
+      #header .top .left::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #header .top .left li {
+        float: left;
+        color: #fff;
+        font: 12px/1 'poppins'; }
+        #header .top .left li:last-child {
+          padding-left: 10px; }
+        #header .top .left li a {
+          display: block;
+          color: #fff;
+          border-right: 1px solid #fff;
+          padding: 0 10px; }
+    #header .top .right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px; }
+      #header .top .right::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #header .top .right li {
+        float: left; }
+        #header .top .right li a {
+          display: block;
+          font: 12px/1 'poppins';
+          color: #fff;
+          padding: 0 10px;
+          transition: .4s; }
+        #header .top .right li:hover:nth-of-type(1) a {
+          color: #4267b2; }
+        #header .top .right li:hover:nth-of-type(2) a {
+          color: #fccc63; }
+        #header .top .right li:hover:nth-of-type(3) a {
+          color: #1da1f2; }
+  #header::before {
+    content: '';
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    background: #111; }
+  #header .inner {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative; }
+    #header .inner > h1 {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header .inner > h1 a {
+        font: bold 42px/1 'Poppins';
+        color: #000; }
+    #header .inner .menuWeb #gnb {
+      position: absolute;
+      left: 20%;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header .inner .menuWeb #gnb::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #header .inner .menuWeb #gnb li {
+        float: left; }
+        #header .inner .menuWeb #gnb li a {
+          display: block;
+          padding: 30px 29px 29px;
+          color: #000;
+          font: normal 18px/1 'Poppins';
+          transition: .3s; }
+        #header .inner .menuWeb #gnb li::after {
+          content: '';
+          width: 0px;
+          height: 3px;
+          display: block;
+          margin: 0 auto;
+          background: #000;
+          transform: translateY(1px);
+          transition: .3s; }
+        #header .inner .menuWeb #gnb li:hover::after {
+          width: 90%; }
+    #header .inner .menuWeb #util {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header .inner .menuWeb #util li {
+        float: left; }
+        #header .inner .menuWeb #util li a {
+          display: block;
+          padding-right: 10px;
+          margin-right: 10px;
+          color: #555;
+          font: normal 13px/1 'Poppins';
+          transition: .4s; }
+          #header .inner .menuWeb #util li a:hover {
+            color: #000;
+            font-weight: bold;
+            transform: scale(1.1); }
 
 /*# sourceMappingURL=style.css.map */
