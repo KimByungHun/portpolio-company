@@ -614,4 +614,386 @@ a {
           font: 10px/20px 'poppins';
           color: #CACACA; }
 
+#header_sub {
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
+  #header_sub .inner {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative; }
+    #header_sub .inner > h1 {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header_sub .inner > h1 a {
+        font: bold 42px/1 'graduate';
+        letter-spacing: 1px;
+        color: #000; }
+    #header_sub .inner .menuWeb #gnb {
+      position: absolute;
+      left: 20%;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header_sub .inner .menuWeb #gnb::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #header_sub .inner .menuWeb #gnb li {
+        float: left; }
+        #header_sub .inner .menuWeb #gnb li a {
+          display: block;
+          padding: 30px 29px 29px;
+          color: #000;
+          font: normal 18px/1 'Poppins';
+          transition: .3s; }
+        #header_sub .inner .menuWeb #gnb li::after {
+          content: '';
+          width: 0px;
+          height: 3px;
+          display: block;
+          margin: 0 auto;
+          background: #000;
+          transform: translateY(1px);
+          transition: .3s; }
+        #header_sub .inner .menuWeb #gnb li:hover::after {
+          width: 90%; }
+    #header_sub .inner .menuWeb #util {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header_sub .inner .menuWeb #util li {
+        float: left; }
+        #header_sub .inner .menuWeb #util li a {
+          display: block;
+          padding-right: 10px;
+          margin-right: 10px;
+          color: #555;
+          font: normal 13px/1 'Poppins';
+          transition: .4s; }
+          #header_sub .inner .menuWeb #util li a:hover {
+            color: #000; }
+        #header_sub .inner .menuWeb #util li:last-of-type a {
+          padding-right: 0; }
+
+.content {
+  width: 100%; }
+  .content .sub_visual {
+    width: 100%;
+    height: 250px;
+    background: gray;
+    margin-bottom: 100px; }
+  .content .inner {
+    width: 1180px;
+    min-height: 500px;
+    margin: 0px auto 100px;
+    border: 1px solid #ddd; }
+
+#footer_sub {
+  width: 100%;
+  background: #fff; }
+  #footer_sub .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 64px 0; }
+    #footer_sub .inner .top {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #cacaca46; }
+      #footer_sub .inner .top::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer_sub .inner .top article {
+        margin-right: 16px;
+        float: left;
+        padding: 8px 12px; }
+        #footer_sub .inner .top article:last-child {
+          margin-right: 0; }
+        #footer_sub .inner .top article h1 {
+          font: bold 22px/1 'poppins';
+          color: #1a1a1a;
+          margin-bottom: 8px; }
+        #footer_sub .inner .top article h2 {
+          font: bold 16px/1 'poppins';
+          color: #1a1a1a;
+          margin-bottom: 8px;
+          padding: 8px 12px; }
+        #footer_sub .inner .top article:last-of-type h2 {
+          padding: 8px 0; }
+        #footer_sub .inner .top article li {
+          border-radius: 5px;
+          padding: 8px 12px;
+          transition: .1s; }
+          #footer_sub .inner .top article li:hover {
+            background: #f8f8f8; }
+          #footer_sub .inner .top article li a {
+            font: normal 14px/20px 'poppins';
+            color: #1a1a1a; }
+        #footer_sub .inner .top article p {
+          margin: 20px 0 0 0;
+          font: normal 14px/20px 'poppins';
+          color: #666; }
+        #footer_sub .inner .top article:nth-of-type(1) {
+          width: 30%; }
+          #footer_sub .inner .top article:nth-of-type(1) a {
+            display: block;
+            margin: 20px 0 0 0;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 14px; }
+            #footer_sub .inner .top article:nth-of-type(1) a i {
+              padding-right: 10px; }
+        #footer_sub .inner .top article:nth-of-type(2) {
+          width: 20%; }
+        #footer_sub .inner .top article:nth-of-type(3) {
+          width: 20%; }
+        #footer_sub .inner .top article:nth-of-type(4) {
+          width: 25%; }
+          #footer_sub .inner .top article:nth-of-type(4) a {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 12px auto;
+            border-radius: 5px;
+            background: #f8f8f8;
+            font: bold 15px/40px 'poppins';
+            color: #1a1a1a;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: .3s; }
+            #footer_sub .inner .top article:nth-of-type(4) a:hover {
+              background: gainsboro; }
+          #footer_sub .inner .top article:nth-of-type(4) p {
+            text-align: center;
+            color: #a2a2a2;
+            margin: 0; }
+    #footer_sub .inner .bottom {
+      padding-top: 40px; }
+      #footer_sub .inner .bottom::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer_sub .inner .bottom article {
+        float: left;
+        margin-right: 16px;
+        padding: 8px 12px; }
+        #footer_sub .inner .bottom article:last-child {
+          margin-right: 0; }
+        #footer_sub .inner .bottom article:nth-of-type(1) {
+          width: 30%; }
+        #footer_sub .inner .bottom article:nth-of-type(2) {
+          width: 65%; }
+        #footer_sub .inner .bottom article ul {
+          padding: 0 11px; }
+          #footer_sub .inner .bottom article ul::after {
+            content: '';
+            display: block;
+            clear: both; }
+          #footer_sub .inner .bottom article ul li {
+            float: left; }
+            #footer_sub .inner .bottom article ul li a {
+              font: 11px/20px 'poppins';
+              color: #a2a2a2;
+              padding-right: 20px; }
+            #footer_sub .inner .bottom article ul li:hover a {
+              color: #1a1a1a; }
+        #footer_sub .inner .bottom article p {
+          margin-top: 20px;
+          padding: 0 11px;
+          font: 10px/20px 'poppins';
+          color: #CACACA; }
+
+#header_sub {
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
+  #header_sub .inner {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative; }
+    #header_sub .inner > h1 {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header_sub .inner > h1 a {
+        font: bold 42px/1 'graduate';
+        letter-spacing: 1px;
+        color: #000; }
+    #header_sub .inner .menuWeb #gnb {
+      position: absolute;
+      left: 20%;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header_sub .inner .menuWeb #gnb::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #header_sub .inner .menuWeb #gnb li {
+        float: left; }
+        #header_sub .inner .menuWeb #gnb li a {
+          display: block;
+          padding: 30px 29px 29px;
+          color: #000;
+          font: normal 18px/1 'Poppins';
+          transition: .3s; }
+        #header_sub .inner .menuWeb #gnb li::after {
+          content: '';
+          width: 0px;
+          height: 3px;
+          display: block;
+          margin: 0 auto;
+          background: #000;
+          transform: translateY(1px);
+          transition: .3s; }
+        #header_sub .inner .menuWeb #gnb li:hover::after {
+          width: 90%; }
+    #header_sub .inner .menuWeb #util {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header_sub .inner .menuWeb #util li {
+        float: left; }
+        #header_sub .inner .menuWeb #util li a {
+          display: block;
+          padding-right: 10px;
+          margin-right: 10px;
+          color: #555;
+          font: normal 13px/1 'Poppins';
+          transition: .4s; }
+          #header_sub .inner .menuWeb #util li a:hover {
+            color: #000; }
+        #header_sub .inner .menuWeb #util li:last-of-type a {
+          padding-right: 0; }
+
+.join {
+  width: 100%; }
+  .join .sub_visual {
+    width: 100%;
+    height: 250px;
+    background: gray;
+    margin-bottom: 100px; }
+  .join .inner {
+    width: 1180px;
+    min-height: 500px;
+    margin: 0px auto 100px;
+    border: 1px solid #ddd; }
+
+#footer_sub {
+  width: 100%;
+  background: #fff; }
+  #footer_sub .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 64px 0; }
+    #footer_sub .inner .top {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #cacaca46; }
+      #footer_sub .inner .top::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer_sub .inner .top article {
+        margin-right: 16px;
+        float: left;
+        padding: 8px 12px; }
+        #footer_sub .inner .top article:last-child {
+          margin-right: 0; }
+        #footer_sub .inner .top article h1 {
+          font: bold 22px/1 'poppins';
+          color: #1a1a1a;
+          margin-bottom: 8px; }
+        #footer_sub .inner .top article h2 {
+          font: bold 16px/1 'poppins';
+          color: #1a1a1a;
+          margin-bottom: 8px;
+          padding: 8px 12px; }
+        #footer_sub .inner .top article:last-of-type h2 {
+          padding: 8px 0; }
+        #footer_sub .inner .top article li {
+          border-radius: 5px;
+          padding: 8px 12px;
+          transition: .1s; }
+          #footer_sub .inner .top article li:hover {
+            background: #f8f8f8; }
+          #footer_sub .inner .top article li a {
+            font: normal 14px/20px 'poppins';
+            color: #1a1a1a; }
+        #footer_sub .inner .top article p {
+          margin: 20px 0 0 0;
+          font: normal 14px/20px 'poppins';
+          color: #666; }
+        #footer_sub .inner .top article:nth-of-type(1) {
+          width: 30%; }
+          #footer_sub .inner .top article:nth-of-type(1) a {
+            display: block;
+            margin: 20px 0 0 0;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 14px; }
+            #footer_sub .inner .top article:nth-of-type(1) a i {
+              padding-right: 10px; }
+        #footer_sub .inner .top article:nth-of-type(2) {
+          width: 20%; }
+        #footer_sub .inner .top article:nth-of-type(3) {
+          width: 20%; }
+        #footer_sub .inner .top article:nth-of-type(4) {
+          width: 25%; }
+          #footer_sub .inner .top article:nth-of-type(4) a {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin: 12px auto;
+            border-radius: 5px;
+            background: #f8f8f8;
+            font: bold 15px/40px 'poppins';
+            color: #1a1a1a;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: .3s; }
+            #footer_sub .inner .top article:nth-of-type(4) a:hover {
+              background: gainsboro; }
+          #footer_sub .inner .top article:nth-of-type(4) p {
+            text-align: center;
+            color: #a2a2a2;
+            margin: 0; }
+    #footer_sub .inner .bottom {
+      padding-top: 40px; }
+      #footer_sub .inner .bottom::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer_sub .inner .bottom article {
+        float: left;
+        margin-right: 16px;
+        padding: 8px 12px; }
+        #footer_sub .inner .bottom article:last-child {
+          margin-right: 0; }
+        #footer_sub .inner .bottom article:nth-of-type(1) {
+          width: 30%; }
+        #footer_sub .inner .bottom article:nth-of-type(2) {
+          width: 65%; }
+        #footer_sub .inner .bottom article ul {
+          padding: 0 11px; }
+          #footer_sub .inner .bottom article ul::after {
+            content: '';
+            display: block;
+            clear: both; }
+          #footer_sub .inner .bottom article ul li {
+            float: left; }
+            #footer_sub .inner .bottom article ul li a {
+              font: 11px/20px 'poppins';
+              color: #a2a2a2;
+              padding-right: 20px; }
+            #footer_sub .inner .bottom article ul li:hover a {
+              color: #1a1a1a; }
+        #footer_sub .inner .bottom article p {
+          margin-top: 20px;
+          padding: 0 11px;
+          font: 10px/20px 'poppins';
+          color: #CACACA; }
+
 /*# sourceMappingURL=style.css.map */

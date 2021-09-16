@@ -1,0 +1,91 @@
+#header_sub{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+
+
+    .inner{
+        width: 1180px;
+        height: 80px;
+        margin: 0 auto;
+        position: relative;
+
+        >h1{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            a{
+                font: bold 42px/1 'graduate';
+                letter-spacing: 1px;
+                color: #000;
+            }
+        }
+
+        .menuWeb{
+            #gnb{
+                position: absolute;
+                left: 20%;
+                top: 50%;
+                transform: translateY(-50%);
+    
+                &::after{
+                    content: ''; display: block; clear: both;
+                }
+                li{
+                    float: left;
+                    a{
+                        display: block;
+                        padding: 30px 29px 29px;
+                        color: #000;
+                        font: normal 18px/1 'Poppins';
+                        transition: .3s;
+                    }              
+                    &::after{
+                        content: '';
+                        width: 0px;
+                        height: 3px;
+                        display: block;
+                        margin: 0 auto;
+                        background: #000;
+
+                        transform: translateY(1px);
+                        transition: .3s;
+                    }        
+                    &:hover::after{
+                        width: 90%;
+                    }     
+                }
+            }
+
+            #util{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+
+                li{
+                    float: left;
+                    a{
+                        display: block;
+                        padding-right: 10px;
+                        margin-right: 10px;
+                        color: #555;
+                        font: normal 13px/1 'Poppins';
+                        // border-right: 1px solid #a5a5a5;
+                        transition: .4s;
+                        &:hover{
+                            color: #000;
+
+                        }
+
+                    }              
+                    &:last-of-type a{
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
