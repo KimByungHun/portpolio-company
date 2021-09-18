@@ -616,7 +616,8 @@ a {
 
 #header_sub {
   width: 100%;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  background: #fff; }
   #header_sub .inner {
     width: 1180px;
     height: 80px;
@@ -679,12 +680,30 @@ a {
           padding-right: 0; }
 
 .content {
-  width: 100%; }
+  width: 100%;
+  padding: 0px 0px 100px; }
   .content .sub_visual {
     width: 100%;
     height: 250px;
     background: gray;
-    margin-bottom: 100px; }
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 50px; }
+    .content .sub_visual h1 {
+      display: inline-block;
+      font: bold 54px/1 'poppins';
+      color: #fff; }
+      .content .sub_visual h1::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #ddd;
+        margin: 20px 0; }
+    .content .sub_visual h2 {
+      font: bold 26px/1 'Gothic A1';
+      letter-spacing: 1px;
+      color: #fff; }
   .content .inner {
     width: 1180px;
     min-height: 500px;
@@ -807,7 +826,8 @@ a {
 
 #header_sub {
   width: 100%;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  background: #fff; }
   #header_sub .inner {
     width: 1180px;
     height: 80px;
@@ -869,18 +889,10 @@ a {
         #header_sub .inner .menuWeb #util li:last-of-type a {
           padding-right: 0; }
 
-.join {
-  width: 100%; }
-  .join .sub_visual {
-    width: 100%;
-    height: 250px;
-    background: gray;
-    margin-bottom: 100px; }
-  .join .inner {
-    width: 1180px;
-    min-height: 500px;
-    margin: 0px auto 100px;
-    border: 1px solid #ddd; }
+.join .sub_visual {
+  background: url(../../img/gallery_02.jpg) no-repeat center/cover fixed; }
+.join .inner {
+  background: url(../img/banner1.jpg) no-repeat center/cover fixed; }
 
 #footer_sub {
   width: 100%;
