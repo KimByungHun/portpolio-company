@@ -175,3 +175,96 @@
         }
     }
 }
+
+@media screen and (max-width:1179px){
+
+
+    #footer_sub{
+        .inner{
+            width: 100%;
+            padding: 48px 10px;
+
+            .top{
+                padding-bottom: 32px;
+    
+                article{
+                    margin-right: 12px;
+
+                    h2{
+                        padding: 8px 0px;
+                    }
+
+                    li{
+                        padding: 8px 0px;
+                    }
+                    
+                    &:nth-of-type(1){
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                    &:nth-of-type(2){
+                        width: 47%;
+                    }
+                    &:nth-of-type(3){
+                        width: 47%;
+                    }
+                    &:nth-of-type(4){
+                        width: 100%;
+                        position: relative;
+
+                        p{
+                            position: absolute;
+                            top: 8px;
+                            right: 12px;
+                        }
+                    }
+                }
+            }
+            
+    
+            .bottom{
+                padding-top: 0px;
+                article{
+                    float: left;
+                    margin-right: 0px;    
+                    padding: 24px 12px;
+
+    
+                    &:nth-of-type(1){
+                        width: 100%;
+                        border-bottom: 1px solid #cacaca46;
+
+
+                    }
+                    &:nth-of-type(2){
+                        width: 100%;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:539px){
+
+
+    #footer_sub{
+        .inner{
+            .top{
+                padding-bottom: 32px;
+    
+                article{
+                    &:nth-of-type(2){
+                        width: 100%;
+                    }
+                    &:nth-of-type(3){
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+}
