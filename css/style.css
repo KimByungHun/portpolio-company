@@ -756,7 +756,7 @@ a {
           position: relative; }
           #footer .inner .top article:nth-of-type(4) p {
             position: absolute;
-            top: 8px;
+            top: 16px;
             right: 12px; }
     #footer .inner .bottom {
       padding-top: 0px; }
@@ -1129,7 +1129,7 @@ a {
           position: relative; }
           #footer_sub .inner .top article:nth-of-type(4) p {
             position: absolute;
-            top: 8px;
+            top: 16px;
             right: 12px; }
     #footer_sub .inner .bottom {
       padding-top: 0px; }
@@ -1473,7 +1473,7 @@ a {
           position: relative; }
           #footer_sub .inner .top article:nth-of-type(4) p {
             position: absolute;
-            top: 8px;
+            top: 16px;
             right: 12px; }
     #footer_sub .inner .bottom {
       padding-top: 0px; }

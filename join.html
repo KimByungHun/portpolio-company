@@ -72,8 +72,137 @@
             <h2>회원가입</h2>
         </div>
         <div class="inner">
-            <h1>INFORMATION</h1>
-        
+            <h1>회원가입</h1>
+            
+            <form action="/" method="post">
+                <fieldset>
+                    <legend class="hidden">회원가입 입력양식</legend>
+                    <h2>약관동의</h2>
+                    <div class="chcek-term">
+                        <ul class="check_box">
+                            <li class="checkBox1">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="chkAll" id="check" class="ChkAll">
+                                    </li>
+                                    <li>
+                                        <span>[필수]</span> 이용약관
+                                    </li>
+                                </ul>
+                                <textarea class="text-term" col="30" row="10">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
+                                </textarea>
+                            </li>
+                            <li class="checkBox2">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="chkAll" id="check" class="ChkAll">
+                                    </li>
+                                    <li>
+                                        <span>[필수]</span> 개인정보 수집 및 이용 동의
+                                    </li>
+                                </ul>
+                                <textarea class="text-term" col="30" row="10">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
+                                </textarea>
+                            </li>
+                            <li class="checkBox3">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="chkAll" id="check" class="ChkAll">
+                                    </li>
+                                    <li>
+                                        이용약관, 개인정보 수집 및 이용,
+                                        위치정보 이용약관(선택), 프로모션 안내
+                                        메일 수신(선택)에 모두 동의합니다.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    
+                    <h2>회원정보</h2>
+                    <table surmmary="회원의 아이디, 비밀번호, 비밀번호 확인, 이름, 주소, 휴대폰 번호, 이메일 입력양식폼"> 
+                        <caption class="hidden">회원정보 입력양식 테이블</caption>
+
+                        <tr>
+                            <th scope="row">
+                                <label for="userid">아이디<spanc class="essentioa">*</spanc></label>
+                            </th>
+                            <td>
+                                <input type="text" name="userid" id="userid" placeholder="영문,숫자 조합 4~12자리로 입력해주세요.">
+                            </td>
+                        </tr>
+                        <tr>
+							<th scope="row"><label for="pwd">비밀번호<span class="essential">*</span></label></th>
+							<td><input type="password" name="pwd" id="pwd" placeholder="숫자, 영문자 조합으로 8~20자리 입력해주세요." required></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="pwd">비밀번호 확인<span class="essential">*</span></label></th>
+							<td><input type="password" name="pwd" id="pwd" placeholder="입력하신 비밀번호를 한 번 더 입력해주세요." required></td>
+						</tr>
+                        <tr>
+							<th scope="row"><label for="name">이름<span class="essential">*</span></label></th>
+							<td><input type="name" name="name" id="name" placeholder="입력하신 비밀번호를 한 번 더 입력해주세요." required></td>
+						</tr>
+                        <tr>
+							<th scope="row"><label for="address">주소<span class="essential">*</span></label></th>
+							<td><input type="name" name="address" id="address" required></td>
+						</tr>
+                        <tr>
+							<th scope="row"><label for="contact_number">휴대폰 번호<span class="essential">*</span></label></th>
+							<td>
+                                <input type="contact_number" name="contact_number" id="contact_number" required>-
+                                <input type="contact_number" name="contact_number" id="contact_number" required>-
+                                <input type="contact_number" name="contact_number" id="contact_number" required>
+                            </td>
+						</tr>
+                        <tr>
+							<th scope="row"><label for="email">이메일주소<span class="essential">*</span></label></th>
+							<td>
+								<input type="text" name="email" id="email" placeholder="이메일주소를 입력해 주세요." required>
+								@
+								<select name="company" id="company">
+                                    <option value="gmail">gmail.com</option>
+									<option value="naver">naver.com</option>
+									<option value="nate">nate.com</option>
+									<option value="daum">daum.net</option>
+								</select>
+							</td>
+						</tr>
+
+                    </table>
+
+                    <h2>선택정보입력</h2>
+					<table surmmary="회원의 광고 정보 수신, 우편물 수령지, 자택/직장 전화번호, 직장명, 우편번호 입력양식폼">
+						<caption class="hidden">회원정보 입력양식 테이블</caption>
+						<tr>
+							<th scope="row">광고 정보 수신 동의</th>
+							<td>								
+								
+								<label for="reading">
+									<input type="checkbox" name="ad" id="emailcheck" value="email">
+									이메일
+								</label>
+								<label for="music"><input type="checkbox" msm="ad" id="msm" value="music">문자</label>
+								<label for="game"><input type="checkbox" name="ad" id="post" value="post">우편물</label>
+								<p class="more_info">광고 정보 수신동의를 하시면 상품 및 이벤트 정보를 받으실 수 있습니다.</p>
+							</td>
+						</tr>
+					</table>
+
+                    <table>
+						<tr>
+							<th class="submit" colspan="2" >
+								<input type="submit" value="가입하기">
+							</th>
+						</tr>
+					</table>
+
+                </fieldset>
+            </form>
+
         </div>
     </section>
 
