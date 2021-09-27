@@ -41,4 +41,13 @@
     }
 }
 
+@media screen and (max-width:1179px){
+    .content{
+        .inner{
+            width: 100%;
+        }
+    }
+}
+
+
 @import "footer_sub";

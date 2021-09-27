@@ -3,16 +3,41 @@
 .join {
 
     .sub_visual{
-        background:url(../../img/gallery_02.jpg) no-repeat center/cover fixed;
+        // background:url(../../img/gallery_02.jpg) no-repeat center/cover fixed;
+        background: black;
          
     }
     .inner {
+        width: 1180px;
+        margin: 0 auto;
         border: none;
 
         h1{
             font: bold 25px/1 'arial';
             color: #222222;
         }
+        .process{
+            width: 50%;
+            height: 70px;
+            margin: 40px auto;
+            background: #f8f8f8;
+            border-radius: 40px;
+
+            ul{
+                &::after{
+                    content:''; display:block; clear:both; 
+                }
+                li{
+                    float: left;
+                    text-align: center;
+                    font:  bold 20px/70px 'arial';
+                    color: #333333;
+                    width: 33.33%;
+                }
+            }
+        }
+
+
         h2{
             font: bold 20px/1 'airal';
             color: #222222;
@@ -29,47 +54,185 @@
             }
         }
 
-        #joinForm{
 
-            fieldset{
-                border: none;
-            }
-    
-            .check_box{
-                .checkBox{
-                    ul{
-                        position: relative;
-                        li{
-                            float: left;
-                            padding: 15px 0;
-                            span{
-                                color: #00a468;
-                            }
+        fieldset{
+            border: none;
+        }
 
-                            &:nth-of-type(1){
-                                padding-right: 10px;
-                            }
+        .check_box{
+            .checkBox{
+                ul{
+                    position: relative;
+                    li{
+                        float: left;
+                        padding: 15px 0;
+                        span{
+                            color: #00a468;
+                        }
 
-                            &:nth-of-type(2){
-                                font: bold 14px/1 'arial';
-                                color: #000000;
-                            }
+                        &:nth-of-type(1){
+                            padding-right: 10px;
+                        }
+
+                        &:nth-of-type(2){
+                            font: bold 14px/1 'arial';
+                            color: #000000;
                         }
                     }
-                    textarea{
-                        width: 96%;
-                        height: 90px;
-                        margin: 0 2%;
-                        background: #fff;
-                        color: #888;
-                        border: 1px solid #888;
-                        border-radius: 10px;
-                        resize: none
+                }
+                textarea{
+                    width: 96%;
+                    height: 160px;
+                    margin: 0 2%;
+                    background: #fff;
+                    color: #888;
+                    border: 1px solid #888;
+                    border-radius: 10px;
+                    resize: none
+                }
+            }
+        }
+
+        table{
+            width: 100%;
+            
+            tr{
+    
+
+                th{
+                    width: 20%;
+                    text-align: left;
+                    border-bottom: 1px solid #eee;
+                    padding: 15px 0;
+                }
+                td{
+                    border-bottom: 1px solid #eee;
+                    padding: 15px 0;
+                    
+                }
+                .submit{
+                    text-align: center;
+                }
+            }
+            &:last-of-type{
+                th{
+                    border-bottom: none;
+                }
+            }
+        }
+        &:nth-of-type(2){
+            tr{
+                td{
+                    label{
+                        margin-right: 10px;
+                        font: 16px/1 'arial';
                     }
                 }
             }
         }
+
+        input[type="text"], input[type="password"], input[type="email_adress"]{
+            width: 40%;
+            height: 50px;
+            border: 1px solid #eee;
+            border-radius: 0;
+            text-align: start;
+            font:  13px/1 'arial';
+            padding: 13px 15px 11px;
+        }
+        input[type="contact_number"], select{
+            height: 50px;
+            border: 1px solid #eee;
+            border-radius: 0;
+            width: 10%;
+        }
+        input[type="submit"]{
+            background: #ff5b59;
+            width: 240px;
+            height: 60px;
+            border: none;
+            margin-top: 30px;
+
+            font: bold 16px/1 'arial';
+            color: #ffffff;
+        }
+        input[type="checkbox"]{
+                margin-right: 5px;
+        }
     }
 }
+
+.essential{
+    padding-left: 2px;
+    color: rgba(255, 0, 0, 0.788);
+}
+
+
+
+@media screen and (max-width:1179px){
+    .join {
+        .inner {
+            width: 100%;
+            padding: 20px;
+    
+            .process{
+                display: none;
+            }
+    
+    
+            h2{
+                font: bold 18px/1 'airal';
+                padding-top: 40px;
+            }
+    
+    
+            .check_box{
+                .checkBox{
+                    ul{
+                        &:last-child{
+                            display: none;
+                        }
+                    }
+                }
+            }
+    
+            table{                
+                tr{
+                    th{
+                        width: 30%;
+                        padding: 10px 0;
+                    }
+                    td{
+                        padding: 10px 0;
+                        
+                    }
+                }
+            }
+
+    
+            input[type="text"], input[type="password"]{
+                width: 100%;
+                height: 40px;
+                padding: 10px 10px 10px;
+            }
+            input[type="contact_number"], select{
+                height: 40px;
+                width: 30%;
+            }
+            input[type="email_adress"]{
+                height: 40px;
+                width: 60%;
+                padding: 10px 10px 10px;
+            }
+            input[type="submit"]{
+                width: 200px;
+                height: 50px;
+            }
+
+        }
+    }
+}
+
+
 
 @import "footer_sub";

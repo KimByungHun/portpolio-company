@@ -991,6 +991,9 @@ a {
     margin: 0px auto 100px;
     border: 1px solid #ddd; }
 
+@media screen and (max-width: 1179px) {
+  .content .inner {
+    width: 100%; } }
 #footer_sub {
   width: 100%;
   background: #fff; }
@@ -1331,12 +1334,30 @@ a {
   #header_sub .inner .menuWeb .util2 {
     display: none; } }
 .join .sub_visual {
-  background: url(../../img/gallery_02.jpg) no-repeat center/cover fixed; }
+  background: black; }
 .join .inner {
+  width: 1180px;
+  margin: 0 auto;
   border: none; }
   .join .inner h1 {
     font: bold 25px/1 'arial';
     color: #222222; }
+  .join .inner .process {
+    width: 50%;
+    height: 70px;
+    margin: 40px auto;
+    background: #f8f8f8;
+    border-radius: 40px; }
+    .join .inner .process ul::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .join .inner .process ul li {
+      float: left;
+      text-align: center;
+      font: bold 20px/70px 'arial';
+      color: #333333;
+      width: 33.33%; }
   .join .inner h2 {
     font: bold 20px/1 'airal';
     color: #222222;
@@ -1349,30 +1370,104 @@ a {
       width: 100%;
       height: 2px;
       margin-top: 10px; }
-  .join .inner #joinForm fieldset {
+  .join .inner fieldset {
     border: none; }
-  .join .inner #joinForm .check_box .checkBox ul {
+  .join .inner .check_box .checkBox ul {
     position: relative; }
-    .join .inner #joinForm .check_box .checkBox ul li {
+    .join .inner .check_box .checkBox ul li {
       float: left;
       padding: 15px 0; }
-      .join .inner #joinForm .check_box .checkBox ul li span {
+      .join .inner .check_box .checkBox ul li span {
         color: #00a468; }
-      .join .inner #joinForm .check_box .checkBox ul li:nth-of-type(1) {
+      .join .inner .check_box .checkBox ul li:nth-of-type(1) {
         padding-right: 10px; }
-      .join .inner #joinForm .check_box .checkBox ul li:nth-of-type(2) {
+      .join .inner .check_box .checkBox ul li:nth-of-type(2) {
         font: bold 14px/1 'arial';
         color: #000000; }
-  .join .inner #joinForm .check_box .checkBox textarea {
+  .join .inner .check_box .checkBox textarea {
     width: 96%;
-    height: 90px;
+    height: 160px;
     margin: 0 2%;
     background: #fff;
     color: #888;
     border: 1px solid #888;
     border-radius: 10px;
     resize: none; }
+  .join .inner table {
+    width: 100%; }
+    .join .inner table tr th {
+      width: 20%;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0; }
+    .join .inner table tr td {
+      border-bottom: 1px solid #eee;
+      padding: 15px 0; }
+    .join .inner table tr .submit {
+      text-align: center; }
+    .join .inner table:last-of-type th {
+      border-bottom: none; }
+  .join .inner:nth-of-type(2) tr td label {
+    margin-right: 10px;
+    font: 16px/1 'arial'; }
+  .join .inner input[type="text"], .join .inner input[type="password"], .join .inner input[type="email_adress"] {
+    width: 40%;
+    height: 50px;
+    border: 1px solid #eee;
+    border-radius: 0;
+    text-align: start;
+    font: 13px/1 'arial';
+    padding: 13px 15px 11px; }
+  .join .inner input[type="contact_number"], .join .inner select {
+    height: 50px;
+    border: 1px solid #eee;
+    border-radius: 0;
+    width: 10%; }
+  .join .inner input[type="submit"] {
+    background: #ff5b59;
+    width: 240px;
+    height: 60px;
+    border: none;
+    margin-top: 30px;
+    font: bold 16px/1 'arial';
+    color: #ffffff; }
+  .join .inner input[type="checkbox"] {
+    margin-right: 5px; }
 
+.essential {
+  padding-left: 2px;
+  color: rgba(255, 0, 0, 0.788); }
+
+@media screen and (max-width: 1179px) {
+  .join .inner {
+    width: 100%;
+    padding: 20px; }
+    .join .inner .process {
+      display: none; }
+    .join .inner h2 {
+      font: bold 18px/1 'airal';
+      padding-top: 40px; }
+    .join .inner .check_box .checkBox ul:last-child {
+      display: none; }
+    .join .inner table tr th {
+      width: 30%;
+      padding: 10px 0; }
+    .join .inner table tr td {
+      padding: 10px 0; }
+    .join .inner input[type="text"], .join .inner input[type="password"] {
+      width: 100%;
+      height: 40px;
+      padding: 10px 10px 10px; }
+    .join .inner input[type="contact_number"], .join .inner select {
+      height: 40px;
+      width: 30%; }
+    .join .inner input[type="email_adress"] {
+      height: 40px;
+      width: 60%;
+      padding: 10px 10px 10px; }
+    .join .inner input[type="submit"] {
+      width: 200px;
+      height: 50px; } }
 #footer_sub {
   width: 100%;
   background: #fff; }

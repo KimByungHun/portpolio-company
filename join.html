@@ -72,7 +72,16 @@
             <h2>회원가입</h2>
         </div>
         <div class="inner">
+            <div class="process">
+                <ul>
+                    <li>1. 약관동의</li>
+                    <li>2. 회원정보</li>
+                    <li>3. 가입완료</li>
+                </ul>
+            </div>
+
             <h1>회원가입</h1>
+            
             
             <form action="/" method="post" id="joinForm">
                 <fieldset>
@@ -114,7 +123,7 @@
                                     <li>
                                         이용약관, 개인정보 수집 및 이용,
                                         위치정보 이용약관(선택), 프로모션 안내
-                                        메일 수신(선택)에 모두 동의합니다.
+                                        메일 수신(선택)에 <span> 모두 동의</span>합니다.
                                     </li>
                                 </ul>
                             </li>
@@ -128,10 +137,10 @@
 
                         <tr>
                             <th scope="row">
-                                <label for="userid">아이디<spanc class="essentioa">*</spanc></label>
+                                <label for="userid">아이디<spanc class="essential">*</spanc></label>
                             </th>
                             <td>
-                                <input type="text" name="userid" id="userid" placeholder="영문,숫자 조합 4~12자리로 입력해주세요.">
+                                <input type="text" name="userid" id="userid" placeholder="영문,숫자 조합 4~12자리로 입력해주세요." required>
                             </td>
                         </tr>
                         <tr>
@@ -144,14 +153,14 @@
 						</tr>
                         <tr>
 							<th scope="row"><label for="name">이름<span class="essential">*</span></label></th>
-							<td><input type="name" name="name" id="name" placeholder="입력하신 비밀번호를 한 번 더 입력해주세요." required></td>
+							<td><input type="text" name="name" id="name" placeholder="입력하신 비밀번호를 한 번 더 입력해주세요." required></td>
 						</tr>
                         <tr>
 							<th scope="row"><label for="address">주소<span class="essential">*</span></label></th>
-							<td><input type="name" name="address" id="address" required></td>
+							<td><input type="text" name="address" id="address" placeholder="도로명 주소를 입력해주세요." required></td>
 						</tr>
                         <tr>
-							<th scope="row"><label for="contact_number">휴대폰 번호<span class="essential">*</span></label></th>
+							<th scope="row" class="contact_number"><label for="contact_number">휴대폰 번호<span class="essential">*</span></label></th>
 							<td>
                                 <input type="contact_number" name="contact_number" id="contact_number" required>-
                                 <input type="contact_number" name="contact_number" id="contact_number" required>-
@@ -161,7 +170,7 @@
                         <tr>
 							<th scope="row"><label for="email">이메일주소<span class="essential">*</span></label></th>
 							<td>
-								<input type="text" name="email" id="email" placeholder="이메일주소를 입력해 주세요." required>
+								<input type="email_adress" name="email" id="email" placeholder="이메일주소를 입력해 주세요." required>
 								@
 								<select name="company" id="company">
                                     <option value="gmail">gmail.com</option>
