@@ -81,6 +81,13 @@
             </div>
 
             <h1>회원가입</h1>
+
+            <!-- 
+               1. 약관 동의 부분 "토글메뉴" 추가
+                
+
+               2. 193 line 선택정보 입력  마케팅 수신동의 란 추가
+             -->
             
             
             <form action="/" method="post" id="joinForm">
@@ -132,7 +139,7 @@
                 
                     
                     <h2>회원정보</h2>
-                    <table surmmary="회원의 아이디, 비밀번호, 비밀번호 확인, 이름, 주소, 휴대폰 번호, 이메일 입력양식폼"> 
+                    <table surmmary="회원의 아이디, 비밀번호, 비밀번호 확인, 이름, 주소, 휴대폰 번호, 이메일 입력양식폼" class="table1"> 
                         <caption class="hidden">회원정보 입력양식 테이블</caption>
 
                         <tr>
@@ -184,8 +191,12 @@
                     </table>
 
                     <h2>선택정보입력</h2>
-					<table surmmary="회원의 광고 정보 수신, 우편물 수령지, 자택/직장 전화번호, 직장명, 우편번호 입력양식폼">
+					<table surmmary="회원의 광고 정보 수신, 우편물 수령지, 자택/직장 전화번호, 직장명, 우편번호 입력양식폼" class="table2">
 						<caption class="hidden">회원정보 입력양식 테이블</caption>
+                        <tr>
+                            <th colspan="2"> www.lorem.com 사이트에 대한 마케팅 활용 동의 입니다. <br> 마케팅 정보의 안내를 받으시겠습니까?</th>
+                        </tr>
+
 						<tr>
 							<th scope="row">광고 정보 수신 동의</th>
 							<td>								
