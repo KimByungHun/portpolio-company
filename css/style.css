@@ -1340,7 +1340,7 @@ a {
   margin: 0 auto;
   border: none; }
   .join .inner h1 {
-    font: bold 25px/1 'arial';
+    font: bold 32px/1 'arial';
     color: #222222; }
   .join .inner .process {
     width: 50%;
@@ -1359,7 +1359,7 @@ a {
       color: #333333;
       width: 33.33%; }
   .join .inner h2 {
-    font: bold 20px/1 'airal';
+    font: bold 22px/1 'airal';
     color: #222222;
     padding-top: 50px;
     padding-bottom: 20px; }
@@ -1372,27 +1372,52 @@ a {
       margin-top: 10px; }
   .join .inner fieldset {
     border: none; }
-  .join .inner .check_box .checkBox ul {
-    position: relative; }
-    .join .inner .check_box .checkBox ul li {
-      float: left;
-      padding: 15px 0; }
-      .join .inner .check_box .checkBox ul li span {
+  .join .inner #TermCheckWrap {
+    width: 1180px;
+    margin: 20px auto; }
+    .join .inner #TermCheckWrap dt {
+      width: 100%;
+      padding: 20px;
+      font: bold 16px/1 'arial';
+      border-bottom: 1px solid #eee;
+      transition: .1s;
+      position: relative;
+      cursor: pointer; }
+      .join .inner #TermCheckWrap dt:first-of-type {
+        border-bottom: 1px solid #bbb; }
+      .join .inner #TermCheckWrap dt .ul_chk > label > span {
         color: #00a468; }
-      .join .inner .check_box .checkBox ul li:nth-of-type(1) {
-        padding-right: 10px; }
-      .join .inner .check_box .checkBox ul li:nth-of-type(2) {
-        font: bold 14px/1 'arial';
-        color: #000000; }
-  .join .inner .check_box .checkBox textarea {
-    width: 96%;
-    height: 160px;
-    margin: 0 2%;
-    background: #fff;
-    color: #888;
-    border: 1px solid #888;
-    border-radius: 10px;
-    resize: none; }
+      .join .inner #TermCheckWrap dt .CheckTermBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+        width: 20px;
+        height: 20px; }
+        .join .inner #TermCheckWrap dt .CheckTermBtn::after {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-right: 1px solid #333;
+          border-bottom: 1px solid #333;
+          transform: rotate(45deg);
+          position: absolute; }
+        .join .inner #TermCheckWrap dt .CheckTermBtn.on::after {
+          top: 7px;
+          transform: rotate(-135deg); }
+    .join .inner #TermCheckWrap dd {
+      width: 100%;
+      padding: 20px;
+      display: none; }
+      .join .inner #TermCheckWrap dd textarea {
+        width: 100%;
+        height: 160px;
+        background: #fff;
+        color: #888;
+        border: none;
+        resize: none;
+        text-indent: none; }
   .join .inner table {
     width: 100%; }
     .join .inner table tr th {
@@ -1402,11 +1427,12 @@ a {
       padding: 15px 0; }
     .join .inner table tr td {
       border-bottom: 1px solid #eee;
+      width: 90%;
       padding: 15px 0; }
-    .join .inner table tr .submit {
-      text-align: center; }
     .join .inner table:last-of-type th {
       border-bottom: none; }
+  .join .inner .table1 tr th {
+    border-bottom: none; }
   .join .inner .table2 tr td label {
     margin-right: 10px;
     font: 16px/1 'arial'; }
@@ -1415,6 +1441,8 @@ a {
     width: 100%;
     letter-spacing: 1px;
     font-weight: normal; }
+  .join .inner .submit {
+    text-align: center; }
   .join .inner input[type="text"], .join .inner input[type="password"], .join .inner input[type="email_adress"] {
     width: 40%;
     height: 50px;
@@ -1437,11 +1465,19 @@ a {
     font: bold 16px/1 'arial';
     color: #ffffff; }
   .join .inner input[type="checkbox"] {
-    margin-right: 5px; }
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: none;
+    cursor: pointer; }
 
 .essential {
   padding-left: 2px;
   color: rgba(255, 0, 0, 0.788); }
+
+.more_info {
+  font: 13px/1 'arial';
+  color: #666666; }
 
 @media screen and (max-width: 1179px) {
   .join .inner {

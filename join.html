@@ -8,6 +8,9 @@
     
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <!-- <script defer src="js/checkAll.js"></script> -->
+    <!-- <script defer src="js/toggle.js"></script> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e561f56c7.js" crossorigin="anonymous"></script>
 
@@ -94,7 +97,7 @@
                 <fieldset>
                     <legend class="hidden">회원가입 입력양식</legend>
                     <h2>약관동의</h2>
-                    <div class="chcek-term">
+                    <!-- <div class="chcek-term">
                         <ul class="check_box">
                             <li class="checkBox check1">
                                 <ul class="clearfix">
@@ -102,7 +105,9 @@
                                         <input type="checkbox" name="chkAll" id="check" class="ChkAll">
                                     </li>
                                     <li>
-                                        <span>[필수]</span> 이용약관
+                                        <label for="foldCheck1">
+                                            <span>[필수]</span> 이용약관
+                                        </label>
                                     </li>
                                 </ul>
                                 <textarea class="text-term" col="30" row="10">
@@ -115,7 +120,9 @@
                                         <input type="checkbox" name="chkAll" id="check" class="ChkAll">
                                     </li>
                                     <li>
-                                        <span>[필수]</span> 개인정보 수집 및 이용 동의
+                                        <label for="foldCheck2">
+                                            <span>[필수]</span> 개인정보 수집 및 이용 동의
+                                        </label>
                                     </li>
                                 </ul>
                                 <textarea class="text-term" col="30" row="10">
@@ -128,14 +135,75 @@
                                         <input type="checkbox" name="chkAll" id="check" class="ChkAll">
                                     </li>
                                     <li>
-                                        이용약관, 개인정보 수집 및 이용,
-                                        위치정보 이용약관(선택), 프로모션 안내
-                                        메일 수신(선택)에 <span> 모두 동의</span>합니다.
+                                        <label for="foldCheckAll">
+                                            이용약관, 개인정보 수집 및 이용,
+                                            위치정보 이용약관(선택), 프로모션 안내
+                                            메일 수신(선택)에 <span> 모두 동의</span>합니다.
+                                        </label>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
+                    </div> -->
+
+                    <div id="TermCheckWrap">
+                        <dl>
+                            <dt class="on">
+                                <input type="checkbox" name="ChkAll" id="check" class="ChkAll">
+                                <span class="ui_chk">
+                                    <label for="foldCheck1">
+                                       전체약관에 동의합니다.
+                                    </label>
+                                </span>
+                            </dt>
+                            <dd class="hidden">
+                            </dd>
+                            <dt>
+                                <span class="ui_chk">
+                                    <input type="checkbox" name="Chk" id="check" class="ChkAll">
+                                    <label for="foldCheck2">
+                                        <span class="essential">[필수]</span> 사이트 이용약관
+                                    </label>
+                                </span>
+                                <a href="#" class="CheckTermBtn"></a>
+                            </dt>
+                            <dd>
+                                <textarea class="text-term" col="30" row="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
+                                </textarea>
+                            </dd>
+                            <dt>
+                                <span class="ui_chk">
+                                    <input type="checkbox" name="Chk" id="check" class="ChkAll">
+                                    <label for="foldCheck3">
+                                        <span class="essential">[필수]</span> 개인정보 수집 및 이용동의
+                                    </label>
+                                </span>
+                                <a href="#" class="CheckTermBtn"></a>
+                            </dt>
+                            <dd>
+                                <textarea class="text-term" col="30" row="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
+                                </textarea>
+                            </dd>
+                            <dt>
+                                <span class="ui_chk">
+                                    <input type="checkbox" name="Chk" id="check" class="ChkAll">
+                                    <label for="foldCheck4">
+                                        [선택] 개인정보 수집 및 이용동의
+                                    </label>
+                                </span>
+                                <a href="#" class="CheckTermBtn"></a>
+                            </dt>
+                            <dd>
+                                
+                                <textarea class="text-term" col="30" row="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
+
+
+                                </textarea>
+                            </dd>
+                           
+                        </dl>
                     </div>
+<!--     toggle               -->
                 
                     
                     <h2>회원정보</h2>
