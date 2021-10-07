@@ -163,7 +163,7 @@
         }
 
         table{
-            width: 100%;
+            width: 1180px;
             
             tr{
                 th{
@@ -185,30 +185,30 @@
                     border-bottom: none;
                 }
             }
-        }
-        .table1{
-            tr{
-                th{
-                    border-bottom: none;
-                }
-            }
-        }
-        .table2{
-            tr{
-                td{
-                    label{
-                        margin-right: 10px;
-                        font: 16px/1 'arial';
+            .table1{
+                tr{
+                    th{
+                        border-bottom: none;
                     }
                 }
-                &:nth-of-type(1) th{
-                    padding-top: 0;
-                    width: 100%;
-                    letter-spacing: 1px;
-                    font-weight: normal;
-                }
             }
-            
+            .table2{
+                tr{
+                    td{
+                        label{
+                            margin-right: 10px;
+                            font: 16px/1 'arial';
+                        }
+                    }
+                    &:nth-of-type(1) th{
+                        padding-top: 0;
+                        width: 100%;
+                        letter-spacing: 1px;
+                        font-weight: normal;
+                    }
+                }
+                
+            }
         }
         .submit{
             text-align: center;
@@ -277,27 +277,65 @@
             }
     
     
-            .check_box{
-                .checkBox{
-                    ul{
-                        &:last-child{
-                            display: none;
+            // .check_box{
+            //     .checkBox{
+            //         ul{
+            //             &:last-child{
+            //                 display: none;
+            //             }
+            //         }
+            //     }
+            // }
+    
+            table{
+                width: 100%;
+                tr{
+                    th{
+                        width: 20%;
+                        border-bottom: none;
+                        padding: 15px 0;
+                    }
+                    td{
+                        border-bottom: none;
+                        width: 80%;
+                        padding: 15px 0;
+                        
+                    }
+    
+                }
+                &:last-of-type{
+                    th{
+                        border-bottom: none;
+                    }
+                }
+                .table1{
+                    width: 100%;
+                    tr{
+                        th{
+                            border-bottom: none;
                         }
                     }
                 }
-            }
-    
-            table{                
-                tr{
-                    th{
-                        width: 30%;
-                        padding: 10px 0;
+                .table2{
+                    tr{
+                        td{
+                            label{
+                                margin-right: 10px;
+                                font: 16px/1 'arial';
+                            }
+                        }
+                        &:nth-of-type(1) th{
+                            padding-top: 0;
+                            width: 100%;
+                            letter-spacing: 1px;
+                            font-weight: normal;
+                        }
                     }
-                    td{
-                        padding: 10px 0;
-                        
-                    }
+                    
                 }
+            }
+            .submit{
+                text-align: center;
             }
 
     

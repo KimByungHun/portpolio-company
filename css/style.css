@@ -1419,7 +1419,7 @@ a {
         resize: none;
         text-indent: none; }
   .join .inner table {
-    width: 100%; }
+    width: 1180px; }
     .join .inner table tr th {
       width: 20%;
       text-align: left;
@@ -1431,16 +1431,16 @@ a {
       padding: 15px 0; }
     .join .inner table:last-of-type th {
       border-bottom: none; }
-  .join .inner .table1 tr th {
-    border-bottom: none; }
-  .join .inner .table2 tr td label {
-    margin-right: 10px;
-    font: 16px/1 'arial'; }
-  .join .inner .table2 tr:nth-of-type(1) th {
-    padding-top: 0;
-    width: 100%;
-    letter-spacing: 1px;
-    font-weight: normal; }
+    .join .inner table .table1 tr th {
+      border-bottom: none; }
+    .join .inner table .table2 tr td label {
+      margin-right: 10px;
+      font: 16px/1 'arial'; }
+    .join .inner table .table2 tr:nth-of-type(1) th {
+      padding-top: 0;
+      width: 100%;
+      letter-spacing: 1px;
+      font-weight: normal; }
   .join .inner .submit {
     text-align: center; }
   .join .inner input[type="text"], .join .inner input[type="password"], .join .inner input[type="email_adress"] {
@@ -1488,13 +1488,32 @@ a {
     .join .inner h2 {
       font: bold 18px/1 'airal';
       padding-top: 40px; }
-    .join .inner .check_box .checkBox ul:last-child {
-      display: none; }
-    .join .inner table tr th {
-      width: 30%;
-      padding: 10px 0; }
-    .join .inner table tr td {
-      padding: 10px 0; }
+    .join .inner table {
+      width: 100%; }
+      .join .inner table tr th {
+        width: 20%;
+        border-bottom: none;
+        padding: 15px 0; }
+      .join .inner table tr td {
+        border-bottom: none;
+        width: 80%;
+        padding: 15px 0; }
+      .join .inner table:last-of-type th {
+        border-bottom: none; }
+      .join .inner table .table1 {
+        width: 100%; }
+        .join .inner table .table1 tr th {
+          border-bottom: none; }
+      .join .inner table .table2 tr td label {
+        margin-right: 10px;
+        font: 16px/1 'arial'; }
+      .join .inner table .table2 tr:nth-of-type(1) th {
+        padding-top: 0;
+        width: 100%;
+        letter-spacing: 1px;
+        font-weight: normal; }
+    .join .inner .submit {
+      text-align: center; }
     .join .inner input[type="text"], .join .inner input[type="password"] {
       width: 100%;
       height: 40px;
