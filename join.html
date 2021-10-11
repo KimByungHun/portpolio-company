@@ -75,222 +75,325 @@
             <h2>회원가입</h2>
         </div>
         <div class="inner">
-            <div class="process">
+            <div class="join_step">
                 <ul>
-                    <li>1. 약관동의</li>
-                    <li>2. 회원정보</li>
-                    <li>3. 가입완료</li>
+                    <li class="step1 on"> <i class="fas fa-unlock-alt"></i> 01. 본인인증</li>
+                    <li class="step2"><i class="fas far far fa-file-alt"></i>  02. 정보입력 및 약관동의</li>
+                    <li class="step3"><i class="fas far far fa-user"></i>03. 가입완료</li>
                 </ul>
             </div>
-
-            <h1>회원가입</h1>
-
-            <!-- 
-               1. 약관 동의 부분 "토글메뉴" 추가
-                
-
-               2. 193 line 선택정보 입력  마케팅 수신동의 란 추가
-             -->
-            
-            
+    
+    
             <form action="/" method="post" id="joinForm">
                 <fieldset>
-                    <legend class="hidden">회원가입 입력양식</legend>
-                    <h2>약관동의</h2>
-                    <!-- <div class="chcek-term">
-                        <ul class="check_box">
-                            <li class="checkBox check1">
-                                <ul class="clearfix">
-                                    <li>
-                                        <input type="checkbox" name="chkAll" id="check" class="ChkAll">
-                                    </li>
-                                    <li>
-                                        <label for="foldCheck1">
-                                            <span>[필수]</span> 이용약관
-                                        </label>
-                                    </li>
-                                </ul>
-                                <textarea class="text-term" col="30" row="10">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
-                                </textarea>
-                            </li>
-                            <li class="checkBox check2">
-                                <ul class="clearfix">
-                                    <li>
-                                        <input type="checkbox" name="chkAll" id="check" class="ChkAll">
-                                    </li>
-                                    <li>
-                                        <label for="foldCheck2">
-                                            <span>[필수]</span> 개인정보 수집 및 이용 동의
-                                        </label>
-                                    </li>
-                                </ul>
-                                <textarea class="text-term" col="30" row="10">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
-                                </textarea>
-                            </li>
-                            <li class="checkBox check3">
+                    <legend class="hidden">회원가입 입력 양식</legend>
+                        <div class="step step01">
+                            <h3>본인인증</h3>
+                            <div class="phone_01">
                                 <ul>
-                                    <li>
-                                        <input type="checkbox" name="chkAll" id="check" class="ChkAll">
-                                    </li>
-                                    <li>
-                                        <label for="foldCheckAll">
-                                            이용약관, 개인정보 수집 및 이용,
-                                            위치정보 이용약관(선택), 프로모션 안내
-                                            메일 수신(선택)에 <span> 모두 동의</span>합니다.
-                                        </label>
-                                    </li>
+                                    <li class="dark"><a href="#tab_skt">SKT</a></li>
+                                    <li><a href="#tab_kt">KT</a></li>
+                                    <li><a href="#tab_lg">LG</a></li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div> -->
-
-                    <div id="TermCheckWrap">
-                        <dl>
-                            <dt class="on">
-                                <input type="checkbox" name="ChkAll" id="check" class="ChkAll">
-                                <span class="ui_chk">
-                                    <label for="foldCheck1">
-                                       전체약관에 동의합니다.
-                                    </label>
-                                </span>
-                            </dt>
-                            <dd class="hidden">
-                            </dd>
-                            <dt>
-                                <span class="ui_chk">
-                                    <input type="checkbox" name="Chk" id="check" class="ChkAll">
-                                    <label for="foldCheck2">
-                                        <span class="essential">[필수]</span> 사이트 이용약관
-                                    </label>
-                                </span>
-                                <a href="#" class="CheckTermBtn"></a>
-                            </dt>
-                            <dd>
-                                <textarea class="text-term" col="30" row="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
-                                </textarea>
-                            </dd>
-                            <dt>
-                                <span class="ui_chk">
-                                    <input type="checkbox" name="Chk" id="check" class="ChkAll">
-                                    <label for="foldCheck3">
-                                        <span class="essential">[필수]</span> 개인정보 수집 및 이용동의
-                                    </label>
-                                </span>
-                                <a href="#" class="CheckTermBtn"></a>
-                            </dt>
-                            <dd>
-                                <textarea class="text-term" col="30" row="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
-                                </textarea>
-                            </dd>
-                            <dt>
-                                <span class="ui_chk">
-                                    <input type="checkbox" name="Chk" id="check" class="ChkAll">
-                                    <label for="foldCheck4">
-                                        [선택] 개인정보 수집 및 이용동의
-                                    </label>
-                                </span>
-                                <a href="#" class="CheckTermBtn"></a>
-                            </dt>
-                            <dd>
-                                
-                                <textarea class="text-term" col="30" row="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor facilis ipsam? Reiciendis, ratione sapiente fuga ab et quod inventore, sint, saepe consectetur repudiandae itaque modi laborum aspernatur nostrum! Dolorum minus aliquam eveniet magni, alias porro consequuntur laborum iusto iste, beatae inventore perferendis sapiente nulla! Quae commodi hic magni. At eum, inventore maiores ab obcaecati cupiditate id explicabo ut voluptatum dolorum. Perferendis repellendus, facilis vel cum eaque nesciunt deserunt odio ut nulla delectus tempore animi officiis ipsa, tenetur aliquam, quo atque! Porro sequi dolores nulla natus recusandae facilis, corporis dolore. In, quod eaque pariatur magnam quibusdam aliquam quasi soluta deserunt quam deleniti sit animi molestiae iste minima repudiandae aliquid officia vero modi, quae maxime autem obcaecati. Nisi voluptates dolorem debitis eveniet, maxime minus voluptatum aliquam. Quisquam quibusdam necessitatibus esse veniam maxime dolorem dolor et accusamus voluptas. Quae autem quaerat placeat ea, nulla rem libero accusamus quis officia qui eveniet debitis corrupti corporis repellendus delectus? Aliquid dolore blanditiis provident porro ab perspiciatis, voluptas fugit iusto distinctio sapiente, optio tenetur eius hic repellendus. Voluptate repudiandae fugit quis porro! Esse facilis debitis velit, magnam inventore dicta est, excepturi commodi odio omnis tempore et maxime. Dolor ex ratione minima molestias quidem. Dolor, facilis dolores?
-
-
-                                </textarea>
-                            </dd>
-                           
-                        </dl>
-                    </div>
-<!--     toggle               -->
-                
-                    
-                    <h2>회원정보</h2>
-                    <table surmmary="회원의 아이디, 비밀번호, 비밀번호 확인, 이름, 주소, 휴대폰 번호, 이메일 입력양식폼" class="table1"> 
-                        <caption class="hidden">회원정보 입력양식 테이블</caption>
-
-                        <tr>
-                            <th scope="row">
-                                <label for="userid">아이디<spanc class="essential">*</spanc></label>
-                            </th>
-                            <td>
-                                <input type="text" name="userid" id="userid" placeholder="영문,숫자 조합 4~12자리로 입력해주세요." required>
-                            </td>
-                        </tr>
-                        <tr>
-							<th scope="row"><label for="pwd">비밀번호<span class="essential">*</span></label></th>
-							<td><input type="password" name="pwd" id="pwd" placeholder="숫자, 영문자 조합으로 8~20자리 입력해주세요." required></td>
-						</tr>
-						<tr>
-							<th scope="row"><label for="pwd">비밀번호 확인<span class="essential">*</span></label></th>
-							<td><input type="password" name="pwd" id="pwd" placeholder="입력하신 비밀번호를 한 번 더 입력해주세요." required></td>
-						</tr>
-                        <tr>
-							<th scope="row"><label for="name">이름<span class="essential">*</span></label></th>
-							<td><input type="text" name="name" id="name" placeholder="입력하신 비밀번호를 한 번 더 입력해주세요." required></td>
-						</tr>
-                        <tr>
-							<th scope="row"><label for="address">주소<span class="essential">*</span></label></th>
-							<td><input type="text" name="address" id="address" placeholder="도로명 주소를 입력해주세요." required></td>
-						</tr>
-                        <tr>
-							<th scope="row" class="contact_number"><label for="contact_number">휴대폰 번호<span class="essential">*</span></label></th>
-							<td>
-                                <input type="contact_number" name="contact_number" id="contact_number" required>-
-                                <input type="contact_number" name="contact_number" id="contact_number" required>-
-                                <input type="contact_number" name="contact_number" id="contact_number" required>
-                            </td>
-						</tr>
-                        <tr>
-							<th scope="row"><label for="email">이메일주소<span class="essential">*</span></label></th>
-							<td>
-								<input type="email_adress" name="email" id="email" placeholder="이메일주소를 입력해 주세요." required>
-								@
-								<select name="company" id="company">
-                                    <option value="gmail">gmail.com</option>
-									<option value="naver">naver.com</option>
-									<option value="nate">nate.com</option>
-									<option value="daum">daum.net</option>
-								</select>
-							</td>
-						</tr>
-
-                    </table>
-
-                    <h2>선택정보입력</h2>
-					<table surmmary="회원의 광고 정보 수신, 우편물 수령지, 자택/직장 전화번호, 직장명, 우편번호 입력양식폼" class="table2">
-						<caption class="hidden">회원정보 입력양식 테이블</caption>
-                        <tr>
-                            <th colspan="2"> www.lorem.com 사이트에 대한 마케팅 활용 동의 입니다. <br> 마케팅 정보의 안내를 받으시겠습니까?</th>
-                        </tr>
-
-						<tr>
-							<th scope="row">광고 정보 수신 동의</th>
-							<td>								
-								
-								<label for="reading">
-									<input type="checkbox" name="ad" id="emailcheck" value="email">
-									이메일
-								</label>
-								<label for="music"><input type="checkbox" msm="ad" id="msm" value="music">문자</label>
-								<label for="game"><input type="checkbox" name="ad" id="post" value="post">우편물</label>
-								<p class="more_info">광고 정보 수신동의를 하시면 상품 및 이벤트 정보를 받으실 수 있습니다.</p>
-							</td>
-						</tr>
-					</table>
-
-                    <table>
-						<tr>
-							<th class="submit" colspan="2" >
-								<input type="submit" value="가입하기">
-							</th>
-						</tr>
-					</table>
-
+                            </div>
+                            <div class="terms_01">
+                                <dl>
+                                    <dt>
+                                        <span class="check"><input type="checkbox" name="chk"></span>
+                                        <span class="open on">개인정보 수집 및 이용 동의</span>
+                                    </dt>
+                                    <dd class="on">
+                                        <div class="cont">
+                                            <strong>개인정보 수집 및 이용 동의</strong><br>
+                                            <div class="agreecont">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iusto sunt veritatis blanditiis officia hic dolores earum quidem cupiditate quisquam totam quo aliquid vitae fuga temporibus odio quibusdam nobis obcaecati perferendis, eum laboriosam animi possimus fugit! Magni facilis ad modi, alias id repudiandae vero ullam, porro eveniet, fugit quidem repellendus quod ipsum qui corporis ipsa minima necessitatibus beatae aut est dolore quasi molestiae mollitia aliquam? Corporis laudantium unde maiores perferendis voluptas, suscipit quasi hic aperiam nostrum ea voluptatum labore mollitia, animi aut? Fugiat deleniti voluptates assumenda! Autem nisi neque vel alias aliquid, vero fugit. Quidem aliquam maiores reprehenderit doloremque ullam nulla natus, ex quam ad, eum eligendi nihil odit ducimus quibusdam perspiciatis hic deserunt? Voluptates assumenda rerum, nam pariatur quos perferendis magni corrupti quis fugiat similique maiores. Commodi exercitationem, placeat magni quasi expedita delectus quod beatae nihil ullam ratione ut suscipit voluptatum aperiam optio esse adipisci. Id itaque similique magni, hic soluta eveniet incidunt consequatur possimus at nihil dolores atque voluptates, architecto saepe esse sunt! Ex dolorum corrupti, necessitatibus reiciendis repellat assumenda accusamus corporis iusto nam, doloremque ratione. Vel, fugit temporibus ratione quae autem distinctio saepe quisquam eveniet quam amet minus dicta cumque blanditiis ducimus? Laudantium reprehenderit sunt cum placeat.
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span class="check"><input type="checkbox" name="chk"></span>
+                                        <span class="open">고유식별 정보 처리 동의</span>
+                                    </dt>
+                                    <dd>
+                                        <div class="cont">
+                                            <strong>고유식별 정보 처리 동의</strong><br>
+                                            <div class="agreecont">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iusto sunt veritatis blanditiis officia hic dolores earum quidem cupiditate quisquam totam quo aliquid vitae fuga temporibus odio quibusdam nobis obcaecati perferendis, eum laboriosam animi possimus fugit! Magni facilis ad modi, alias id repudiandae vero ullam, porro eveniet, fugit quidem repellendus quod ipsum qui corporis ipsa minima necessitatibus beatae aut est dolore quasi molestiae mollitia aliquam? Corporis laudantium unde maiores perferendis voluptas, suscipit quasi hic aperiam nostrum ea voluptatum labore mollitia, animi aut? Fugiat deleniti voluptates assumenda! Autem nisi neque vel alias aliquid, vero fugit. Quidem aliquam maiores reprehenderit doloremque ullam nulla natus, ex quam ad, eum eligendi nihil odit ducimus quibusdam perspiciatis hic deserunt? Voluptates assumenda rerum, nam pariatur quos perferendis magni corrupti quis fugiat similique maiores. Commodi exercitationem, placeat magni quasi expedita delectus quod beatae nihil ullam ratione ut suscipit voluptatum aperiam optio esse adipisci. Id itaque similique magni, hic soluta eveniet incidunt consequatur possimus at nihil dolores atque voluptates, architecto saepe esse sunt! Ex dolorum corrupti, necessitatibus reiciendis repellat assumenda accusamus corporis iusto nam, doloremque ratione. Vel, fugit temporibus ratione quae autem distinctio saepe quisquam eveniet quam amet minus dicta cumque blanditiis ducimus? Laudantium reprehenderit sunt cum placeat.
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span class="check"><input type="checkbox" name="chk"></span>
+                                        <span class="open">서비스 이용약관 동의</span>
+                                    </dt>
+                                    <div class="cont">
+                                            <dd>
+                                            <strong>서비스 이용약관 동의</strong><br>
+                                            <div class="agreecont">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iusto sunt veritatis blanditiis officia hic dolores earum quidem cupiditate quisquam totam quo aliquid vitae fuga temporibus odio quibusdam nobis obcaecati perferendis, eum laboriosam animi possimus fugit! Magni facilis ad modi, alias id repudiandae vero ullam, porro eveniet, fugit quidem repellendus quod ipsum qui corporis ipsa minima necessitatibus beatae aut est dolore quasi molestiae mollitia aliquam? Corporis laudantium unde maiores perferendis voluptas, suscipit quasi hic aperiam nostrum ea voluptatum labore mollitia, animi aut? Fugiat deleniti voluptates assumenda! Autem nisi neque vel alias aliquid, vero fugit. Quidem aliquam maiores reprehenderit doloremque ullam nulla natus, ex quam ad, eum eligendi nihil odit ducimus quibusdam perspiciatis hic deserunt? Voluptates assumenda rerum, nam pariatur quos perferendis magni corrupti quis fugiat similique maiores. Commodi exercitationem, placeat magni quasi expedita delectus quod beatae nihil ullam ratione ut suscipit voluptatum aperiam optio esse adipisci. Id itaque similique magni, hic soluta eveniet incidunt consequatur possimus at nihil dolores atque voluptates, architecto saepe esse sunt! Ex dolorum corrupti, necessitatibus reiciendis repellat assumenda accusamus corporis iusto nam, doloremque ratione. Vel, fugit temporibus ratione quae autem distinctio saepe quisquam eveniet quam amet minus dicta cumque blanditiis ducimus? Laudantium reprehenderit sunt cum placeat.
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span class="check"><input type="checkbox" name="chk"></span>
+                                        <span class="open">통신사 이용약관 동의</span>
+                                    </dt>
+                                    <dd>
+                                        <div class="cont">
+                                            <strong>통신사 이용약관 동의</strong><br>
+                                            <div class="agreecont">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iusto sunt veritatis blanditiis officia hic dolores earum quidem cupiditate quisquam totam quo aliquid vitae fuga temporibus odio quibusdam nobis obcaecati perferendis, eum laboriosam animi possimus fugit! Magni facilis ad modi, alias id repudiandae vero ullam, porro eveniet, fugit quidem repellendus quod ipsum qui corporis ipsa minima necessitatibus beatae aut est dolore quasi molestiae mollitia aliquam? Corporis laudantium unde maiores perferendis voluptas, suscipit quasi hic aperiam nostrum ea voluptatum labore mollitia, animi aut? Fugiat deleniti voluptates assumenda! Autem nisi neque vel alias aliquid, vero fugit. Quidem aliquam maiores reprehenderit doloremque ullam nulla natus, ex quam ad, eum eligendi nihil odit ducimus quibusdam perspiciatis hic deserunt? Voluptates assumenda rerum, nam pariatur quos perferendis magni corrupti quis fugiat similique maiores. Commodi exercitationem, placeat magni quasi expedita delectus quod beatae nihil ullam ratione ut suscipit voluptatum aperiam optio esse adipisci. Id itaque similique magni, hic soluta eveniet incidunt consequatur possimus at nihil dolores atque voluptates, architecto saepe esse sunt! Ex dolorum corrupti, necessitatibus reiciendis repellat assumenda accusamus corporis iusto nam, doloremque ratione. Vel, fugit temporibus ratione quae autem distinctio saepe quisquam eveniet quam amet minus dicta cumque blanditiis ducimus? Laudantium reprehenderit sunt cum placeat.
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span class="check"><input type="checkbox" name="chk"></span>
+                                        <span class="open">개인정보 수집 및 이용 동의</span>                
+                                    </dt>
+                                    <dd>
+                                        <div class="cont">
+                                            <strong>개인정보 수집 및 이용 동의</strong><br>
+                                            <div class="agreecont">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iusto sunt veritatis blanditiis officia hic dolores earum quidem cupiditate quisquam totam quo aliquid vitae fuga temporibus odio quibusdam nobis obcaecati perferendis, eum laboriosam animi possimus fugit! Magni facilis ad modi, alias id repudiandae vero ullam, porro eveniet, fugit quidem repellendus quod ipsum qui corporis ipsa minima necessitatibus beatae aut est dolore quasi molestiae mollitia aliquam? Corporis laudantium unde maiores perferendis voluptas, suscipit quasi hic aperiam nostrum ea voluptatum labore mollitia, animi aut? Fugiat deleniti voluptates assumenda! Autem nisi neque vel alias aliquid, vero fugit. Quidem aliquam maiores reprehenderit doloremque ullam nulla natus, ex quam ad, eum eligendi nihil odit ducimus quibusdam perspiciatis hic deserunt? Voluptates assumenda rerum, nam pariatur quos perferendis magni corrupti quis fugiat similique maiores. Commodi exercitationem, placeat magni quasi expedita delectus quod beatae nihil ullam ratione ut suscipit voluptatum aperiam optio esse adipisci. Id itaque similique magni, hic soluta eveniet incidunt consequatur possimus at nihil dolores atque voluptates, architecto saepe esse sunt! Ex dolorum corrupti, necessitatibus reiciendis repellat assumenda accusamus corporis iusto nam, doloremque ratione. Vel, fugit temporibus ratione quae autem distinctio saepe quisquam eveniet quam amet minus dicta cumque blanditiis ducimus? Laudantium reprehenderit sunt cum placeat.
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+    
+                            <table summary="이름, 생년월일, 휴대폰번호" class="table_01">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="01_name" ></label>이름 *</th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input" placeholder="예 : 김병훈" required>
+                                                </span>
+                                                <span class="slt">
+                                                    <select name="country" id="country">
+                                                        <option value="1">내국인</option>
+                                                        <option value="2">외국인</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="01_birth">생년월일 *</label></th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input" placeholder="예 : 19961025" required>
+                                                </span>
+                                                <span class="gender">
+                                                    <button type="button" name="gend" class="btnD dark">
+                                                        남자
+                                                    </button>
+                                                    <button type="button" name="gend" class="btnD on">
+                                                        여자
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="01_number">휴대폰번호 *</label></th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input" placeholder="예 : 01012345678" required>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <div class="step step02">
+                            <h3>필수항목</h3>
+                            <table summary="아이디(이메일주소), 비밀번호, 비밀번호 확인. 주소" class="table_02">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="02_id"></label>아이디(이메일 주소)</th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input short" required>
+                                                </span>
+                                                <span>@</span>
+                                                <span>
+                                                    <input type="text" class="input short">
+                                                </span>
+                                                <span class="slt">
+                                                    <select name="email" id="email">
+                                                        <option value>직접입력</option>
+                                                        <option value="naver.com">naver.com</option>
+                                                        <option value="gmail.com">gmail.com</option>
+                                                        <option value="daum.net">daum.com</option>
+                                                        <option value="nate.com">nate.com</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="02_pwd"></label>비밀번호</th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input" placeholder="비밀번호 입력" required>
+                                                </span>
+                                                <span class="notice_msg">
+                                                    10자 이상, 영문 대소문자, 숫자 중 2가지 이상 조합
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="02_pwd"></label>비밀번호 확인</th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input" placeholder="비밀번호 입력" required>
+                                                </span>
+                                                <span class="notice_msg">
+                                                    10자 이상, 영문 대소문자, 숫자 중 2가지 이상 조합
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="02_adress"></label>주소</th>
+                                        <td>
+                                            <div class="01_text">
+                                                <span>
+                                                    <input type="text" class="input short">
+                                                </span>
+                                                <button type="button" name="address" class="btnD addressbtnD">
+                                                    우편번호 검색
+                                                </button>
+                                                <span>
+                                                    <input type="text" class="input long" placeholder="도로명 주소">
+                                                </span>
+                                                <span>
+                                                    <input type="text" class="input long" placeholder="지번 주소">
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                            <h3>선택항목</h3>
+                            <table summary="아이디(이메일주소), 비밀번호, 비밀번호 확인. 주소" class="table_02">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">휴면전환 기간</th>
+                                        <td>
+                                            <ul class="dor_list">
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="dor_list1" value="1">
+                                                        <label for="dor_list1">
+                                                        1년</label>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="dor_list1" value="3">
+                                                        <label for="dor_list1">
+                                                        3년</label>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="dor_list1" value="5">
+                                                        <label for="dor_list1">
+                                                        5년</label>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="dor_list1" value="none">
+                                                        <label for="dor_list1">
+                                                        탈퇴 시 까지</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+    
+                                            <span class="notice_msg">
+                                                별도의 선택이 없을 시 휴면전환 기간은 1년으로 설정 됩니다.
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">마케팅정보 수신동의</th>
+                                        <td>
+                                            <span class="notice_msg" style="text-decoration: underline;">
+                                                수신 미동의 회사에서 진행하는 이벤트 및 할인 등의 정보를 받아보실 수 없으며. 추가 해택 제공 대상에서 제외 될 수 있습니다.
+                                            </span>
+                                            <span class="notice_msg">
+                                                (회원가입/구매/회사의 주요정책 관련 정보는 모든 회원에게 발송 됩니다.).
+                                            </span>
+                                            <ul class="dor_list">
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="mrk_list1" value="1">
+                                                        <label for="mrk_list1">
+                                                        SMS</label>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="mrk_list2" value="2">
+                                                        <label for="mrk_list2">
+                                                        E-mail</label>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="mrk_list3" value="3">
+                                                        <label for="mrk_list3">
+                                                        DM</label>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="clickChb">
+                                                        <input type="checkbox" id="mrk_list4" value="4">
+                                                        <label for="mrk_list4">
+                                                        CALL</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+    
+    
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <table class="step3 step">
+                            <tr>
+                                <th class="submit" colspan="2" >
+                                    <input type="submit" value="가입하기">
+                                </th>
+                            </tr>
+                        </table>
+    
                 </fieldset>
             </form>
-
         </div>
     </section>
 
