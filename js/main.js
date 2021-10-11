@@ -11,15 +11,15 @@ btnCall.onclick = function(e){
 
 // 
 
-const $frame = $("#TermCheckWrap");
-const $btns = $frame.find("dt");
-const $boxs = $frame.find("dd");
+// const $frame = $("#TermCheckWrap");
+// const $btns = $frame.find("dt");
+// const $boxs = $frame.find("dd");
 
-const $TermChk = $(".ui_chk");
+// const $TermChk = $(".ui_chk");
 
 
 
-let speed = 0;
+// let speed = 0;
 
 //event binding
 // $btns.on("click", function(e){

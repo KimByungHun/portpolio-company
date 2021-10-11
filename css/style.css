@@ -93,7 +93,7 @@ a {
       top: 50%;
       transform: translateY(-50%); }
       #header .inner > h1 a {
-        font: bold 42px/1 'graduate';
+        font: bold 40px/1 'graduate';
         letter-spacing: 1px;
         color: #000; }
     #header .inner .menuWeb #gnb {
@@ -270,7 +270,8 @@ a {
     #visual .inner p {
       font: normal 20px/1 'Poppins';
       color: #fff;
-      margin: 50px; }
+      margin: 50px;
+      padding: 0 20px; }
     #visual .inner a {
       display: block;
       margin: 0 auto;
@@ -424,9 +425,7 @@ a {
       color: #666666;
       margin-bottom: 30px; }
     #brand .inner > img {
-      background: #111;
       display: block;
-      height: 240px;
       display: block;
       margin: 0 auto;
       margin-bottom: 60px; }
@@ -444,7 +443,6 @@ a {
             display: block;
             width: 100%;
             height: 260px;
-            border-radius: 20px;
             object-fit: cover;
             opacity: .7;
             transition: .5s; }
@@ -475,16 +473,14 @@ a {
             transition: .5s;
             position: absolute;
             width: 100%;
-            height: 600px;
-            border-radius: 40px;
+            height: 560px;
             background-color: rgba(119, 104, 104, 0); }
           #brand .inner .wrap .center article img {
             background: #111;
             display: block;
             width: 100%;
-            height: 600px;
+            height: 560px;
             object-fit: cover;
-            border-radius: 40px;
             background-image: url(../img/brand5.jpg); }
           #brand .inner .wrap .center article .links {
             display: block;
@@ -522,7 +518,6 @@ a {
             display: block;
             width: 100%;
             height: 260px;
-            border-radius: 20px;
             object-fit: cover;
             transition: .5s;
             opacity: .7; }
@@ -543,7 +538,7 @@ a {
 #banner {
   width: 100%;
   padding: 150px 0;
-  background: url(../img/banner4.jpg) no-repeat center/cover fixed; }
+  background: url(../img/banner7.jpg) no-repeat center/cover fixed; }
   #banner .inner {
     width: 1180px;
     margin: 0 auto; }
@@ -556,6 +551,68 @@ a {
       font: 16px/1.3 'Poppins';
       color: #fff;
       text-align: center; }
+
+#client {
+  width: 100%;
+  padding: 100px 0 50px; }
+  #client .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    #client .inner h1 {
+      font: bold 24px/1 'Poppins';
+      color: #555;
+      text-align: center;
+      margin-bottom: 30px; }
+    #client .inner p {
+      font: 19px/1.4 'Poppins';
+      width: 70%;
+      margin: 0 auto;
+      color: #666666;
+      margin-bottom: 30px; }
+    #client .inner .slider {
+      width: 100%;
+      height: 200px;
+      padding-bottom: 50px;
+      position: relative;
+      overflow: hidden; }
+      #client .inner .slider .client_list {
+        width: 1500px;
+        height: 100%;
+        margin-left: -300px;
+        position: absolute; }
+        #client .inner .slider .client_list li {
+          width: 300px;
+          height: 100%;
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: .5s; }
+          #client .inner .slider .client_list li.cl1 {
+            background: url(../img/icon/h8-client-1.png) no-repeat center;
+            transition: .3s; }
+            #client .inner .slider .client_list li.cl1:hover {
+              background: url(../img/icon/h8-client-1h.png) no-repeat center; }
+          #client .inner .slider .client_list li.cl2 {
+            background: url(../img/icon/h8-client-2.png) no-repeat center;
+            transition: .3s; }
+            #client .inner .slider .client_list li.cl2:hover {
+              background: url(../img/icon/h8-client-2h.png) no-repeat center; }
+          #client .inner .slider .client_list li.cl3 {
+            background: url(../img/icon/h8-client-3.png) no-repeat center;
+            transition: .3s; }
+            #client .inner .slider .client_list li.cl3:hover {
+              background: url(../img/icon/h8-client-3h.png) no-repeat center; }
+          #client .inner .slider .client_list li.cl4 {
+            background: url(../img/icon/h8-client-4.png) no-repeat center;
+            transition: .3s; }
+            #client .inner .slider .client_list li.cl4:hover {
+              background: url(../img/icon/h8-client-4h.png) no-repeat center; }
+          #client .inner .slider .client_list li.cl5 {
+            background: url(../img/icon/h8-client-5.png) no-repeat center;
+            transition: .3s; }
+            #client .inner .slider .client_list li.cl5:hover {
+              background: url(../img/icon/h8-client-5h.png) no-repeat center; }
 
 #comment {
   width: 100%;
@@ -607,7 +664,7 @@ a {
     margin: 0 auto;
     padding: 64px 0; }
     #footer .inner .top {
-      padding-bottom: 40px;
+      padding-bottom: 30px;
       border-bottom: 1px solid #cacaca46; }
       #footer .inner .top::after {
         content: '';
@@ -678,7 +735,7 @@ a {
             color: #a2a2a2;
             margin: 0; }
     #footer .inner .bottom {
-      padding-top: 40px; }
+      padding-top: 30px; }
       #footer .inner .bottom::after {
         content: '';
         display: block;
@@ -693,7 +750,17 @@ a {
         #footer .inner .bottom article:nth-of-type(1) {
           width: 30%; }
         #footer .inner .bottom article:nth-of-type(2) {
-          width: calc(100% - 30% - 24px); }
+          width: calc(100% - 30% - 24px);
+          position: relative; }
+          #footer .inner .bottom article:nth-of-type(2)::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 130px;
+            left: -15px;
+            top: -30px;
+            position: absolute;
+            background-color: #cacaca46; }
         #footer .inner .bottom article ul {
           padding: 0 11px; }
           #footer .inner .bottom article ul::after {
@@ -1002,7 +1069,7 @@ a {
     margin: 0 auto;
     padding: 64px 0; }
     #footer_sub .inner .top {
-      padding-bottom: 40px;
+      padding-bottom: 30px;
       border-bottom: 1px solid #cacaca46; }
       #footer_sub .inner .top::after {
         content: '';
@@ -1073,12 +1140,13 @@ a {
             color: #a2a2a2;
             margin: 0; }
     #footer_sub .inner .bottom {
-      padding-top: 40px; }
+      padding-top: 30px; }
       #footer_sub .inner .bottom::after {
         content: '';
         display: block;
         clear: both; }
       #footer_sub .inner .bottom article {
+        width: 100%;
         float: left;
         margin-right: 16px;
         padding: 8px 12px; }
@@ -1087,7 +1155,17 @@ a {
         #footer_sub .inner .bottom article:nth-of-type(1) {
           width: 30%; }
         #footer_sub .inner .bottom article:nth-of-type(2) {
-          width: 65%; }
+          width: calc(100% - 30% - 24px);
+          position: relative; }
+          #footer_sub .inner .bottom article:nth-of-type(2)::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 130px;
+            left: -15px;
+            top: -30px;
+            position: absolute;
+            background-color: #cacaca46; }
         #footer_sub .inner .bottom article ul {
           padding: 0 11px; }
           #footer_sub .inner .bottom article ul::after {
@@ -1581,7 +1659,7 @@ a {
     margin: 0 auto;
     padding: 64px 0; }
     #footer_sub .inner .top {
-      padding-bottom: 40px;
+      padding-bottom: 30px;
       border-bottom: 1px solid #cacaca46; }
       #footer_sub .inner .top::after {
         content: '';
@@ -1652,12 +1730,13 @@ a {
             color: #a2a2a2;
             margin: 0; }
     #footer_sub .inner .bottom {
-      padding-top: 40px; }
+      padding-top: 30px; }
       #footer_sub .inner .bottom::after {
         content: '';
         display: block;
         clear: both; }
       #footer_sub .inner .bottom article {
+        width: 100%;
         float: left;
         margin-right: 16px;
         padding: 8px 12px; }
@@ -1666,7 +1745,17 @@ a {
         #footer_sub .inner .bottom article:nth-of-type(1) {
           width: 30%; }
         #footer_sub .inner .bottom article:nth-of-type(2) {
-          width: 65%; }
+          width: calc(100% - 30% - 24px);
+          position: relative; }
+          #footer_sub .inner .bottom article:nth-of-type(2)::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 130px;
+            left: -15px;
+            top: -30px;
+            position: absolute;
+            background-color: #cacaca46; }
         #footer_sub .inner .bottom article ul {
           padding: 0 11px; }
           #footer_sub .inner .bottom article ul::after {
