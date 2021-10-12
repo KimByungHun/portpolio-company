@@ -294,7 +294,7 @@ a {
     width: 1180px;
     margin: 0 auto; }
     #news .inner h1 {
-      font: bold 24px/1 'Poppins';
+      font: bold 32px/1 'Poppins';
       color: #555;
       text-align: center;
       margin-bottom: 50px; }
@@ -414,7 +414,7 @@ a {
     width: 1180px;
     margin: 0 auto; }
     #brand .inner h1 {
-      font: bold 24px/1 'Poppins';
+      font: bold 32px/1 'Poppins';
       color: #555;
       text-align: center;
       margin-bottom: 30px; }
@@ -559,7 +559,7 @@ a {
     width: 1180px;
     margin: 0 auto; }
     #client .inner h1 {
-      font: bold 24px/1 'Poppins';
+      font: bold 32px/1 'Poppins';
       color: #555;
       text-align: center;
       margin-bottom: 30px; }
@@ -616,8 +616,8 @@ a {
 
 #comment {
   width: 100%;
-  padding: 150px 0;
-  background: #efefef; }
+  padding: 100px 0;
+  background-color: #efefef; }
   #comment .inner {
     width: 1180px;
     margin: 0 auto; }
@@ -631,6 +631,7 @@ a {
       #comment .inner ul li {
         width: 100%;
         border: 1px solid #111;
+        background-color: #efefef;
         margin-bottom: 20px;
         padding: 15px 20px;
         box-sizing: border-box;
@@ -655,6 +656,60 @@ a {
             color: #fff; }
           #comment .inner ul li:hover span {
             color: #ddd; }
+
+#contact {
+  width: 100%;
+  padding: 100px 0 100px;
+  background: url(../img/contact5.jpg) no-repeat center/cover; }
+  #contact .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #contact .inner h1 {
+      font: bold 32px/1 'Poppins';
+      color: #F8F8FA;
+      text-align: center;
+      margin-bottom: 50px; }
+    #contact .inner p {
+      font: 19px/1.4 'Poppins';
+      width: 70%;
+      margin: 0 auto;
+      color: #F8F8FA;
+      margin-bottom: 50px; }
+    #contact .inner .contact_wrap {
+      width: 800px;
+      margin: 0 auto; }
+      #contact .inner .contact_wrap::after {
+        display: block;
+        content: '';
+        clear: both; }
+      #contact .inner .contact_wrap li {
+        float: left;
+        width: 50%;
+        height: 100px;
+        text-align: center;
+        padding: 20px 10px;
+        font: 15px/1.5 "arial";
+        color: #F8F8FA;
+        letter-spacing: 1px; }
+        #contact .inner .contact_wrap li span {
+          font-weight: bold;
+          font-size: 22px; }
+        #contact .inner .contact_wrap li a {
+          display: inline-block;
+          padding: 15px 30px;
+          border-radius: 10px;
+          width: 200px;
+          font: bold 15px/1.5 "arial";
+          color: #1a1a1a;
+          background: #f8f8f8;
+          transition: .5s; }
+          #contact .inner .contact_wrap li a:hover {
+            background: gainsboro; }
+        #contact .inner .contact_wrap li i {
+          padding-left: 10px; }
+      #contact .inner .contact_wrap .ct1 {
+        border-right: 1px solid #fff; }
 
 #footer {
   width: 100%;
@@ -1029,7 +1084,7 @@ a {
     display: none; } }
 .content {
   width: 100%;
-  padding: 0px 0px 100px; }
+  padding: 0px 0px; }
   .content .sub_visual {
     width: 100%;
     height: 250px;
@@ -2004,12 +2059,13 @@ a {
 .member .sub_visual {
   background: url(../../img/banner11.jpg) no-repeat center/cover; }
 .member .inner {
-  width: 1180px;
-  min-height: 3500px;
-  margin: 0px auto 100px;
+  width: 100%;
+  min-height: 500px;
+  margin: 0px auto;
   border: none; }
   .member .inner #member1 {
-    width: 100%; }
+    width: 1180px;
+    margin: 0 auto; }
     .member .inner #member1::after {
       display: block;
       content: '';
@@ -2029,14 +2085,14 @@ a {
         padding: 20px 0px 50px 50px;
         box-sizing: border-box; }
   .member .inner #member2 {
-    width: 100%; }
+    width: 1180px;
+    margin: 0 auto; }
     .member .inner #member2::after {
       display: block;
       content: '';
       clear: both; }
     .member .inner #member2 .m2_left {
       width: 50%;
-      height: 500px;
       float: left; }
       .member .inner #member2 .m2_left .m2_inner {
         width: 100%;
@@ -2051,7 +2107,6 @@ a {
           padding-right: 20px; }
     .member .inner #member2 .m2_right {
       width: 50%;
-      height: 500px;
       background: #fff;
       float: left; }
       .member .inner #member2 .m2_right .m2_inner {
@@ -2062,24 +2117,23 @@ a {
           padding-left: 20px; }
   .member .inner #member3 {
     width: 100%;
-    height: 300px;
     background: #efefef;
-    padding: 150px 0; }
+    padding: 100px; }
     .member .inner #member3 .inner {
       width: 1180px;
       margin: 0 auto;
       position: relative; }
       .member .inner #member3 .inner h2 {
-        font: bold 24px/1 'Poppins';
+        font: bold 80px/1 'Poppins';
         color: #555;
         text-align: center;
-        margin-bottom: 30px; }
+        padding-bottom: 100px; }
       .member .inner #member3 .inner .m3_txt {
-        font: 19px/1.4 'Poppins';
+        font: 22px/1.4 'Poppins';
         width: 70%;
         margin: 0 auto;
         color: #666666;
-        margin-bottom: 30px; }
+        margin-bottom: 50px; }
       .member .inner #member3 .inner .wrap {
         width: 100%; }
         .member .inner #member3 .inner .wrap::after {
@@ -2087,21 +2141,21 @@ a {
           clear: both;
           content: ''; }
         .member .inner #member3 .inner .wrap article {
-          width: 380px;
+          width: 340px;
           background: #fff;
           padding: 35px 30px;
           box-sizing: border-box;
           float: left;
-          margin-right: 20px;
+          margin-right: 80px;
           position: relative; }
           .member .inner #member3 .inner .wrap article:last-of-type {
             margin-right: 0; }
           .member .inner #member3 .inner .wrap article h5 {
-            font: bold 30px/1 'arial';
+            font: bold 30px/1.3 'arial';
             color: #333333;
             margin-bottom: 20px; }
           .member .inner #member3 .inner .wrap article p {
-            font: 16px/1.3 'arial';
+            font: 16px/1.4 'arial';
             color: #333333;
             letter-spacing: 2px;
             margin-bottom: 30px; }
