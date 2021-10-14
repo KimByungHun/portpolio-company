@@ -1133,6 +1133,71 @@
     }
 }
 
+#popup{
+    width: 600px;
+    position: fixed; 
+    top: 70%; left: 50%; transform: translate(-50%,-50%);
+    margin: 0 auto;
+    box-shadow: 10px 10px 10px rgba(17, 17, 17,.4);
+    &::after{
+        display: block; content: ''; clear: both;
+    }
+    .pop_left{
+        width: 40%;height: 300px; background:url(../img/banner10.jpg) no-repeat center/cover; float: left
+    }
+    .pop_right{
+        width: 60%;height: 300px; background:#fff; float: left;
+        position: relative; padding: 20px 30px 0 30px; box-sizing: border-box;
+
+        .pop_inner{
+            width: 100%; 
+
+            h2{
+                font: bold 48px/1 'arial'; margin-bottom: 20px;
+            }
+            p{
+                font: 18px/1 'airal'; color: #a7a7a7; margin-bottom: 20px;
+
+                &:last-of-type{
+                    margin-bottom: 30px;
+                }
+            }
+            .pop_shop{
+                display: block;
+                margin: 0 auto;
+                width: 200px;
+                height: 50px;
+                color: #fff;
+                font: bold 14px/50px 'poppins';
+                background: #111;
+                letter-spacing: 1px;
+                transition: .5s;
+                text-align: center;
+                &:hover{
+                    background: #fff;
+                    color: #111;
+                    border: 1px solid #8a8a8a;
+                }
+            }
+
+            .wrap{
+                float: left;
+                position:absolute; bottom: 0; right: 0;
+                label{ font: 14px/1 'airal'; color: #e0e0e0;  margin-left: 4px;}
+            }
+
+            .pop_close{
+                position: absolute;
+                top: -10px; right: -10px;
+                display: block;
+                width: 20px; height: 20px; border-radius: 50%;
+                text-align: center; background-color: #a2a2a2; color: #fff;
+                padding-left: 2px; font: 14px/20px 'airal';
+            }
+        }
+    }
+}
+
 //media query
 @media screen and (max-width:1179px){
     #header{

@@ -19,6 +19,6 @@ function move(){
     }else{ 
         num -= 1;
     }    
-    console.log(num);
+    // console.log(num);
     $(".client_list").css({left: num});
 }
