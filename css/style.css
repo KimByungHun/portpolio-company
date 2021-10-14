@@ -1540,7 +1540,7 @@ a {
   #header_sub .inner .menuWeb .util2 {
     display: none; } }
 .join .sub_visual {
-  background: url(../../img/banner4.jpg) no-repeat center/cover fixed; }
+  background: url(./../img/banner4.jpg) no-repeat center/cover fixed; }
 .join .inner {
   width: 1180px;
   margin: 0 auto;
@@ -2130,7 +2130,7 @@ a {
   #header_sub .inner .menuWeb .util2 {
     display: none; } }
 .member .sub_visual {
-  background: url(../../img/banner11.jpg) no-repeat center/cover; }
+  background: url(./../img/banner11.jpg) no-repeat center/cover; }
 .member .inner {
   width: 100%;
   min-height: 500px;
@@ -2146,7 +2146,7 @@ a {
     .member .inner #member1 .m1_left {
       width: 60%;
       height: 500px;
-      background: url(../../img/member1.jpg) no-repeat center/cover;
+      background: url(./../img/member1.jpg) no-repeat center/cover;
       float: left; }
     .member .inner #member1 .m1_right {
       width: 40%;
@@ -2234,7 +2234,7 @@ a {
             margin-bottom: 30px; }
   .member .inner #member4 {
     background-color: #1a3838;
-    background-image: url(../../img/background2.svg);
+    background-image: url(./../img/background2.svg);
     background-size: 50%;
     background-position: 2% 98%;
     background-repeat: no-repeat; }
@@ -2664,7 +2664,7 @@ a {
   #header_sub .inner .menuWeb .util2 {
     display: none; } }
 .community .sub_visual {
-  background: url(../../img/banner7.jpg) no-repeat center/cover fixed; }
+  background: url(./../img/banner7.jpg) no-repeat center/cover fixed; }
 .community .inner {
   width: 1180px;
   margin: 0 auto;
@@ -3256,7 +3256,7 @@ a {
 .youtube {
   width: 100%; }
   .youtube .sub_visual {
-    background: url(../../img/banner10.jpg) no-repeat center/cover; }
+    background: url(./../img/banner10.jpg) no-repeat center/cover; }
   .youtube .inner {
     width: 1180px;
     min-height: 500px;
@@ -3633,7 +3633,7 @@ a {
 .gallery {
   width: 100%; }
   .gallery .sub_visual {
-    background: url(../../img/banner8.jpg) no-repeat center/cover fixed; }
+    background: url(./../img/banner8.jpg) no-repeat center/cover fixed; }
   .gallery .inner {
     width: 1180px;
     min-height: 500px;
@@ -4012,7 +4012,7 @@ a {
 .location {
   width: 100%; }
   .location .sub_visual {
-    background: url(../../img/banner12.jpg) no-repeat center/cover fixed; }
+    background: url(./../img/banner12.jpg) no-repeat center/cover fixed; }
   .location .inner {
     width: 1180px;
     min-height: 500px;

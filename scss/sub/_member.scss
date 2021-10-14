@@ -2,7 +2,7 @@
 
 .member {
     .sub_visual {
-        background:url(../../img/banner11.jpg) no-repeat center/cover ;
+        background:url(./../img/banner11.jpg) no-repeat center/cover ;
 
     }
     .inner {
@@ -15,7 +15,7 @@
                 display: block; content: ''; clear: both;
             }
             .m1_left{
-                width: 60%;height: 500px; background: url(../../img/member1.jpg) no-repeat center/cover; float: left
+                width: 60%;height: 500px; background: url(./../img/member1.jpg) no-repeat center/cover; float: left
             }
             .m1_right{
                 width: 40%;height: 500px; background:#fff; float: left;
@@ -95,7 +95,7 @@
         #member4{
             background-color: #1a3838;
             // background: url(../../img/banner8.jpg) no-repeat center/cover;
-            background-image: url(../../img/background2.svg);
+            background-image: url(./../img/background2.svg);
             background-size: 50%;
             background-position: 2% 98%;
             background-repeat: no-repeat;
