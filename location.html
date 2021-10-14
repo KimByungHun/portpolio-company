@@ -8,6 +8,9 @@
     
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script defer src="js/map.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=82d179c5992bbd3137077342d46e4ada"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e561f56c7.js" crossorigin="anonymous"></script>
 
@@ -73,6 +76,20 @@
         </div>
         <div class="inner">
             <h1>INFORMATION</h1>
+
+            <div id="map"></div>
+
+            <ul class="traffic">
+                <li><a href="#">교통정보 보기</a></li>
+                <li class="on"><a href="#" >교통정보 끄기</a></li>
+            </ul>
+        
+            <ul class="branch">
+                <li data-index="0" class="on"><a href="#">본점</a></li>
+                <li data-index="1"><a href="#">지점1</a></li>
+                <li data-index="2"><a href="#">지점2</a></li>
+        
+            </ul>
         
         </div>
     </section>
