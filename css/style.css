@@ -862,54 +862,52 @@ a {
     position: relative;
     padding: 20px 30px 0 30px;
     box-sizing: border-box; }
-    #popup .pop_right .pop_inner {
-      width: 100%; }
-      #popup .pop_right .pop_inner h2 {
-        font: bold 48px/1 'arial';
-        margin-bottom: 20px; }
-      #popup .pop_right .pop_inner p {
-        font: 18px/1 'airal';
-        color: #a7a7a7;
-        margin-bottom: 20px; }
-        #popup .pop_right .pop_inner p:last-of-type {
-          margin-bottom: 30px; }
-      #popup .pop_right .pop_inner .pop_shop {
-        display: block;
-        margin: 0 auto;
-        width: 200px;
-        height: 50px;
-        color: #fff;
-        font: bold 14px/50px 'poppins';
-        background: #111;
-        letter-spacing: 1px;
-        transition: .5s;
-        text-align: center; }
-        #popup .pop_right .pop_inner .pop_shop:hover {
-          background: #fff;
-          color: #111;
-          border: 1px solid #8a8a8a; }
-      #popup .pop_right .pop_inner .wrap {
-        float: left;
-        position: absolute;
-        bottom: 0;
-        right: 0; }
-        #popup .pop_right .pop_inner .wrap label {
-          font: 14px/1 'airal';
-          color: #e0e0e0;
-          margin-left: 4px; }
-      #popup .pop_right .pop_inner .pop_close {
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        display: block;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        text-align: center;
-        background-color: #a2a2a2;
-        color: #fff;
-        padding-left: 2px;
-        font: 14px/20px 'airal'; }
+    #popup .pop_right h2 {
+      font: bold 48px/1 'arial';
+      margin-bottom: 20px; }
+    #popup .pop_right p {
+      font: 18px/1 'airal';
+      color: #a7a7a7;
+      margin-bottom: 20px; }
+      #popup .pop_right p:last-of-type {
+        margin-bottom: 30px; }
+    #popup .pop_right .pop_shop {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 50px;
+      color: #fff;
+      font: bold 14px/50px 'poppins';
+      background: #111;
+      letter-spacing: 1px;
+      transition: .5s;
+      text-align: center; }
+      #popup .pop_right .pop_shop:hover {
+        background: #fff;
+        color: #111;
+        border: 1px solid #8a8a8a; }
+    #popup .pop_right .wrap {
+      float: left;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+      #popup .pop_right .wrap label {
+        font: 14px/1 'airal';
+        color: #e0e0e0;
+        margin-left: 4px; }
+    #popup .pop_right .pop_close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      background-color: #a2a2a2;
+      color: #fff;
+      padding-left: 2px;
+      font: 14px/20px 'airal'; }
 
 @media screen and (max-width: 1179px) {
   #header .top {
