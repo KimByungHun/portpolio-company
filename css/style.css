@@ -928,6 +928,103 @@ a {
     #header .inner .btnCall {
       display: block; }
 
+  #visual {
+    height: 80vh; }
+    #visual video {
+      width: 100%; }
+    #visual .inner {
+      width: 100%; }
+      #visual .inner h1 {
+        font: normal 92px/1 'poppins'; }
+
+  #news {
+    padding: 50px 20px; }
+    #news .inner {
+      width: 100%; }
+      #news .inner .topnews article {
+        width: 50%; }
+      #news .inner .wrap {
+        width: 100%; }
+        #news .inner .wrap article {
+          width: 49%;
+          margin-right: 2%; }
+          #news .inner .wrap article:nth-of-type(2), #news .inner .wrap article :nth-of-type(4) {
+            margin-right: 0px; }
+
+  #brand {
+    padding: 50px 20px; }
+    #brand .inner {
+      width: 100%; }
+      #brand .inner .wrap .left {
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-right: 1%; }
+        #brand .inner .wrap .left::after {
+          display: block;
+          content: '';
+          clear: both; }
+        #brand .inner .wrap .left article {
+          width: 49%;
+          float: left;
+          margin-right: 2%; }
+          #brand .inner .wrap .left article:last-of-type {
+            margin-right: 0; }
+      #brand .inner .wrap .center {
+        width: 100%;
+        float: left;
+        margin-bottom: 30px; }
+        #brand .inner .wrap .center article {
+          width: 100%; }
+      #brand .inner .wrap .right {
+        width: 100%;
+        height: 100%; }
+        #brand .inner .wrap .right::after {
+          display: block;
+          content: '';
+          clear: both; }
+        #brand .inner .wrap .right article {
+          width: 49%;
+          float: left;
+          margin-right: 2%; }
+          #brand .inner .wrap .right article:last-of-type {
+            margin-right: 0; }
+
+  #banner {
+    padding: 50px 20px; }
+    #banner .inner {
+      width: 100%; }
+
+  #client {
+    width: 100%;
+    padding: 50px 20px; }
+    #client .inner {
+      width: 100%; }
+      #client .inner p {
+        margin: 0 auto; }
+
+  #comment {
+    width: 100%;
+    padding: 50px 20px; }
+    #comment .inner {
+      width: 100%; }
+
+  #contact {
+    padding: 50px 20px; }
+    #contact .inner {
+      width: 100%; }
+      #contact .inner p {
+        margin-bottom: 0; }
+      #contact .inner .contact_wrap {
+        width: 100%; }
+        #contact .inner .contact_wrap li {
+          width: 100%;
+          height: 100%;
+          padding: 20px 10px; }
+        #contact .inner .contact_wrap .ct1 {
+          border-right: none;
+          padding-bottom: 0; }
+
   #footer .inner {
     width: 100%;
     padding: 48px 10px; }
@@ -1187,6 +1284,12 @@ a {
     border: 1px solid #ddd; }
 
 @media screen and (max-width: 1179px) {
+  .content .sub_visual {
+    height: 220px; }
+    .content .sub_visual h1 {
+      font-size: 48px; }
+    .content .sub_visual h2 {
+      font-size: 22px; }
   .content .inner {
     width: 100%; } }
 #footer_sub {
@@ -2482,6 +2585,94 @@ a {
       width: 100%; }
     #footer_sub .inner .top article:nth-of-type(3) {
       width: 100%; } }
+@media screen and (max-width: 1179px) {
+  .member .inner {
+    width: 100%; }
+    .member .inner #member1 {
+      width: 100%;
+      padding: 0px 20px 0px 20px; }
+      .member .inner #member1 .m1_left {
+        height: 500px; }
+      .member .inner #member1 .m1_right {
+        height: 500px; }
+        .member .inner #member1 .m1_right .m1_inner {
+          width: 100%;
+          padding: 20px 0px 50px 50px; }
+    .member .inner #member2 {
+      width: 100%;
+      padding: 50px 20px; }
+      .member .inner #member2 .m2_left .m2_inner {
+        padding: 50px 20px 50px 0px; }
+        .member .inner #member2 .m2_left .m2_inner .m2_txt {
+          letter-spacing: 2px;
+          padding: 15px 20px 0px 35px; }
+        .member .inner #member2 .m2_left .m2_inner img {
+          padding-right: 10px; }
+      .member .inner #member2 .m2_right .m2_inner {
+        padding: 50px 0px 50px 20px; }
+        .member .inner #member2 .m2_right .m2_inner img {
+          padding-left: 10px; }
+    .member .inner #member3 {
+      padding: 50px 20px; }
+      .member .inner #member3 .inner {
+        width: 100%; }
+        .member .inner #member3 .inner h2 {
+          font: bold 72px/1 'Poppins'; }
+        .member .inner #member3 .inner .wrap article {
+          width: 32%;
+          padding: 35px 30px;
+          margin-right: 2%;
+          position: relative; }
+          .member .inner #member3 .inner .wrap article:last-of-type {
+            margin-right: 0; }
+    .member .inner #member4 {
+      padding: 50px 20px; }
+      .member .inner #member4 .wrap_mem4 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0; }
+        .member .inner #member4 .wrap_mem4 .m4_left {
+          width: 60%;
+          float: left; }
+          .member .inner #member4 .wrap_mem4 .m4_left p {
+            font: normal 48px/1.2 'arial';
+            color: #fff; }
+          .member .inner #member4 .wrap_mem4 .m4_left strong {
+            font: bold 52px/1.2 'arial';
+            color: #fff; }
+        .member .inner #member4 .wrap_mem4 .m4_right {
+          width: 40%;
+          float: left; }
+          .member .inner #member4 .wrap_mem4 .m4_right .m4_inner {
+            width: 100%;
+            padding: 0px 0px;
+            box-sizing: border-box; }
+            .member .inner #member4 .wrap_mem4 .m4_right .m4_inner ul li input {
+              padding: 20px 30px 10px 0; }
+            .member .inner #member4 .wrap_mem4 .m4_right .m4_inner ul li textarea {
+              width: 100%;
+              padding: 20px 0px 10px 0; }
+    .member .inner img {
+      width: calc(100%);
+      padding: 30px 0; }
+    .member .inner .m2_mem4 {
+      padding-top: 0; }
+    .member .inner h3 {
+      font-size: 72px;
+      margin-bottom: 20px; }
+    .member .inner p {
+      font: 16px/1 'airal';
+      color: #333333;
+      margin-bottom: 20px; }
+    .member .inner h4 {
+      font: bold 30px/1 'arial';
+      color: #333333;
+      margin-bottom: 20px; }
+    .member .inner .m_btn {
+      display: block;
+      font: bold 16px/1 'arial';
+      color: #E47157;
+      padding-bottom: 20px; } }
 #header_sub {
   width: 100%;
   border-bottom: 1px solid #ddd;

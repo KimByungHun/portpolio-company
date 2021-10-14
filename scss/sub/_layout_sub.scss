@@ -43,6 +43,13 @@
 
 @media screen and (max-width:1179px){
     .content{
+        .sub_visual{
+            height: 220px;
+            h1{
+                font-size: 48px;
+            }
+            h2{font-size: 22px;}
+        }
         .inner{
             width: 100%;
         }
