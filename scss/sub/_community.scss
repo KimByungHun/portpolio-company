@@ -4,267 +4,83 @@
     .sub_visual{
         background:url(./../img/banner7.jpg) no-repeat center/cover fixed ;
     }
-    .inner{
-        width: 1180px;  margin: 0 auto; min-height: 500px;  border:none;
-    
-        .join_step{
-            min-height: 60px; margin-top: 40px; margin-bottom: 60px; border-bottom: 1px solid #f0f0f0; border-top: 1px solid #f0f0f0; background: #f7f7f7;
-    
-            ul{
+    .inner {
+        width: 100%; ; min-height: 500px; margin: 0px auto;
+        border: none;
+        
+        #cm4{
+            background-color: rgb(238, 246, 243);
+
+        
+            .wrap_cm4{
+                width: 1180px; margin: 0 auto; padding: 100px 50px;
+                background: url(./../img/hand-phone-call-icon.jpg) no-repeat center/cover;
+                background-size: 40%; background-position: 100% 0%;
+                
                 &::after{
                     display: block; content: ''; clear: both;
                 }
-                margin: 0 140px;
-                text-align: center;
-    
-                li{
-                    float: left;
-                    margin: 18px 0;
-                    padding: 0 40px;
-                    text-align: center;
-                    width: 300px;
-                    position: relative;
-    
-                    font: 15px/1 'arial'; color: #999999;
-    
-                    &::before{
-                        background: url();
+                .cm4_left{
+                    width: 60%; float: left;
+                    p{
+                        font-size: 28px;    
+                        font-weight: 700;
+                        line-height: 140%;
+                        color: rgba(0, 12, 30, 0.8);
+                        margin-bottom: 8px;
                     }
-                    
-                    &::after{
-                        display: block; content: ''; width: 15px; height: 15px; border-right: 1px solid #000; border-top: 1px solid #000;
-                        position: absolute;
-                        right: 0; top: 5px;
-                        transform: rotate(45deg);
-                        
-    
-                    }
-                    &:last-of-type{
-                        &::after{
-                            display: none;
-                        }
-                    }
-    
-                    .fas{
-                        font-size: 24px;
-                        padding-right: 5px;
-                        transform: translateY(3px);
-                    }
-                    
-                    &.on{
-                        color: #212121;
-                    }
-                }
-            }
-        }
-    
-        fieldset{
-            border: none;
-        }
-        
-        .step{
-            width: 1000px;
-            margin: 0 auto;
-    
-            h3{font: 18px/1 'arial'; color: #212121; margin: 0 0 18px;}
-            
-            .phone_01{
-                padding: 12px 0 30px 0;
-                height: 32px;
-    
-                ul{
-                    li{
-                        float: left;
-                        width: 94px;
+                    h2{
                         display: block;
-                        border: 1px solid #999999;
-                        text-align: center;
-                        a{
-                            font: 12px/1 'airla'; color: #212121;
-                        }
-    
-                        &.dark{
-                            background: #666666;
-                            border-color: #666666;
-                            a{color: #fff;}
-                        }
+                        font-size: 19px;
+                        font-weight: 500;
+                        line-height: 150%;
+                        color: rgba(0, 19, 43, 0.58);
+                        margin-bottom: 40px;
                     }
-                }
-            }
-    
-            .terms_01{
-                border: 1px solid #f0f0f0;
-            }
-            dl{
-                display: block;
-                overflow: hidden;
-                dt{
-                    padding: 15px 20px 15px 30px;
-                    border-top: 1px solid #f0f0f0;
-                    height: 56px;
-                    position: relative;
-                    .check{
-                        display: inline-block; height: 16px;
-                        position: absolute;
-                        left: 20px; top: 0;
-                        height: 56px; 
-                        line-height: 58px;
-                        >input{
-                            border: none; outline: none;
-                            width: 16px; height: 16px;
-                            margin-right: 10px;
-                            // border: 1px solid #111;
-                        }
-                    }
-                    .open{
-                        cursor: pointer;
-                        display: block;
-                        position: absolute;
-                        left: 55px; top: 0;
-                        height: 56px; width: 930px;
-                        line-height: 56px;
-    
-                        &::before{
-                            display: block; content: ''; width: 1px; height: 16px; background: #010101;
-                            position: absolute;
-                            right: 30px; top: 18px;
-                        }
-                        &::after{
-                            display: block; content: ''; width: 16px; height: 1px; background: #010101;
-                            position: absolute;
-                            right: 22px; top: 25px;
-                        }
-    
-                        &.on{
-                            &::before{
-                                display: none;
-                            }
-                        }
-                    }
-                }
-                
-                dd{
-                    display: none; height: 150px; overflow: hidden; padding-top: 15px; padding-bottom: 30px; border-top: 1px solid #f0f0f0;
-    
-                    .cont{
-                        height: 150px; overflow-y: auto;
-                        padding: 15px 29px; line-height: 20px;
-    
-                        .agreecont{
-                            padding: 15px 19px 15px 29px;
-                        }
-                    }
-    
-                    &.on{
-                        display: block;
-                    }
-                }
-            }
-    
-           table{
-                margin-top: 30px;
-                margin-bottom: 30px;
-    
-                width: 100%;
-                border-collapse: collapse;
-                text-align: left;
-                tr{
-                    border-top: 1px solid #f0f0f0;
-                    border-bottom: 1px solid #f0f0f0;
-                    th{
-                        width: 180px;
-                        padding: 12px 0 12px 30px;
-                        background: #f7f7f7;
-                        color: #212121;
-                    }
-                    td{
-                        width: auto;
-                        padding: 12px 30px;
-                        border-left: 1px solid #f0f0f0;
-                        position: relative;
-    
-                        .input{
-                             width: 360px; height: 32px; padding: 2px 10px 4px 10px; resize: none; border: 1px solid #ccc; line-height: 32px;
-                             margin-right: 10px;
-                        }
-                        .short{
-                            width: 169px; margin-right: 0;
-                        }
-                        .long{
-                            width: 740px;
-                            margin-top: 7px;
-                        }
-                        .slt{
-                            height: 24px; overflow: hidden;
-    
-                            select{
-                                height: 32px; padding: 5px 24px 6px 8px;
-                                border: 1px solid #dbdbdb;
-                                font-size: 13px; line-height: 24px;
-                            }
-                        }
-                        .notice_msg{
-                            display: block;
-                            margin-top: 7px;
-                            font: 12px/1 'arial'; color: #212121;
-                        }
-                        
-                        .btnD{
-                            cursor: pointer;
-                            display: inline-block; width: auto; height: 32px;
-                            margin-left: -5px;
-                            padding: 0 15px; border: 1px solid #d3d3d3;
-                            background: #fff; color: #212121; 
-    
-                            &.dark{
-                                background: #212121;
-                                color: #d3d3d3;
-                            }
-                        }
-    
-                        .addressbtnD{
-                            margin-left: 10px;
-                        }
-    
-                        
-                        .dor_list{
-                            display: block;
-                            &::after{
-                                content: ''; clear: both; display: block;
-                            }
+                    .call_wrap{
+                        ul{
                             li{
                                 float: left;
-                                .clickChb{
-                                    display: inline-block; height: 16px; position: relative;
-                                    input[type=checkbox]{
-                                        width: 16px; height: 16px; position: absolute; top: 50%; margin-top: -5px;
-                                    }
-                                    label{
-                                         padding: 0 20px; box-sizing: border-box;
-                                        font: 11px/1 'arial'; color: #212121;
-                                    }
+                                text-align: center;
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 150%;
+                                color: rgba(0, 19, 43, 0.58);
+                                span{
+                                    font-size: 19px;
+                                    font-weight: 700;
+                                    line-height: 150%;
+                                    color: rgba(3, 18, 40, 0.7);
                                 }
-                                
+                            }
+                            .call1{
+                                border-right: 2px solid rgba(0, 27, 55, 0.1);
+                                padding-right: 20px;
+                            }
+                            .call2{
+                                padding-left: 20px;
                             }
                         }
-                        
                     }
                 }
-    
+                .cm4_right{
+                    width: 40%; height: 200px; float: left; position: relative;
+                    // .cm_img{
+                    //     background-image: url(../../img/hand-phone-call-icon.jpg) no-repeat center/cover;
+                    //     position: absolute;
+                    //     top: 50%; left: 50%;
+
+
+        
+                    // }
+   
+                }
             }
-            input[type="submit"]{
-                // background: #ff5b59;
-                background: #222222;
-                width: 240px;
-                height: 60px;
-                border: none;
-                margin-top: 30px;
-    
-                font: bold 16px/1 'arial';
-                color: #ffffff;
-            }
+            
         }
+
     }
+
 }
 
 
