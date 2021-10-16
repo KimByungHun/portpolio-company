@@ -1,6 +1,7 @@
 @import "header_sub";
 
 .member {
+    
     .sub_visual {
         background:url(./../img/banner11.jpg) no-repeat center/cover ;
 
@@ -26,7 +27,7 @@
                 }
             }
         }
-        
+        //전체적인 글자크기 조절/ 푸터와 상관관계 고려
         #member2{
             width: 1180px; margin: 0 auto;
 
