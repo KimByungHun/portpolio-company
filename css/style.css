@@ -3250,7 +3250,7 @@ textarea:focus, input:focus {
     .community .inner #cm4 .wrap_cm4 {
       width: 100%;
       margin: 0 auto;
-      padding: 70px 0px 100px 0px;
+      padding: 70px 50px 100px 50px;
       background-size: 60%;
       background-position: 100% 100%; }
       .community .inner #cm4 .wrap_cm4::after {
