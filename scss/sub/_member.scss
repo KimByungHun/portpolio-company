@@ -76,7 +76,8 @@
                     margin-bottom: 50px;
                 }
 
-                .wrap{ width: 100%;
+                .wrap{ 
+                    width: 100%;
                 
                     &::after{display: block; clear: both; content: '';}
 

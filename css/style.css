@@ -2855,7 +2855,7 @@ a {
   #header_sub .inner .menuWeb .util2 {
     display: none; } }
 .community .sub_visual {
-  background: url(./../img/banner7.jpg) no-repeat center/cover fixed;
+  background: url(./../img/banner7.jpg) no-repeat center fixed;
   margin-bottom: 0;
   padding-bottom: 0; }
 .community .inner {
@@ -2966,6 +2966,12 @@ a {
             color: #E4E4E5;
             margin-bottom: 20px;
             transition: .3s; }
+          .community .inner #cm0 .wrap .left article:nth-of-type(1) a .img {
+            background: url(./../img/comminity1.jpg) no-repeat center/cover; }
+          .community .inner #cm0 .wrap .left article:nth-of-type(2) a .img {
+            background: url(./../img/comminity2.jpg) no-repeat center/cover; }
+          .community .inner #cm0 .wrap .left article:nth-of-type(3) a .img {
+            background: url(./../img/comminity3.jpg) no-repeat center/cover; }
           .community .inner #cm0 .wrap .left article:hover .img {
             transform: translateY(-10px); }
           .community .inner #cm0 .wrap .left article:hover h2 {
@@ -3044,6 +3050,12 @@ a {
           color: #E4E4E5;
           margin-bottom: 20px;
           transition: .3s; }
+        .community .inner #cm0_2 .wrap article:nth-of-type(1) a .img {
+          background: url(./../img/comminity4.jpg) no-repeat center/cover; }
+        .community .inner #cm0_2 .wrap article:nth-of-type(2) a .img {
+          background: url(./../img/comminity5.jpg) no-repeat center/cover; }
+        .community .inner #cm0_2 .wrap article:nth-of-type(3) a .img {
+          background: url(./../img/comminity6.jpg) no-repeat center/cover; }
         .community .inner #cm0_2 .wrap article:hover .img {
           transform: translateY(-10px); }
         .community .inner #cm0_2 .wrap article:hover h2 {
