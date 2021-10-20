@@ -442,12 +442,12 @@
                 width: 100%; position: relative;
                 // margin: 100px auto;
                 // min-height: 1100px;
-                padding-left: calc(1180px * 0.25);
+                padding-left: calc(1180px * 0.15);
                 border-bottom: 1px solid #02204710;
 
         
                 >dt{
-                    width: calc(1180px * 0.25); height: 80px;
+                    width: calc(1180px * 0.15); height: 80px;
                     position: absolute;
                     left: 0;
         
@@ -467,7 +467,7 @@
                         display: block;
                         width: 100%; height: 100%;
                         font: bold 20px/80px 'arial';
-                        color: #E4E4E5; text-align: center;
+                        color: #E4E4E5; text-align:left;
                         // border-radius: 10px;
                         transition: .3s;
         

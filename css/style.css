@@ -2280,7 +2280,7 @@ a {
           letter-spacing: 2px;
           padding: 15px 20px 25px 35px; }
         .member .inner #member2 .m2_left .m2_inner img {
-          padding-right: 20px; }
+          padding-right: 0px; }
     .member .inner #member2 .m2_right {
       width: 50%;
       background: #fff;
@@ -2290,7 +2290,7 @@ a {
         padding: 50px 0px 50px 50px;
         box-sizing: border-box; }
         .member .inner #member2 .m2_right .m2_inner img {
-          padding-left: 20px; }
+          padding-left: 0px; }
   .member .inner #member3 {
     width: 100%;
     background: #efefef;
@@ -2300,7 +2300,7 @@ a {
       margin: 0 auto;
       position: relative; }
       .member .inner #member3 .inner h2 {
-        font: bold 80px/1 'Poppins';
+        font: bold 72px/1 'Poppins';
         color: #555;
         text-align: center;
         padding-bottom: 100px; }
@@ -2353,8 +2353,10 @@ a {
         width: 60%;
         float: left; }
         .member .inner #member4 .wrap_mem4 .m4_left p, .member .inner #member4 .wrap_mem4 .m4_left strong {
-          font: 60px/1.2 'arial';
+          font: 48px/1.2 'arial';
           color: #fff; }
+        .member .inner #member4 .wrap_mem4 .m4_left strong {
+          font-size: 60px; }
       .member .inner #member4 .wrap_mem4 .m4_right {
         width: 40%;
         float: left; }
@@ -2399,11 +2401,11 @@ a {
   .member .inner .m2_mem4 {
     padding-top: 0; }
   .member .inner h3 {
-    font: bold 90px/1 'arial';
+    font: bold 72px/1 'arial';
     color: #333333;
     margin-bottom: 40px; }
   .member .inner p {
-    font: 16px/1 'airal';
+    font: 18px/1 'airal';
     color: #333333;
     margin-bottom: 20px; }
   .member .inner h4 {
@@ -3187,10 +3189,10 @@ a {
     .community .inner #cm3 #cm_tab {
       width: 100%;
       position: relative;
-      padding-left: calc(1180px * 0.25);
+      padding-left: calc(1180px * 0.15);
       border-bottom: 1px solid #02204710; }
       .community .inner #cm3 #cm_tab > dt {
-        width: calc(1180px * 0.25);
+        width: calc(1180px * 0.15);
         height: 80px;
         position: absolute;
         left: 0; }
@@ -3216,7 +3218,7 @@ a {
           height: 100%;
           font: bold 20px/80px 'arial';
           color: #E4E4E5;
-          text-align: center;
+          text-align: left;
           transition: .3s; }
           .community .inner #cm3 #cm_tab > dt a.on {
             background-color: #0220470D;
@@ -4332,27 +4334,98 @@ a {
   .gallery .inner {
     width: 1180px;
     min-height: 500px;
-    margin: 0px auto 100px; }
-    .gallery .inner #gallery .pop {
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 100px;
-      box-sizing: border-box; }
-      .gallery .inner #gallery .pop img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-      .gallery .inner #gallery .pop span {
-        font: bold 14px/1 'arial';
-        color: #fff;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer; }
+    margin: 0px auto 100px;
+    border: none; }
+    .gallery .inner #gallery {
+      width: 100%; }
+      .gallery .inner #gallery ul {
+        width: 100%; }
+        .gallery .inner #gallery ul::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .gallery .inner #gallery ul li {
+          float: left;
+          width: 380px;
+          height: 450px;
+          padding: 0px;
+          margin-right: 20px;
+          margin-top: 20px;
+          background: #000;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+          .gallery .inner #gallery ul li:nth-of-type(3n) {
+            margin-right: 0; }
+          .gallery .inner #gallery ul li:hover h2 {
+            color: #111; }
+          .gallery .inner #gallery ul li a {
+            display: block;
+            width: 100%;
+            height: 225px;
+            margin-bottom: 10px; }
+            .gallery .inner #gallery ul li a img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              filter: grayscale(60%) contrast(70%);
+              transition: 0.5s; }
+              .gallery .inner #gallery ul li a img:hover {
+                filter: grayscale(0%) contrast(100%); }
+          .gallery .inner #gallery ul li > span {
+            font: bold 16px/1 'arial';
+            color: #ffffff;
+            margin-top: 10px;
+            padding: 10px 20px; }
+          .gallery .inner #gallery ul li > h2 {
+            font: 15px/1 'arial';
+            color: #ffffff;
+            margin: 20px 0 10px 0;
+            padding: 10px 20px; }
+          .gallery .inner #gallery ul li:hover h2 {
+            color: #868686; }
+          .gallery .inner #gallery ul li .profile {
+            border-top: 1px solid #86868654; }
+            .gallery .inner #gallery ul li .profile::after {
+              display: block;
+              content: '';
+              clear: both; }
+            .gallery .inner #gallery ul li .profile .left {
+              float: left;
+              width: 40%; }
+              .gallery .inner #gallery ul li .profile .left > span {
+                width: 100%;
+                display: inline-block;
+                padding: 10px 20px;
+                color: #e64926;
+                font: 14px/1 'arial'; }
+            .gallery .inner #gallery ul li .profile .right {
+              float: left; }
+              .gallery .inner #gallery ul li .profile .right > span {
+                display: inline-block;
+                bottom: 0;
+                width: 100%;
+                padding: 10px;
+                color: #fff;
+                font: 14px/1 'arial'; }
+
+.pop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 100px; }
+  .pop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .pop > span {
+    font: bold 14px/1 'airal';
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; }
 
 #footer_sub {
   width: 100%;
