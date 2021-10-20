@@ -1,21 +1,186 @@
 @import "header_sub";
 
-textarea:focus, input:focus{
-    outline: none;
-}
+
 .community {
+    
     .sub_visual{
         background:url(./../img/banner7.jpg) no-repeat center/cover fixed ;
     }
     .inner {
         width: 100%; margin: 0px auto;
         border: none;
+        background-color: #101013;
+
+
+        #cm0{
+            width: 1180px; margin: 0px auto;
+            padding: 100px 0 50px 0px;
+    
+            .wrap{
+                width: 100%; height: auto;
+                position: relative;
+                .left{
+                    float: left;
+                    width: 50%;
+                    padding-right: 50px;
+    
+                    article{
+                        width: 450px;
+                        a{
+                            .img{
+                                width: 100%; height: 300px;
+                                background-color: #efefef;
+                                margin-bottom: 20px;
+                                transition: .3s;
+    
+                            }
+                            p{
+                                font-size: 15px;
+                                color: #7E7E87;
+                                margin-bottom: 20px;
+                            }
+                            span{
+                                display: block;
+                                font-size: 15px;
+                                color: #7E7E87;
+                                margin-bottom: 80px;
+                            }
+                            h2{
+                                font-size: 28px;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                                line-height: 1.2;
+                                color: #E4E4E5;
+                                margin-bottom: 20px;
+                                transition: .3s;
+    
+                            }
+                        }
+    
+                        &:hover{
+                            .img{
+                                transform: translateY(-10px);
+                            }
+                            h2{
+                                color: #3182F6;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    float: left;
+                    width: 50%;
+                    height: 1730px;
+                    top: 0;
+                    padding-left: 50px;
+                    position: relative;
+    
+                    .floating{
+                        text-align: center;
+                        width: 450px;
+                        position: -webkit-sticky;
+                        position: sticky;
+                        top: 300px;
+                        padding-top: 300px;
+                        padding-bottom: 60px;
+    
+                        top: 0px; right: 0px;
+                        h1{
+                            font-size: 44px;
+                            font-weight: bold;
+                            color: #E4E4E5;
+                            margin-bottom: 16px;
+                        }
+                        p{
+                            font-size: 20px;
+                            color: #9E9Ea9;
+                            margin-bottom: 29px;
+                        }
+                        a{
+                            display: block;
+                            margin: 0 auto;
+                            width: 120px; 
+                            height: 50px;
+                            background-color: #3182F6;
+    
+                            font-size: 15px;
+                            color: #fff;
+                            line-height: 50px;
+                            transition: .3s;
+    
+                            &:hover{
+                                background-color: #1b64DA;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #cm0_2{
+            width: 100%; margin: 0 auto;
+            background-color: #101013;
+            .wrap{
+                width: 1180px; height: auto;
+                margin: 0 auto;
+                position: relative;
+    
+                article{
+                    float: left;
+                    width: 380px;
+                    margin-right: 20px;
+
+                    a{
+                        .img{
+                            width: 100%; height: 200px;
+                            background-color: #efefef;
+                            margin-bottom: 20px;
+                            transition: .3s;
+
+                        }
+                        p{
+                            font-size: 15px;
+                            color: #7E7E87;
+                            margin-bottom: 20px;
+                        }
+                        span{
+                            display: block;
+                            font-size: 15px;
+                            color: #7E7E87;
+                            margin-bottom: 80px;
+                        }
+                        h2{
+                            font-size: 28px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            line-height: 1.2;
+                            color: #E4E4E5;
+                            margin-bottom: 20px;
+                            transition: .3s;
+                        }
+                    }
+                    &:hover{
+                        .img{
+                            transform: translateY(-10px);
+                        }
+                        h2{
+                            color: #3182F6;
+                        }
+                    }
+
+                    
+    
+                    &:last-of-type{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
 
         #cm1{
-            width: 1180px;
+            width: 100%;
             margin: 0 auto; 
             padding: 50px 0;
-            // background-color: red;
+            background-color: #efefef;
             display: block;
             h1{
                 font:bold 36px/1 'arial'; 
@@ -23,7 +188,7 @@ textarea:focus, input:focus{
                 padding-bottom: 50px;
             }
             .wrap{
-                width: 100%; margin: 0 auto; position: relative;
+                width: 1180px; margin: 0 auto; position: relative;
                 padding-bottom: 30px;
 
                 a{
@@ -69,6 +234,7 @@ textarea:focus, input:focus{
                 }
             }
             .notice{
+                width: 1180px; margin: 0 auto;
                 padding-bottom: 30px;
                 border-bottom: 1px solid #0220470D;
 
@@ -82,7 +248,7 @@ textarea:focus, input:focus{
 
                     a{
                         display: block; overflow: hidden;
-                        background-color: #fff;
+                        // background-color: #fff;
                         white-space: nowrap;
 
                         em{
@@ -96,15 +262,15 @@ textarea:focus, input:focus{
 
                             &.news{
                                 color: #d20055;
-                                background-color: #ffecf3;
+                                background-color: #fff6f9;
                             }
                             &.brand{
                                 color: #7e00d2;
-                                background-color: #f3ecff;
+                                background-color: #f9f6ff;
                             }
                             &.event{
                                 color: #a5d200;
-                                background-color: #f4ffec;
+                                background-color: #f8fff6;
                             }
                         }
                         span{
@@ -151,6 +317,7 @@ textarea:focus, input:focus{
 
             
         }
+
 
 /*
         #cm2{
@@ -224,16 +391,17 @@ textarea:focus, input:focus{
             h1{
                 font: bold 36px/1 'arial';
                 margin-bottom: 50px;
+                color: #E4E4E5;
             }
             .question{
-                border-bottom: 1px solid #0220470D;
+                border-bottom: 1px solid #E4E4E5;
                 margin-bottom: 70px; position: relative;
 
                 span{
                     i{
                         position: absolute;
                         left: 0; top: 5px;
-                        font-size: 32px; color: #0326530d;
+                        font-size: 32px; color: #E4E4E5;
                     }
                 }
 
@@ -243,6 +411,7 @@ textarea:focus, input:focus{
                     font:  32px/1 'arial';
                     border:none;
                     caret-color: #3182F6;
+                    background-color: rgba(255, 0, 0, 0);
 
                     &.on{
                         border-bottom: 1px solid #3182F6;   
@@ -281,8 +450,8 @@ textarea:focus, input:focus{
                     a{
                         display: block;
                         width: 100%; height: 100%;
-                        background-color: #fff; font: bold 20px/80px 'arial';
-                        color: #aaa; text-align: center;
+                        font: bold 20px/80px 'arial';
+                        color: #E4E4E5; text-align: center;
                         // border-radius: 10px;
                         transition: .3s;
         
@@ -299,8 +468,9 @@ textarea:focus, input:focus{
                 }
                 >dd{
                     width: 100%;
-                    background-color: #fff; padding: 0px 20px;
+                     padding: 0px 20px;
                     display: none;
+                    
         
                     &#tab1{
                         display: block;
@@ -310,16 +480,17 @@ textarea:focus, input:focus{
                         >dt{
                             padding: 30px 16px 30px 50px;
                             width: 100%;
-                            background-color: #02204704;
+                            // background-color: #02204704;
                             margin-bottom: 20px;
                             font:  19px/1 'arial';
-                            color: #4E5968;
+                            color: #E4E4E5;
                             cursor: pointer;
                             transition: .5s;
                             position: relative;
                             // border-radius: 10px;
                             &.open{
-                                background-color: #0220470D; color: #111;
+                                 color: #E4E4E5;
+                                 font-weight: bold;
                             }
                             i{
                                 position: absolute; 
@@ -349,12 +520,14 @@ textarea:focus, input:focus{
         
         
         #cm4{
+            width: 100%;
             background-color: rgb(238, 246, 243);
 
             .wrap_cm4{
                 width: 1180px; margin: 0 auto; padding: 100px 250px;
                 background: url(./../img/hand-phone-call-icon.jpg) no-repeat center/cover;
-                background-size: 40%; background-position: 100% 0%;
+                background-position: 100% 100%;
+                background-size: 400px 400px;
                 
                 &::after{
                     display: block; content: ''; clear: both;
@@ -426,13 +599,45 @@ textarea:focus, input:focus{
 @media screen and (max-width:1179px){
     .community {
         .inner {
-            width: 100%;
-            padding: 0 20px;
+            #cm0{
+                width: 100%;
+                padding: 100px 20px 50px 20px;
+                .wrap{
+                    .left{
+                        article{
+                            width: 100%;
+                            a{
+                                .img{
+                                    width: 100%; height: 300px;        
+                                }
+                            }
+                        }
+                    }
+                    .right{
+                        float: left;
+                        width: 50%;
+                        height: 1730px;
+                        padding-left: 0px;
+                    }
+                }
+            }
+            #cm0_2{
+                padding: 0 20px;
+                .wrap{
+                    width: 100%; height: auto;        
+                    article{
+                        width: 32%;
+                        margin-right: 2%;
+                    }
+                }
+            }
 
             #cm1{
                 width: 100%;
+                padding: 50px 20px;
+
                 .wrap{
-    
+                    width: 100%;
                     a{
                         width: 49%;
                         margin-bottom: 20px;
@@ -456,6 +661,8 @@ textarea:focus, input:focus{
             
             #cm3{
                 width: 100%;
+                padding: 0 20px;
+
                 #cm_tab{
                     width: 100%;
                     padding-left: 150px;
@@ -486,6 +693,8 @@ textarea:focus, input:focus{
 
                                 i{
                                     font-size: 16px;
+                                    position: absolute; 
+                                    left: 10px; top: 24px;
                                 }
 
                             }
@@ -499,10 +708,14 @@ textarea:focus, input:focus{
             
             
             #cm4{
-    
+                padding: 0 0;
+                padding: 0 20px;
+
+
                 .wrap_cm4{
                     width: 100%; margin: 0 auto; padding: 70px 50px 100px 50px;
-                    background-size: 60%; background-position: 100% 100%;
+                    background-position: 100% 100%;
+                    background-size: 300px 300px;
                     
                     &::after{
                         display: block; content: ''; clear: both;
