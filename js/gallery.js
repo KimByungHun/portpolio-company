@@ -3,11 +3,11 @@ $.ajax({
     dataType:"json", 
     data:{
         api_key:"e4dac3c336f1aa366b20a39011946539", 
-        per_page:10, 
+        per_page:12, 
         format:"json",
         nojsoncallback:1,
         privacy_filter : 5, 
-        tags :"tree"
+        tags :"mordern art"
     }
 })
 .success(function(data){

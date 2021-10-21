@@ -838,10 +838,10 @@ a {
           color: #CACACA; }
 
 #popup {
-  width: 600px;
+  width: 450px;
   position: fixed;
-  top: 70%;
-  left: 50%;
+  top: 50%;
+  left: 80%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
   box-shadow: 10px 10px 10px rgba(17, 17, 17, 0.4); }
@@ -850,17 +850,29 @@ a {
     content: '';
     clear: both; }
   #popup .pop_left {
-    width: 40%;
-    height: 300px;
+    width: 100%;
+    height: 250px;
     background: url(../img/banner10.jpg) no-repeat center/cover;
     float: left; }
+    #popup .pop_left .pop_close {
+      position: absolute;
+      top: 1px;
+      right: 2px;
+      display: block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      background-color: #111;
+      color: #fff;
+      padding-left: 2px;
+      font: bold 18px/30px 'airal'; }
   #popup .pop_right {
-    width: 60%;
-    height: 300px;
+    width: 100%;
+    height: 350px;
     background: #fff;
     float: left;
     position: relative;
-    padding: 20px 30px 0 30px;
+    padding: 40px 30px 0 30px;
     box-sizing: border-box; }
     #popup .pop_right h2 {
       font: bold 48px/1 'arial';
@@ -870,14 +882,14 @@ a {
       color: #a7a7a7;
       margin-bottom: 20px; }
       #popup .pop_right p:last-of-type {
-        margin-bottom: 30px; }
+        margin-bottom: 50px; }
     #popup .pop_right .pop_shop {
       display: block;
       margin: 0 auto;
-      width: 200px;
-      height: 50px;
+      width: 220px;
+      height: 60px;
       color: #fff;
-      font: bold 14px/50px 'poppins';
+      font: bold 16px/60px 'poppins';
       background: #111;
       letter-spacing: 1px;
       transition: .5s;
@@ -889,25 +901,12 @@ a {
     #popup .pop_right .wrap {
       float: left;
       position: absolute;
-      bottom: 0;
-      right: 0; }
+      bottom: 5px;
+      right: 10px; }
       #popup .pop_right .wrap label {
         font: 14px/1 'airal';
-        color: #e0e0e0;
+        color: #999999;
         margin-left: 4px; }
-    #popup .pop_right .pop_close {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      display: block;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      text-align: center;
-      background-color: #a2a2a2;
-      color: #fff;
-      padding-left: 2px;
-      font: 14px/20px 'airal'; }
 
 @media screen and (max-width: 1179px) {
   #header .top {
@@ -4351,12 +4350,15 @@ a {
           padding: 0px;
           margin-right: 20px;
           margin-top: 20px;
-          background: #000;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+          background: #fcfcfc;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          transition: .5s; }
           .gallery .inner #gallery ul li:nth-of-type(3n) {
             margin-right: 0; }
-          .gallery .inner #gallery ul li:hover h2 {
-            color: #111; }
+          .gallery .inner #gallery ul li:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+            .gallery .inner #gallery ul li:hover h2 {
+              color: #111; }
           .gallery .inner #gallery ul li a {
             display: block;
             width: 100%;
@@ -4371,17 +4373,17 @@ a {
               .gallery .inner #gallery ul li a img:hover {
                 filter: grayscale(0%) contrast(100%); }
           .gallery .inner #gallery ul li > span {
-            font: bold 16px/1 'arial';
-            color: #ffffff;
+            font: bold 18px/1 'arial';
+            color: #555555;
             margin-top: 10px;
             padding: 10px 20px; }
           .gallery .inner #gallery ul li > h2 {
-            font: 15px/1 'arial';
-            color: #ffffff;
+            font: 20px/1 'arial';
+            color: #868686;
             margin: 20px 0 10px 0;
             padding: 10px 20px; }
           .gallery .inner #gallery ul li:hover h2 {
-            color: #868686; }
+            color: #111; }
           .gallery .inner #gallery ul li .profile {
             border-top: 1px solid #86868654; }
             .gallery .inner #gallery ul li .profile::after {
@@ -4396,7 +4398,7 @@ a {
                 display: inline-block;
                 padding: 10px 20px;
                 color: #e64926;
-                font: 14px/1 'arial'; }
+                font: 16px/1 'arial'; }
             .gallery .inner #gallery ul li .profile .right {
               float: left; }
               .gallery .inner #gallery ul li .profile .right > span {
@@ -4404,8 +4406,8 @@ a {
                 bottom: 0;
                 width: 100%;
                 padding: 10px;
-                color: #fff;
-                font: 14px/1 'arial'; }
+                color: #555555;
+                font: 16px/1 'arial'; }
 
 .pop {
   width: 100%;
@@ -4421,7 +4423,7 @@ a {
     object-fit: cover; }
   .pop > span {
     font: bold 14px/1 'airal';
-    color: #fff;
+    color: #555555;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -4782,47 +4784,140 @@ a {
   .location .sub_visual {
     background: url(./../img/banner12.jpg) no-repeat center/cover fixed; }
   .location .inner {
-    width: 1180px;
+    width: 100%;
     min-height: 500px;
     margin: 0px auto 100px;
-    border: 1px solid #ddd; }
-    .location .inner #map {
+    border: none; }
+    .location .inner .loc1 {
+      width: 1180px;
+      height: 700px;
+      margin: 0 auto; }
+      .location .inner .loc1 > p {
+        margin-top: 50px;
+        width: 800px;
+        margin: 50px auto;
+        font: 16px/1.8 'arial';
+        text-align: center; }
+      .location .inner .loc1 .top_img {
+        width: 100%;
+        height: 400px;
+        background: url(./../img/location1.jpg) no-repeat center/cover; }
+    .location .inner .loc2 {
       width: 100%;
-      height: 500px; }
-    .location .inner .branch {
-      float: right;
-      margin-top: 20px; }
-      .location .inner .branch li {
-        float: left;
-        margin-right: 10px; }
-        .location .inner .branch li a {
+      padding: 70px 0;
+      background-color: #efefef; }
+      .location .inner .loc2 .main {
+        width: 1180px;
+        margin: 0 auto; }
+        .location .inner .loc2 .main::after {
+          content: '';
           display: block;
-          width: 200px;
-          height: 40px;
-          background: #555;
-          font: bold 12px/40px '맑은 고딕';
-          color: #fff;
-          text-align: center; }
-        .location .inner .branch li.on a {
-          background: #aaa;
-          color: #333; }
-    .location .inner .traffic {
-      float: left;
-      margin-top: 20px; }
-      .location .inner .traffic li {
+          clear: both; }
+        .location .inner .loc2 .main .left {
+          width: 50%;
+          float: left;
+          padding: 20px 20px 20px 0; }
+          .location .inner .loc2 .main .left .main_img {
+            width: 100%;
+            height: 550px;
+            background: url(./../img/location2.jpg) no-repeat center/cover;
+            transform: rotate(-90deg); }
+        .location .inner .loc2 .main .right {
+          width: 50%;
+          float: left;
+          padding: 20px 0px 20px 20px; }
+    .location .inner .loc2_2 {
+      width: 1180px;
+      padding: 100px 0;
+      margin: 0 auto; }
+      .location .inner .loc2_2::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .location .inner .loc2_2 h2 {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 0 65px;
+        font-size: 42px;
+        position: relative; }
+        .location .inner .loc2_2 h2::before {
+          position: absolute;
+          content: '';
+          top: 49%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 470px;
+          height: 6px;
+          border-top: solid 1px #000;
+          border-bottom: solid 1px #000; }
+        .location .inner .loc2_2 h2::after {
+          position: absolute;
+          content: '';
+          top: 49%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 470px;
+          height: 6px;
+          border-top: solid 1px #000;
+          border-bottom: solid 1px #000; }
+      .location .inner .loc2_2 .left {
+        width: 50%;
         float: left;
-        margin-right: 10px; }
-        .location .inner .traffic li a {
-          display: block;
-          width: 200px;
-          height: 40px;
-          background: #555;
-          font: bold 12px/40px "맑은 고딕";
-          color: #fff;
-          text-align: center; }
-        .location .inner .traffic li.on a {
-          background: #aaa;
-          color: #333; }
+        padding: 20px 20px 20px 0; }
+        .location .inner .loc2_2 .left .second_img1 {
+          width: 100%;
+          height: 550px;
+          background: url(./../img/location3.jpg) no-repeat center/cover; }
+      .location .inner .loc2_2 .right {
+        width: 50%;
+        float: left;
+        padding: 20px 0 20px 20px; }
+        .location .inner .loc2_2 .right .second_img2 {
+          width: 100%;
+          height: 550px;
+          background: url(./../img/location4.jpg) no-repeat center/cover; }
+    .location .inner .loc3 {
+      width: 1180px;
+      margin: 0 auto; }
+      .location .inner .loc3 #map {
+        width: 100%;
+        height: 500px; }
+      .location .inner .loc3 .branch {
+        float: right;
+        margin-top: 20px; }
+        .location .inner .loc3 .branch li {
+          float: left;
+          margin-right: 10px; }
+          .location .inner .loc3 .branch li a {
+            display: block;
+            width: 200px;
+            height: 40px;
+            background: #555;
+            font: bold 12px/40px '맑은 고딕';
+            color: #fff;
+            text-align: center; }
+          .location .inner .loc3 .branch li.on a {
+            background: #aaa;
+            color: #333; }
+      .location .inner .loc3 .traffic {
+        float: left;
+        margin-top: 20px; }
+        .location .inner .loc3 .traffic li {
+          float: left;
+          margin-right: 10px; }
+          .location .inner .loc3 .traffic li a {
+            display: block;
+            width: 200px;
+            height: 40px;
+            background: #555;
+            font: bold 12px/40px "맑은 고딕";
+            color: #fff;
+            text-align: center; }
+          .location .inner .loc3 .traffic li.on a {
+            background: #aaa;
+            color: #333; }
 
 #footer_sub {
   width: 100%;

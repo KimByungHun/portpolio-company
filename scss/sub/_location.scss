@@ -7,16 +7,126 @@
         background:url(./../img/banner12.jpg) no-repeat center/cover fixed;
     }
     .inner {
-        width: 1180px; min-height: 500px; margin: 0px auto 100px;
-        border: 1px solid #ddd;
+      width: 100%; min-height: 500px; margin: 0px auto 100px;
+      border:none;
 
+      .loc1{
+         width: 1180px;
+         height: 700px;
+         margin: 0 auto;
+         >p{
+            margin-top: 50px;
+            width: 800px; margin: 50px auto;
 
-        #map{
-            width:100%; 
-            height:500px;    
-          
+            font: 16px/1.8 'arial';
+            text-align: center;
+         }
+         .top_img{
+            width: 100%; height: 400px;
+            background: url(./../img/location1.jpg) no-repeat center/cover
+         }
+      }
+
+      .loc2{
+         width: 100%; padding: 70px 0;
+         background-color: #efefef;
+         .main{
+            width: 1180px;
+            margin:0 auto;
+            &::after{
+               content: ''; display: block; clear: both;
+            }
+            .left{
+               width: 50%;
+               float: left;
+              padding: 20px 20px 20px 0;
+
+               .main_img{
+                  width: 100%;
+                  height: 550px;
+                  background: url(./../img/location2.jpg) no-repeat center/cover;
+                  transform: rotate(-90deg);
+               }
+            }
+            .right{
+               width: 50%;
+               float: left;
+            padding: 20px 0px 20px 20px;
+
+            }
          }
          
+      }
+      .loc2_2{
+         width: 1180px;
+         padding: 100px 0;
+         margin: 0 auto;
+         &::after{
+            content: ''; display: block; clear: both;
+         }
+         h2{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 0 65px;
+            font-size: 42px;
+            position: relative;
+
+            &::before{
+               position: absolute;
+               content: '';
+               top: 49%;
+               transform: translateY(-50%);
+               left: 0;
+               width: 470px;
+               height: 6px;
+               border-top: solid 1px #000;
+               border-bottom: solid 1px #000;
+            }
+            &::after{
+               position: absolute;
+               content: '';
+               top: 49%;
+               transform: translateY(-50%);
+               right: 0;
+               width: 470px;
+               height: 6px;
+               border-top: solid 1px #000;
+               border-bottom: solid 1px #000;
+            }
+         }
+         .left{
+            width: 50%;
+            float: left;
+            padding: 20px 20px 20px 0;
+            .second_img1{
+            width: 100%;
+            height: 550px;
+            background: url(./../img/location3.jpg) no-repeat center/cover;
+            }
+         }
+         .right{
+            width: 50%;
+            float: left;
+            padding: 20px 0 20px 20px;
+            .second_img2{
+               width: 100%;
+               height: 550px;
+               background: url(./../img/location4.jpg) no-repeat center/cover;
+               }
+         }
+
+
+      }
+      .loc3{
+         width: 1180px;
+         margin: 0 auto;
+         #map{
+            width:100%; 
+          height:500px;    
+         }  
+
          .branch{
             float:right; 
             margin-top:20px; 
@@ -38,6 +148,8 @@
                }
             }
          }
+
+
          
          .traffic{
             float:left; margin-top:20px; 
@@ -59,6 +171,7 @@
                }
             }
          }
+      }
     }
 }
 
