@@ -25,7 +25,7 @@
                     width: 300px;
                     position: relative;
     
-                    font: 15px/1 'arial'; color: #999999;
+                    font: 15px/1 'poppins'; color: #999999;
     
                     &::before{
                         background: url();
@@ -66,7 +66,7 @@
             width: 1000px;
             margin: 0 auto;
     
-            h3{font: 18px/1 'arial'; color: #212121; margin: 0 0 18px;}
+            h3{font: 18px/1 'poppins'; color: #212121; margin: 0 0 18px;}
             
             .phone_01{
                 padding: 12px 0 30px 0;
@@ -80,7 +80,7 @@
                         border: 1px solid #999999;
                         text-align: center;
                         a{
-                            font: 12px/1 'airla'; color: #212121;
+                            font: 12px/1 'poppins'; color: #212121;
                         }
     
                         &.dark{
@@ -260,7 +260,7 @@
                 border: none;
                 margin-top: 30px;
     
-                font: bold 16px/1 'arial';
+                font: bold 16px/1 'poppins';
                 color: #ffffff;
             }
         }

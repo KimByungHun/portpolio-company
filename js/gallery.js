@@ -3,11 +3,11 @@ $.ajax({
     dataType:"json", 
     data:{
         api_key:"e4dac3c336f1aa366b20a39011946539", 
-        per_page:10, 
+        per_page:12, 
         format:"json",
         nojsoncallback:1,
         privacy_filter : 5, 
-        tags :"city"
+        tags :"mordern art"
     }
 })
 .success(function(data){
@@ -39,15 +39,27 @@ $.ajax({
                         )
                     )
                     .append(
-                        $("<p>").text(text)
+                        $("<span>").text("TITLE"),
+                        $("<h2>").text(text)
                     )
                     .append(
                         $("<div class='profile'>")
                             .append(
-                                $("<img>").attr({
-                                    src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
-                                }),
-                                $("<span>").text(data.owner)
+                                $("<div class='left'>").append(
+                                    $("<span>").text("owner"),
+                                    $("<span>").text("date"),
+                                    $("<span>").text("tags")
+
+                                ),
+                                
+                                // $("<img>").attr({
+                                //     src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
+                                // }),
+                                $("<div class='right'>").append(
+                                    $("<span>").text(data.owner),
+                                    $("<span>").text(data.time)
+
+                                )
                             )
                     )
             )
