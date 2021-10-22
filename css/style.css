@@ -4858,7 +4858,7 @@ a {
               color: #666666; }
     .location .inner .loc2_2 {
       width: 1180px;
-      padding: 100px 0;
+      padding: 100px 0 50px;
       margin: 0 auto; }
       .location .inner .loc2_2::after {
         content: '';
@@ -4940,7 +4940,6 @@ a {
     .location .inner .loc3 {
       width: 1180px;
       margin: 0 auto;
-      padding: 50px 0;
       position: relative; }
       .location .inner .loc3 #map {
         width: 100%;
@@ -5002,6 +5001,217 @@ a {
       .location .inner .location_btn:nth-of-type(3) {
         margin: 20px auto; }
 
+@media screen and (max-width: 1179px) {
+  .location .inner {
+    width: 100%;
+    min-height: 500px;
+    margin: 0px auto 100px;
+    border: none; }
+    .location .inner .loc1 {
+      width: 100%;
+      height: auto;
+      margin: 50px auto; }
+      .location .inner .loc1 .top_img {
+        width: 100%;
+        height: 400px; }
+    .location .inner .loc2 {
+      width: 100%;
+      padding: 30px 20px; }
+      .location .inner .loc2 .main {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto; }
+        .location .inner .loc2 .main::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .location .inner .loc2 .main .left {
+          width: 50%;
+          float: left;
+          padding: 20px 20px 20px 0;
+          overflow: hidden; }
+          .location .inner .loc2 .main .left .main_img {
+            height: 750px;
+            background-image: url(./../img/location2.jpg) no-repeat center/cover; }
+        .location .inner .loc2 .main .right {
+          width: 50%;
+          float: left;
+          padding: 20px 20px 20px 20px; }
+          .location .inner .loc2 .main .right h3 {
+            font: bold 30px/1.3 'poppins';
+            color: #333333;
+            margin-bottom: 20px; }
+          .location .inner .loc2 .main .right p {
+            font: 22px/1.4 'Poppins';
+            color: #666666;
+            margin-bottom: 40px; }
+          .location .inner .loc2 .main .right dl {
+            width: 100%;
+            display: block; }
+            .location .inner .loc2 .main .right dl::after {
+              content: '';
+              display: block;
+              clear: both; }
+            .location .inner .loc2 .main .right dl dt {
+              display: block;
+              float: left;
+              width: 20%;
+              height: 50px;
+              line-height: 50px; }
+            .location .inner .loc2 .main .right dl dd {
+              float: left;
+              width: 80%;
+              height: auto;
+              display: block;
+              font: 22px/50px 'poppins'; }
+            .location .inner .loc2 .main .right dl i {
+              font-size: 22px;
+              color: #666666; }
+    .location .inner .loc2_2 {
+      width: 100%;
+      padding: 50px 20px 50px;
+      margin: 0 auto; }
+      .location .inner .loc2_2::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .location .inner .loc2_2 h2 {
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 0 65px;
+        font-size: 42px;
+        position: relative; }
+        .location .inner .loc2_2 h2::before {
+          position: absolute;
+          content: '';
+          top: 49%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 50px;
+          height: 6px;
+          border-top: solid 1px #000;
+          border-bottom: solid 1px #000; }
+        .location .inner .loc2_2 h2::after {
+          position: absolute;
+          content: '';
+          top: 49%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 50px;
+          height: 6px;
+          border-top: solid 1px #000;
+          border-bottom: solid 1px #000; }
+      .location .inner .loc2_2 .left {
+        width: 50%;
+        float: left;
+        padding: 20px 20px 20px 0; }
+        .location .inner .loc2_2 .left .second_img1 {
+          width: 100%;
+          height: 550px;
+          background: url(./../img/location3.jpg) no-repeat center/cover; }
+      .location .inner .loc2_2 .right {
+        width: 50%;
+        float: left;
+        padding: 20px 0 20px 20px; }
+        .location .inner .loc2_2 .right .second_img2 {
+          width: 100%;
+          height: 550px;
+          background: url(./../img/location4.jpg) no-repeat center/cover; }
+      .location .inner .loc2_2 h3 {
+        font: bold 30px/1.3 'poppins';
+        color: #333333;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        text-align: center; }
+      .location .inner .loc2_2 dl {
+        width: 70%;
+        display: block;
+        margin: 0 auto; }
+        .location .inner .loc2_2 dl::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .location .inner .loc2_2 dl dt {
+          display: block;
+          float: left;
+          width: 20%;
+          height: 50px;
+          line-height: 50px; }
+        .location .inner .loc2_2 dl dd {
+          float: left;
+          width: 80%;
+          display: block;
+          height: auto;
+          font: 22px/50px 'poppins'; }
+        .location .inner .loc2_2 dl i {
+          font-size: 22px;
+          color: #666666; }
+    .location .inner .loc3 {
+      width: 100%;
+      margin: 0 auto;
+      position: relative; }
+      .location .inner .loc3 #map {
+        width: 100%;
+        height: 700px; }
+      .location .inner .loc3 .branch {
+        float: right;
+        margin-top: 20px; }
+        .location .inner .loc3 .branch li {
+          float: left;
+          margin-right: 10px; }
+          .location .inner .loc3 .branch li a {
+            display: block;
+            width: 200px;
+            height: 40px;
+            background: #555;
+            font: bold 12px/40px '맑은 고딕';
+            color: #fff;
+            text-align: center; }
+          .location .inner .loc3 .branch li.on a {
+            background: #aaa;
+            color: #333; }
+      .location .inner .loc3 .traffic {
+        float: left;
+        margin-top: 20px;
+        position: absolute;
+        left: 0;
+        bottom: 60px;
+        z-index: 3; }
+        .location .inner .loc3 .traffic li {
+          float: left;
+          margin-right: 10px; }
+          .location .inner .loc3 .traffic li a {
+            display: block;
+            width: 100px;
+            height: 40px;
+            background: #fff;
+            border-radius: 10px;
+            font: bold 12px/40px "맑은 고딕";
+            color: #111;
+            text-align: center; }
+          .location .inner .loc3 .traffic li.on a {
+            background: #3182F6;
+            color: #fff; }
+    .location .inner .location_btn {
+      display: block;
+      margin-top: 20px;
+      width: 300px;
+      height: 80px;
+      text-align: center;
+      font: 24px/80px 'poppins';
+      color: #333333;
+      background: none;
+      border: 1px solid #666666; }
+      .location .inner .location_btn i {
+        font-size: 24px;
+        margin-right: 20px; }
+      .location .inner .location_btn:nth-of-type(2) {
+        margin: 20px auto; }
+      .location .inner .location_btn:nth-of-type(3) {
+        margin: 20px auto; } }
 #footer_sub {
   width: 100%;
   background: #fff; }
