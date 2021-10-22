@@ -35,7 +35,10 @@ var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 
-const branch_btns = document.querySelectorAll(".branch li"); 
+const branch_btns1 = document.querySelector(".branch .loc_A"); 
+const branch_btns2 = document.querySelector(".branch .loc_B"); 
+const branch_btns3 = document.querySelector(".branch .loc_C"); 
+
 const markerOptions = [
     {
         title : "본점",
@@ -43,7 +46,7 @@ const markerOptions = [
         imgSrc : "img/marker1.png",
         imgSize : new kakao.maps.Size(70, 70),
         imgPos : {offset: new kakao.maps.Point(35, 35)},
-        button : branch_btns[0]
+        button : branch_btns1
     },
     {
         title : "지점1",
@@ -51,7 +54,7 @@ const markerOptions = [
         imgSrc : "img/marker2.png",
         imgSize : new kakao.maps.Size(70, 70),
         imgPos : {offset: new kakao.maps.Point(35, 35)},
-        button : branch_btns[1]
+        button : branch_btns2
     },
     {
         title : "지점2",
@@ -59,7 +62,7 @@ const markerOptions = [
         imgSrc : "img/marker3.png",
         imgSize : new kakao.maps.Size(55, 60),
         imgPos : {offset: new kakao.maps.Point(35, 35)},
-        button : branch_btns[2]
+        button : branch_btns3
     }
 ];
 
