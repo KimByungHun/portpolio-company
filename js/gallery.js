@@ -3,10 +3,10 @@ $.ajax({
     dataType:"json", 
     data:{
         api_key:"e4dac3c336f1aa366b20a39011946539", 
-        per_page:12, 
+        per_page:21, 
         format:"json",
         nojsoncallback:1,
-        privacy_filter : 5, 
+        privacy_filter : 1, 
         tags :"mordern art"
     }
 })
