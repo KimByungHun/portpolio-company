@@ -3,10 +3,11 @@ $.ajax({
     dataType:"json", 
     data:{
         api_key:"e4dac3c336f1aa366b20a39011946539", 
-        per_page:12, 
+        // datetime: "4",
+        per_page:21, 
         format:"json",
         nojsoncallback:1,
-        privacy_filter : 5, 
+        privacy_filter : 1, 
         tags :"mordern art"
     }
 })
@@ -14,10 +15,9 @@ $.ajax({
     console.log(data.photos.photo); 
     let items = data.photos.photo; 
 
-    //#gallery프레임안에 ul 태그 생성 
+    
     $("#gallery").append("<ul>");
 
-    //이미지 데이터 갯수만큼 안쪽 코드 반복 
     $(items).each(function(index, data){
 
         let text = data.title; 
@@ -39,16 +39,16 @@ $.ajax({
                         )
                     )
                     .append(
-                        $("<span>").text("TITLE"),
+                        // $("<span>").text("TITLE"),
                         $("<h2>").text(text)
                     )
                     .append(
                         $("<div class='profile'>")
                             .append(
                                 $("<div class='left'>").append(
-                                    $("<span>").text("owner"),
+                                    // $("<span>").text("owner"),
                                     $("<span>").text("date"),
-                                    $("<span>").text("tags")
+                                    // $("<span>").text("tags")
 
                                 ),
                                 
@@ -56,8 +56,11 @@ $.ajax({
                                 //     src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
                                 // }),
                                 $("<div class='right'>").append(
-                                    $("<span>").text(data.owner),
-                                    $("<span>").text(data.time)
+                                    $("<img>").attr({
+                                        src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
+                                    })
+                                    // $("<span>").text(data.datetime),
+                                    // $("<span>").text(data.time)
 
                                 )
                             )
