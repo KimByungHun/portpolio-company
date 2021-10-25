@@ -31,6 +31,7 @@
                     background: rgb(252, 252, 252);
                     box-shadow: 2px 2px 4px rgba(0,0,0, 0.1);
 
+
                     transition: .5s;
         
                     &:nth-of-type(3n){
@@ -72,6 +73,8 @@
                         color: #868686;
                         margin: 20px 0 10px 0;
                         padding: 10px 20px;
+                        border-bottom: 1px solid #86868654;
+
                     }
                     &:hover{
                             h2{
@@ -79,7 +82,11 @@
                             }
                     }
                     .profile{
-                        border-top: 1px solid #86868654;
+                        margin-top: 80px;
+                        // padding-top: 70px;
+                        position: relative;
+
+
 
                         &::after{
                             display: block; content: ''; clear: both;
@@ -104,6 +111,13 @@
                                 padding:10px ;
                                 color: #555555;
                                 font: 16px/1 'poppins';
+                            }
+                            >img{
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 10px;
+                                // bottom: 10px;
                             }
                         }
                     }

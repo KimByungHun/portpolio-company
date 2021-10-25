@@ -4381,11 +4381,13 @@ a {
             font: 20px/1 'poppins';
             color: #868686;
             margin: 20px 0 10px 0;
-            padding: 10px 20px; }
+            padding: 10px 20px;
+            border-bottom: 1px solid #86868654; }
           .gallery .inner #gallery ul li:hover h2 {
             color: #111; }
           .gallery .inner #gallery ul li .profile {
-            border-top: 1px solid #86868654; }
+            margin-top: 80px;
+            position: relative; }
             .gallery .inner #gallery ul li .profile::after {
               display: block;
               content: '';
@@ -4408,6 +4410,11 @@ a {
                 padding: 10px;
                 color: #555555;
                 font: 16px/1 'poppins'; }
+              .gallery .inner #gallery ul li .profile .right > img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px; }
 
 .pop {
   width: 100%;
