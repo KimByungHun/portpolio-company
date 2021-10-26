@@ -91,10 +91,10 @@ $("body").on("click", ".pop span", function(){
     $(".pop").remove(); 
 });
 
-window.addEventListener("load", ()=>{
-    const grid = new Isotope(".ul",{
-        itemSelector : ".li",
-        columWidth: ".li",
-        transitionDuration : "0.5s"
-    });
-});
+// window.addEventListener("load", ()=>{
+//     const grid = new Isotope(".ul",{
+//         itemSelector : ".li",
+//         columWidth: ".li",
+//         transitionDuration : "0.5s"
+//     });
+// });
