@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 * {
   margin: 0px;
@@ -2274,7 +2274,7 @@ a {
         padding: 50px 50px 50px 0px;
         box-sizing: border-box; }
         .member .inner #member2 .m2_left .m2_inner h3 {
-          font: bold 72px/1 'poppins'; }
+          font: bold 52px/1 'poppins'; }
         .member .inner #member2 .m2_left .m2_inner .m2_txt {
           letter-spacing: 2px;
           padding: 15px 0px 25px 0px; }
@@ -2299,12 +2299,12 @@ a {
       margin: 0 auto;
       position: relative; }
       .member .inner #member3 .inner h2 {
-        font: bold 72px/1 'Poppins';
+        font: bold 52px/1 'Poppins';
         color: #555;
         text-align: center;
         padding-bottom: 100px; }
       .member .inner #member3 .inner .m3_txt {
-        font: 22px/1.4 'Poppins';
+        font: 20px/1.4 'Poppins';
         width: 70%;
         margin: 0 auto;
         color: #666666;
@@ -2352,7 +2352,7 @@ a {
         width: 60%;
         float: left; }
         .member .inner #member4 .wrap_mem4 .m4_left p, .member .inner #member4 .wrap_mem4 .m4_left strong {
-          font: 48px/1.2 'poppins';
+          font: 36px/1.2 'poppins';
           color: #fff; }
         .member .inner #member4 .wrap_mem4 .m4_left strong {
           font-size: 60px; }
@@ -2400,7 +2400,7 @@ a {
   .member .inner .m2_mem4 {
     padding-top: 0; }
   .member .inner h3 {
-    font: bold 72px/1 'arial';
+    font: bold 56px/1 'arial';
     color: #333333;
     margin-bottom: 40px; }
   .member .inner p {
@@ -2618,7 +2618,7 @@ a {
       .member .inner #member3 .inner {
         width: 100%; }
         .member .inner #member3 .inner h2 {
-          font: bold 72px/1 'Poppins'; }
+          font: bold 48px/1 'Poppins'; }
         .member .inner #member3 .inner .wrap article {
           width: 32%;
           padding: 35px 30px;
@@ -2659,10 +2659,10 @@ a {
     .member .inner .m2_mem4 {
       padding-top: 0; }
     .member .inner h3 {
-      font-size: 72px;
+      font-size: 48px;
       margin-bottom: 20px; }
     .member .inner p {
-      font: 16px/1 'airal';
+      font: 18px/1 'airal';
       color: #333333;
       margin-bottom: 20px; }
     .member .inner h4 {
@@ -3890,8 +3890,9 @@ a {
         border-top: 4px solid #333; }
         .youtube .inner #video article .con h2 {
           width: 95%;
-          font: bold 42px/1.2 'poppins';
+          font: 36px/1.2 'poppins';
           margin-bottom: 20px;
+          font-weight: 500;
           color: #333333; }
         .youtube .inner #video article .con p {
           width: 99%;
@@ -4346,7 +4347,7 @@ a {
         .gallery .inner #gallery ul li {
           float: left;
           width: 380px;
-          height: 450px;
+          height: auto;
           padding: 0px;
           margin-right: 20px;
           margin-top: 20px;
@@ -4362,7 +4363,7 @@ a {
           .gallery .inner #gallery ul li a {
             display: block;
             width: 100%;
-            height: 225px;
+            height: auto;
             margin-bottom: 10px; }
             .gallery .inner #gallery ul li a img {
               width: 100%;
@@ -4402,7 +4403,7 @@ a {
                 color: #e64926;
                 font: 16px/1 'poppins'; }
             .gallery .inner #gallery ul li .profile .right {
-              float: left; }
+              float: right; }
               .gallery .inner #gallery ul li .profile .right > span {
                 display: inline-block;
                 bottom: 0;
@@ -4436,6 +4437,97 @@ a {
     right: 20px;
     cursor: pointer; }
 
+@media screen and (max-width: 1179px) {
+  .gallery {
+    width: 100%; }
+    .gallery .sub_visual {
+      background: url(./../img/banner8.jpg) no-repeat center/cover fixed; }
+    .gallery .inner {
+      width: 100%;
+      min-height: 500px;
+      margin: 0px auto 100px;
+      border: none; }
+      .gallery .inner #gallery {
+        width: 100%; }
+        .gallery .inner #gallery ul {
+          width: 100%;
+          padding: 0 20px; }
+          .gallery .inner #gallery ul::after {
+            content: '';
+            display: block;
+            clear: both; }
+          .gallery .inner #gallery ul li {
+            float: left;
+            width: 49%;
+            height: auto;
+            padding: 0px;
+            margin-right: 1%;
+            margin-top: 20px;
+            background: #fcfcfc;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: .5s; }
+            .gallery .inner #gallery ul li:nth-of-type(2n) {
+              margin-right: 0; }
+            .gallery .inner #gallery ul li:hover {
+              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+              .gallery .inner #gallery ul li:hover h2 {
+                color: #111; }
+            .gallery .inner #gallery ul li a {
+              display: block;
+              width: 100%;
+              height: 225px;
+              margin-bottom: 10px; }
+              .gallery .inner #gallery ul li a img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(60%) contrast(70%);
+                transition: 0.5s; }
+                .gallery .inner #gallery ul li a img:hover {
+                  filter: grayscale(0%) contrast(100%); }
+            .gallery .inner #gallery ul li > span {
+              font: bold 18px/1 'poppins';
+              color: #555555;
+              margin-top: 10px;
+              padding: 10px 20px; }
+            .gallery .inner #gallery ul li > h2 {
+              font: 20px/1 'poppins';
+              color: #868686;
+              margin: 20px 0 10px 0;
+              padding: 10px 20px;
+              border-bottom: 1px solid #86868654; }
+            .gallery .inner #gallery ul li:hover h2 {
+              color: #111; }
+            .gallery .inner #gallery ul li .profile {
+              margin-top: 80px;
+              position: relative; }
+              .gallery .inner #gallery ul li .profile::after {
+                display: block;
+                content: '';
+                clear: both; }
+              .gallery .inner #gallery ul li .profile .left {
+                float: left;
+                width: 40%; }
+                .gallery .inner #gallery ul li .profile .left > span {
+                  width: 100%;
+                  display: inline-block;
+                  padding: 10px 20px;
+                  color: #e64926;
+                  font: 16px/1 'poppins'; }
+              .gallery .inner #gallery ul li .profile .right {
+                float: right; }
+                .gallery .inner #gallery ul li .profile .right > span {
+                  display: inline-block;
+                  bottom: 0;
+                  width: 100%;
+                  padding: 10px;
+                  color: #555555;
+                  font: 16px/1 'poppins'; }
+                .gallery .inner #gallery ul li .profile .right > img {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 10px; } }
 #footer_sub {
   width: 100%;
   background: #fff; }
@@ -4803,7 +4895,7 @@ a {
         margin-top: 50px;
         width: 80%;
         margin: 50px auto;
-        font: 24px/1.8 'poppins';
+        font: 22px/1.8 'poppins';
         text-align: center; }
       .location .inner .loc1 .top_img {
         width: 100%;
@@ -4838,7 +4930,7 @@ a {
             color: #333333;
             margin-bottom: 20px; }
           .location .inner .loc2 .main .right p {
-            font: 22px/1.4 'Poppins';
+            font: 20px/1.4 'Poppins';
             color: #666666;
             margin-bottom: 40px; }
           .location .inner .loc2 .main .right dl {
@@ -4859,7 +4951,7 @@ a {
               width: 80%;
               display: block;
               height: 50px;
-              font: 22px/50px 'poppins'; }
+              font: 18px/50px 'poppins'; }
             .location .inner .loc2 .main .right dl i {
               font-size: 22px;
               color: #666666; }
@@ -4940,7 +5032,7 @@ a {
           width: 80%;
           display: block;
           height: 50px;
-          font: 22px/50px 'poppins'; }
+          font: 18px/50px 'poppins'; }
         .location .inner .loc2_2 dl i {
           font-size: 22px;
           color: #666666; }
@@ -5206,9 +5298,9 @@ a {
       display: block;
       margin-top: 20px;
       width: 300px;
-      height: 80px;
+      height: 60px;
       text-align: center;
-      font: 24px/80px 'poppins';
+      font: 20px/60px 'poppins';
       color: #333333;
       background: none;
       border: 1px solid #666666; }

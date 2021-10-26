@@ -16,7 +16,7 @@ $.ajax({
     let items = data.photos.photo; 
 
     
-    $("#gallery").append("<ul>");
+    $("#gallery").append("<ul class='ul'>");
 
     $(items).each(function(index, data){
 
@@ -25,9 +25,9 @@ $.ajax({
             text = "No description in this photo"; 
         }
 
-        $("#gallery ul")
+        $("#gallery .ul")
             .append(
-                $("<li>")
+                $("<li class='li'>")
                     .append(
                         $("<a>").attr({
                             href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
@@ -56,10 +56,10 @@ $.ajax({
                                 //     src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
                                 // }),
                                 $("<div class='right'>").append(
-                                    $("<img>").attr({
-                                        src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
-                                    })
-                                    // $("<span>").text(data.datetime),
+                                    // $("<img>").attr({
+                                    //     src : "https://www.flickr.com/buddyicons/"+data.owner+".jpg"
+                                    // })
+                                    $("<span>").text(data.owner)
                                     // $("<span>").text(data.time)
 
                                 )
@@ -89,4 +89,12 @@ $("body").on("click", "#gallery ul li", function(e){
 
 $("body").on("click", ".pop span", function(){
     $(".pop").remove(); 
+});
+
+window.addEventListener("load", ()=>{
+    const grid = new Isotope(".ul",{
+        itemSelector : ".li",
+        columWidth: ".li",
+        transitionDuration : "0.5s"
+    });
 });
