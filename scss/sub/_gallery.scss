@@ -24,7 +24,7 @@
                 li{
                     float: left;
                     width: 380px;
-                    height: 450px;
+                    height: auto;
                     padding: 0px;
                     margin-right: 20px;
                     margin-top: 20px;
@@ -47,7 +47,7 @@
                     }
                     a{
                         display: block;
-                        width: 100%; height: 225px;
+                        width: 100%; height: auto;
                         margin-bottom: 10px;
         
                         
@@ -103,7 +103,7 @@
                             }
                         }
                         .right{
-                            float: left;
+                            float: right;
                             >span{
                                 display: inline-block;
                                 bottom: 0;
@@ -144,6 +144,136 @@
         position: absolute;
         top: 20px; right: 20px;
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width:1179px){
+    .gallery {
+        width: 100%;
+    
+        .sub_visual {
+            background:url(./../img/banner8.jpg) no-repeat center/cover fixed;
+        }
+        .inner {
+            width: 100%; min-height: 500px; margin: 0px auto 100px;
+            border: none;
+            // border: 1px solid #ddd;
+    
+            #gallery{
+                width: 100%;
+            
+                ul{
+                    width: 100%;
+                    padding: 0 20px;
+                    
+                    &::after{
+                        content: ''; display: block; clear: both;
+                    }
+            
+                    li{
+                        float: left;
+                        width: 49%;
+                        height: auto;
+                        padding: 0px;
+                        margin-right: 1%;
+                        margin-top: 20px;
+                        background: rgb(252, 252, 252);
+                        box-shadow: 2px 2px 4px rgba(0,0,0, 0.1);
+    
+    
+                        transition: .5s;
+            
+                        &:nth-of-type(2n){
+                            margin-right: 0;
+                        }
+            
+                        &:hover {
+                            box-shadow: 5px 5px 10px rgba(0,0,0, 0.2);
+                            h2{
+                                color: #111;
+                            }
+                
+                        }
+                        a{
+                            display: block;
+                            width: 100%; height: 225px;
+                            margin-bottom: 10px;
+            
+                            
+                            img{
+                                width: 100%; height: 100%;
+                                object-fit: cover;
+                                filter: grayscale(60%) contrast(70%);
+                                transition: 0.5s;
+                                &:hover{
+                                    filter: grayscale(0%) contrast(100%);
+                                }
+                            }
+                        }
+            
+                        >span{
+                            font: bold 18px/1 'poppins';
+                            color: #555555;
+                            margin-top: 10px;
+                            padding: 10px 20px;
+                        }
+                        >h2{
+                            font: 20px/1 'poppins';
+                            color: #868686;
+                            margin: 20px 0 10px 0;
+                            padding: 10px 20px;
+                            border-bottom: 1px solid #86868654;
+    
+                        }
+                        &:hover{
+                                h2{
+                                    color: #111;
+                                }
+                        }
+                        .profile{
+                            margin-top: 80px;
+                            // padding-top: 70px;
+                            position: relative;
+    
+    
+    
+                            &::after{
+                                display: block; content: ''; clear: both;
+                            }
+                            .left{
+                                float: left;
+                                width: 40%;
+                                >span{
+                                    width: 100%;
+                                    display: inline-block;
+                                    padding:10px 20px;
+                                    color: #e64926;
+                                    font: 16px/1 'poppins';
+                                }
+                            }
+                            .right{
+                                float: right;
+                                >span{
+                                    display: inline-block;
+                                    bottom: 0;
+                                    width: 100%;
+                                    padding:10px ;
+                                    color: #555555;
+                                    font: 16px/1 'poppins';
+                                }
+                                >img{
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 10px;
+                                    // bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
