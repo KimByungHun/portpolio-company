@@ -4332,14 +4332,33 @@ a {
   .gallery .sub_visual {
     background: url(./../img/banner8.jpg) no-repeat center/cover fixed; }
   .gallery .inner {
-    width: 1180px;
+    width: 100%;
     min-height: 500px;
     margin: 0px auto 100px;
     border: none; }
     .gallery .inner #gallery {
-      width: 100%; }
+      width: 1180px;
+      min-height: 500px;
+      position: relative;
+      margin: 0 auto; }
+      .gallery .inner #gallery .loading {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s; }
+        .gallery .inner #gallery .loading.off {
+          opacity: 0; }
       .gallery .inner #gallery ul {
-        width: 100%; }
+        width: 100%;
+        transition: 0.5s;
+        transform: translateY(100px);
+        opacity: 0; }
+        .gallery .inner #gallery ul.on {
+          opacity: 1;
+          transform: translateY(0px); }
         .gallery .inner #gallery ul::after {
           content: '';
           display: block;
@@ -4461,13 +4480,13 @@ a {
             width: 49%;
             height: auto;
             padding: 0px;
-            margin-right: 1%;
+            margin-right: 2%;
             margin-top: 20px;
             background: #fcfcfc;
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             transition: .5s; }
             .gallery .inner #gallery ul li:nth-of-type(2n) {
-              margin-right: 0; }
+              margin-right: 0%; }
             .gallery .inner #gallery ul li:hover {
               box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
               .gallery .inner #gallery ul li:hover h2 {

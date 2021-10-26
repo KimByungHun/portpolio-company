@@ -7,15 +7,28 @@
         background:url(./../img/banner8.jpg) no-repeat center/cover fixed;
     }
     .inner {
-        width: 1180px; min-height: 500px; margin: 0px auto 100px;
+        width: 100%; min-height: 500px; margin: 0px auto 100px;
         border: none;
         // border: 1px solid #ddd;
 
         #gallery{
-            width: 100%;
+            width: 1180px; min-height: 500px; position: relative;
+            margin:  0 auto;
+            .loading {
+                width: 200px; height: 200px; position: absolute; top: 150px; left: 50%; transform: translateX( -50%); transition: 0.5s;
+   
+                &.off {
+                    opacity: 0;
+                }
+            }
         
             ul{
-                width: 100%;
+                width: 100%; 
+                transition: 0.5s; transform: translateY(100px); opacity: 0;
+
+                &.on {
+                    opacity: 1; transform: translateY(0px);
+                }
                 
                 &::after{
                     content: ''; display: block; clear: both;
@@ -175,7 +188,7 @@
                         width: 49%;
                         height: auto;
                         padding: 0px;
-                        margin-right: 1%;
+                        margin-right: 2%;
                         margin-top: 20px;
                         background: rgb(252, 252, 252);
                         box-shadow: 2px 2px 4px rgba(0,0,0, 0.1);
@@ -184,7 +197,7 @@
                         transition: .5s;
             
                         &:nth-of-type(2n){
-                            margin-right: 0;
+                            margin-right: 0%;
                         }
             
                         &:hover {
