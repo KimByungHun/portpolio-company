@@ -1,7 +1,50 @@
 getList({
-    type : "search",
-    tag : "tree"
+    type : "userid",
+    user_id: "194107799@N07"
 })
+
+$("#searchBox button").on("click", function(){
+
+    $("#gallery ul").removeClass("on");
+    $(".loading").removeClass("off");
+    var inputs = $("#searchBox input").val();
+
+    getList({
+        type : "search",
+        tag : inputs
+    });
+});
+
+
+
+$(window).on("keypress",function(e){
+    if(e.keyCode == 13){
+
+        $("#gallery ul").removeClass("on");
+        $(".loading").removeClass("off");
+        var inputs = $("#searchBox input").val();
+        $("#searchBox input").val("");
+
+        getList({
+            type: "search",
+            tag: inputs
+        }); 
+    }
+})
+
+$(".content h1").on("click",function(){
+
+    $("#gallery ul").removeClass("on");
+    $(".loading").removeClass("off");
+    
+    getList({
+        type: "userid",
+        user_id: "194107799@N07"
+    })
+})
+
+
+
 
 function getList(opt){
     var result_opt = {};
@@ -56,6 +99,7 @@ function getList(opt){
         let items = data.photos.photo; 
         console.log(items);
        
+        $("#gallery").empty();       
         $("#gallery").append("<ul>");
        
         $(items).each(function(index, data){
@@ -66,7 +110,8 @@ function getList(opt){
     
             $("#gallery ul")
             .append(
-                $("<li>")
+                $("<li>").append(
+                    $("<div class='li_in'>")
                     .append(
                         $("<a>").attr({
                             href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
@@ -84,7 +129,7 @@ function getList(opt){
                         $("<div class='profile'>")
                             .append(
                                 $("<div class='left'>").append(
-                                    $("<span>").text("date")
+                                    $("<span>").text("owner")
                                 ),
                                 $("<div class='right'>").append(
     
@@ -92,6 +137,7 @@ function getList(opt){
                                 )
                             )
                     )
+                )
             )
         });  
         
@@ -125,6 +171,7 @@ function getList(opt){
         console.err("데이터를 호출하는데 실패했습니다"); 
     });
 }
+
 
 
 
