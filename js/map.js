@@ -6,7 +6,7 @@ var options = {
 
 var map = new kakao.maps.Map(container, options); 
 
-
+/*      ------------------       */ 
 const t_on = document.querySelectorAll(".traffic li")[0];
 const t_off = document.querySelectorAll(".traffic li")[1];
 
@@ -28,12 +28,18 @@ t_off.addEventListener("click", function(e){
     t_off.classList.add("on");
 });
 
+
+/*      ------------------       */ 
+
+
 var mapTypeControl = new kakao.maps.MapTypeControl();
 map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
+
+/*      ------------------       */ 
 
 const branch_btns1 = document.querySelector(".branch .loc_A"); 
 const branch_btns2 = document.querySelector(".branch .loc_B"); 
@@ -92,3 +98,14 @@ function moveTo(target) {
     
     map.setCenter(moveLatLon);
 }
+
+/*      ------------------       */ 
+
+
+
+window.onresize = ()=>{
+    var active_btn = document.querySelector(".branch .location_btn.on"); 
+    var active_index = active_btn.getAttribute("data-index"); 
+    console.log(active_btn); 
+    map.setCenter(markerOptions[active_index].latlng)
+ }
