@@ -5140,15 +5140,15 @@ a {
     .location .inner .location_btn {
       display: block;
       margin: 20px auto 0;
-      width: 300px;
-      height: 60px;
+      width: 220px;
+      height: 40px;
       text-align: center;
-      font: 20px/60px 'poppins';
+      font: 18px/40px 'poppins';
       color: #333333;
       background: none;
       border: 1px solid #666666; }
       .location .inner .location_btn i {
-        font-size: 24px;
+        font-size: 20px;
         margin-right: 20px; }
       .location .inner .location_btn:nth-of-type(2) {
         margin: 20px auto; }
