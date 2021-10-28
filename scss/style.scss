@@ -10,6 +10,7 @@
 #header{
     width: 100%;
     border-bottom: 1px solid #ddd;
+    z-index: 10;
 
     .top{
         width: 1180px;
@@ -121,9 +122,10 @@
                 &::after{
                     content: ''; display: block; clear: both;
                 }
-                li{
+                >li{
                     float: left;
-                    a{
+                    position: relative;
+                    >a{
                         display: block;
                         padding: 30px 29px 29px;
                         color: #000;
@@ -144,6 +146,16 @@
                     &:hover::after{
                         width: 90%;
                     }     
+
+                    .sub{
+                        width: 100px;
+                        height: 300px;
+                        position: absolute;
+                        top: 60px; left: 20px;
+                        display: block;
+                        background-color: #fff;
+                        border: 1px solid red;
+                    }
                 }
             }
 
@@ -314,13 +326,15 @@
     height: calc(100vh - 112px);
     background: #000;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
+    z-index: 1;
 
     video{
         width: 4000px;
         height: 100%;
         object-fit: cover;
         opacity: .4;
+
     }
 
     .inner{

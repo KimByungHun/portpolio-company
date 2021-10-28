@@ -24,7 +24,8 @@ a {
 
 #header {
   width: 100%;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  z-index: 10; }
   #header .top {
     width: 1180px;
     height: 30px;
@@ -106,15 +107,16 @@ a {
         content: '';
         display: block;
         clear: both; }
-      #header .inner .menuWeb #gnb li {
-        float: left; }
-        #header .inner .menuWeb #gnb li a {
+      #header .inner .menuWeb #gnb > li {
+        float: left;
+        position: relative; }
+        #header .inner .menuWeb #gnb > li > a {
           display: block;
           padding: 30px 29px 29px;
           color: #000;
           font: normal 18px/1 'Poppins';
           transition: .3s; }
-        #header .inner .menuWeb #gnb li::after {
+        #header .inner .menuWeb #gnb > li::after {
           content: '';
           width: 0px;
           height: 3px;
@@ -123,8 +125,17 @@ a {
           background: #000;
           transform: translateY(1px);
           transition: .3s; }
-        #header .inner .menuWeb #gnb li:hover::after {
+        #header .inner .menuWeb #gnb > li:hover::after {
           width: 90%; }
+        #header .inner .menuWeb #gnb > li .sub {
+          width: 100px;
+          height: 300px;
+          position: absolute;
+          top: 60px;
+          left: 20px;
+          display: block;
+          background-color: #fff;
+          border: 1px solid red; }
     #header .inner .menuWeb #util {
       position: absolute;
       right: 0;
@@ -250,7 +261,7 @@ a {
   height: calc(100vh - 112px);
   background: #000;
   position: relative;
-  overflow: hidden; }
+  z-index: 1; }
   #visual video {
     width: 4000px;
     height: 100%;
@@ -4332,12 +4343,36 @@ a {
   .gallery .sub_visual {
     background: url(./../img/banner8.jpg) no-repeat center/cover fixed; }
   .gallery .inner {
-    width: 100%;
+    width: 1180px;
     min-height: 500px;
     margin: 0px auto 100px;
     border: none; }
+    .gallery .inner #searchBox {
+      width: 40%;
+      margin: 0 auto 30px; }
+      .gallery .inner #searchBox::after {
+        display: block;
+        content: '';
+        clear: both; }
+      .gallery .inner #searchBox input {
+        width: 70%;
+        height: 40px;
+        float: left;
+        border: 1px solid #111;
+        text-align: center; }
+        .gallery .inner #searchBox input::placeholder {
+          font-size: 14px;
+          color: #333; }
+      .gallery .inner #searchBox button {
+        width: 30%;
+        height: 40px;
+        float: left;
+        border: 1px solid #111;
+        background-color: #111;
+        color: #fff;
+        font: 14px/1 'poppins'; }
     .gallery .inner #gallery {
-      width: 1180px;
+      width: 100%;
       min-height: 500px;
       position: relative;
       margin: 0 auto; }

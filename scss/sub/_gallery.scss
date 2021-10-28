@@ -7,12 +7,40 @@
         background:url(./../img/banner8.jpg) no-repeat center/cover fixed;
     }
     .inner {
-        width: 100%; min-height: 500px; margin: 0px auto 100px;
+        width: 1180px; min-height: 500px; margin: 0px auto 100px;
         border: none;
         // border: 1px solid #ddd;
 
+        #searchBox{
+            width: 40%;
+            margin: 0 auto 30px;
+            &::after{
+                display: block;content: ''; clear: both;
+            }
+            input{
+                width: 70%;
+                height: 40px;
+                float: left;
+                border: 1px solid #111;
+                text-align: center;
+                &::placeholder{
+                    font-size: 14px;
+                    color: #333;
+                }
+            }
+            button{
+                width: 30%;
+                height: 40px;
+                float: left;
+                border: 1px solid #111;
+                background-color: #111;
+                color: #fff;
+                font: 14px/1 'poppins';
+            }
+        }
+
         #gallery{
-            width: 1180px; min-height: 500px; position: relative;
+            width: 100%; min-height: 500px; position: relative;
             margin:  0 auto;
             .loading {
                 width: 200px; height: 200px; position: absolute; top: 150px; left: 50%; transform: translateX( -50%); transition: 0.5s;
