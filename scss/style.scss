@@ -118,7 +118,8 @@
                 left: 20%;
                 top: 50%;
                 transform: translateY(-50%);
-    
+                z-index: 5;
+
                 &::after{
                     content: ''; display: block; clear: both;
                 }
@@ -148,13 +149,20 @@
                     }     
 
                     .sub{
-                        width: 100px;
-                        height: 300px;
                         position: absolute;
-                        top: 60px; left: 20px;
-                        display: block;
-                        background-color: #fff;
-                        border: 1px solid red;
+                        top: 70px; left: 0;
+                        display: none;
+                        // background-color: #fff;
+                        // border: 1px solid red;
+                        width: 100%;
+                        .sub_inner{
+                            background-color: #fff;
+                            height: 300px;
+                            width: 100%;
+                            padding: 20px;
+                            margin-top:25px;
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -334,6 +342,7 @@
         height: 100%;
         object-fit: cover;
         opacity: .4;
+        z-index: 1;
 
     }
 
