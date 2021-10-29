@@ -131,16 +131,94 @@ a {
         #header .inner .menuWeb #gnb > li .sub {
           position: absolute;
           top: 70px;
-          left: 0;
+          left: -25%;
           display: none;
-          width: 100%; }
+          width: 150%;
+          transition: top .15s ease-out; }
           #header .inner .menuWeb #gnb > li .sub .sub_inner {
             background-color: #fff;
-            height: 300px;
-            width: 100%;
             padding: 20px;
             margin-top: 25px;
-            text-align: center; }
+            text-align: left; }
+            #header .inner .menuWeb #gnb > li .sub .sub_inner li {
+              padding: 10px 0;
+              font: 13px/1 'poppins'; }
+              #header .inner .menuWeb #gnb > li .sub .sub_inner li a {
+                color: #666666;
+                padding: 0 0 0 0px;
+                position: relative;
+                transition: padding .3s ease-in-out; }
+                #header .inner .menuWeb #gnb > li .sub .sub_inner li a::before {
+                  position: absolute;
+                  content: '⇀';
+                  top: 4px;
+                  left: 0px;
+                  width: 20px;
+                  font-family: 'poppins';
+                  color: inherit;
+                  font-size: 13px;
+                  line-height: 13px;
+                  transition: all .3s;
+                  opacity: 0; }
+                #header .inner .menuWeb #gnb > li .sub .sub_inner li a:hover {
+                  padding: 0 0 0 15px; }
+                  #header .inner .menuWeb #gnb > li .sub .sub_inner li a:hover::before {
+                    opacity: 1; }
+        #header .inner .menuWeb #gnb > li:nth-of-type(2) .sub {
+          left: -200%;
+          width: 500%; }
+          #header .inner .menuWeb #gnb > li:nth-of-type(2) .sub .sub_inner::after {
+            display: block;
+            clear: both;
+            content: ''; }
+          #header .inner .menuWeb #gnb > li:nth-of-type(2) .sub .sub_inner .sub_inner_cont {
+            float: left;
+            width: 33.33%;
+            display: block;
+            padding-left: 3.3%;
+            border-left: 1px solid #efefef; }
+            #header .inner .menuWeb #gnb > li:nth-of-type(2) .sub .sub_inner .sub_inner_cont h3 {
+              font: 16px/1.4 'poppins';
+              color: #333333;
+              padding-bottom: 18px; }
+        #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub {
+          width: 100%; }
+          #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner li {
+            text-align: right; }
+            #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner li:last-of-type a {
+              position: relative; }
+            #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner li a {
+              padding: 0 0 0 0;
+              transition: padding .3s ease-in-out; }
+              #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner li a::before {
+                position: absolute;
+                content: '⇀';
+                top: 4px;
+                right: -100px;
+                width: 20px;
+                font-family: 'poppins';
+                color: inherit;
+                font-size: 13px;
+                line-height: 13px;
+                transition: all .3s;
+                opacity: 0; }
+              #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner li a:hover {
+                padding: 0 15px 0 0; }
+                #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner li a:hover::before {
+                  opacity: 1; }
+          #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner:hover li .sub_inner_branch {
+            display: block; }
+          #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner .sub_inner_branch {
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: auto;
+            background-color: #fff;
+            left: -50%;
+            top: 85px;
+            display: none; }
+            #header .inner .menuWeb #gnb > li:nth-of-type(5) .sub .sub_inner .sub_inner_branch ul {
+              padding: 10px 20px; }
     #header .inner .menuWeb #util {
       position: absolute;
       right: 0;
