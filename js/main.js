@@ -1,5 +1,6 @@
 var btnCall = document.querySelector(".btnCall"); 
 var menuMo = document.querySelector(".menuMo"); 
+var locaBranch = document.querySelector(".sub");
 
 btnCall.onclick = function(e){
     e.preventDefault(); 
@@ -14,6 +15,18 @@ $("#gnb>li").on("mouseenter", function(){
 
 $("#gnb>li").on("mouseleave", function(){
     $(this).find(".sub").hide(); 
+});
+
+$("#gnb>li>.sub>.sub_inner>.sub_inner_loca").on("mouseenter", function(){
+
+
+    $(this).parent().find(".sub_inner_branch").show(); 
+});
+
+$("#gnb>li>.sub>.sub_inner").on("mouseleave", function(){
+    console.log("l");
+
+    $(this).find(".sub_inner_branch").hide(); 
 });
 
 $("#gnb>li").each(function(index){
