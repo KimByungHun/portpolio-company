@@ -5,30 +5,32 @@ getList({
 
 $("#searchBox button").on("click", function(){
 
-    $("#gallery ul").removeClass("on");
-    $(".loading").removeClass("off");
     var inputs = $("#searchBox input").val();
-
     getList({
         type : "search",
         tag : inputs
     });
+    
+    $("#gallery ul").removeClass("on");
+    $(".loading").removeClass("off");
+    $("#searchBox input").val("");
+
 });
 
 
 
 $(window).on("keypress",function(e){
     if(e.keyCode == 13){
-
-        $("#gallery ul").removeClass("on");
-        $(".loading").removeClass("off");
+        
         var inputs = $("#searchBox input").val();
-        $("#searchBox input").val("");
-
         getList({
             type: "search",
             tag: inputs
         }); 
+
+        $("#gallery ul").removeClass("on");
+        $(".loading").removeClass("off");
+        $("#searchBox input").val("");
     }
 })
 
@@ -143,15 +145,16 @@ function getList(opt){
         
         const total = $("#gallery ul li").length;
         let imgNum=0;
+        
     
         $("#gallery img").each(function(index, data){   
             data.onerror = function(){
                 $(data).attr("src", "img/default.jpg");
             }
             
+            
             data.onload = function(){            
                 imgNum++;
-                console.log(imgNum);
                
                 if(imgNum === total){   
                     $(".loading").addClass("off");

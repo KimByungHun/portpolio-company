@@ -23,10 +23,11 @@ $("#gnb>li>.sub>.sub_inner>.sub_inner_loca").on("mouseenter", function(){
     $(this).parent().find(".sub_inner_branch").show(); 
 });
 
-$("#gnb>li>.sub>.sub_inner").on("mouseleave", function(){
+$("#gnb>li>.sub>.sub_inner>.sub_inner_branch").on("mouseleave", function(){
     console.log("l");
 
-    $(this).find(".sub_inner_branch").hide(); 
+    $(this).hide(); 
+    console.log($(this))
 });
 
 $("#gnb>li").each(function(index){
