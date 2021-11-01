@@ -9,6 +9,10 @@ btnCall.onclick = function(e){
     menuMo.classList.toggle("on"); 
 }
 
+
+/*-------------------*/
+
+
 $("#gnb>li").on("mouseenter", function(){
     $(this).find(".sub").show(); 
 });
@@ -17,18 +21,28 @@ $("#gnb>li").on("mouseleave", function(){
     $(this).find(".sub").hide(); 
 });
 
+
 $("#gnb>li>.sub>.sub_inner>.sub_inner_loca").on("mouseenter", function(){
-
-
     $(this).parent().find(".sub_inner_branch").show(); 
 });
 
-$("#gnb>li>.sub>.sub_inner>.sub_inner_branch").on("mouseleave", function(){
-    console.log("l");
+$("#gnb>li>.sub>.sub_inner>.sub_inner_loca").on("mouseleave", function(){
 
-    $(this).hide(); 
-    console.log($(this))
+    $("#gnb>li>.sub>.sub_inner>.sub_inner_branch").hide(); 
 });
+
+$("#gnb>li>.sub>.sub_inner>.sub_inner_branch").on("mouseenter", function(){
+
+    $("#gnb>li>.sub>.sub_inner>.sub_inner_branch").show(); 
+});
+
+$("#gnb>li>.sub>.sub_inner>.sub_inner_branch").on("mouseleave", function(){
+
+    $("#gnb>li>.sub>.sub_inner>.sub_inner_branch").hide(); 
+});
+
+
+/*-------------------*/
 
 $("#gnb>li").each(function(index){
 
