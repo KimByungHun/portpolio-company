@@ -3,49 +3,59 @@ getList({
     user_id: "194107799@N07"
 })
 
-$("#searchBox button").on("click", function(){
-
-    var inputs = $("#searchBox input").val();
+//검색창 구동
+$("#searchBox button").on("click",function(){
+    let searchTag = $("#searchBox input").val();
     getList({
-        type : "search",
-        tag : inputs
+        type: "search",
+        tags: searchTag
     });
-    
+
     $("#gallery ul").removeClass("on");
     $(".loading").removeClass("off");
     $("#searchBox input").val("");
-
 });
 
-
-
+//enter 검색 구동
 $(window).on("keypress",function(e){
     if(e.keyCode == 13){
-        
-        var inputs = $("#searchBox input").val();
+        let searchTag = $("#searchBox input").val();
         getList({
             type: "search",
-            tag: inputs
-        }); 
-
+            tags: searchTag
+        });
+    
         $("#gallery ul").removeClass("on");
         $(".loading").removeClass("off");
         $("#searchBox input").val("");
     }
-})
-
-$(".content h1").on("click",function(){
-
-    $("#gallery ul").removeClass("on");
-    $(".loading").removeClass("off");
-    
-    getList({
-        type: "userid",
-        user_id: "194107799@N07"
-    })
-})
+});
 
 
+
+
+// 썸네일 클릭시, pop창 띄우기
+
+$("body").on("click", "#gallery ul li", function(e){
+    e.preventDefault(); 
+
+    let imgSrc = $(this).children(".li_in").children("a").attr("href"); 
+
+    $("body").append(
+        $("<div class='pop'>")
+            .append(
+                $("<img>").attr({ src : imgSrc}),
+                $("<span>").text("close")
+            )
+    )
+});
+
+// pop창 닫기 버튼
+
+
+$("body").on("click", ".pop span", function(){
+    $(".pop").remove(); 
+});
 
 
 function getList(opt){
@@ -76,7 +86,7 @@ function getList(opt){
                 format:"json",
                 nojsoncallback:1, 
                 privacy_filter : 1, 
-                tags :opt.tag,
+                tags :opt.tag
             }
         }
     }
@@ -98,10 +108,9 @@ function getList(opt){
     $.ajax(result_opt)
     .success(function(data){    
         
+        console.log(data);
         let items = data.photos.photo; 
-        console.log(items);
        
-        $("#gallery").empty();       
         $("#gallery").append("<ul>");
        
         $(items).each(function(index, data){
@@ -109,6 +118,7 @@ function getList(opt){
             if(!data.title){          
                 text = "No description in this photo"; 
             }
+    
     
             $("#gallery ul")
             .append(
@@ -145,16 +155,15 @@ function getList(opt){
         
         const total = $("#gallery ul li").length;
         let imgNum=0;
-        
     
         $("#gallery img").each(function(index, data){   
             data.onerror = function(){
                 $(data).attr("src", "img/default.jpg");
             }
             
-            
             data.onload = function(){            
                 imgNum++;
+                // console.log(imgNum);
                
                 if(imgNum === total){   
                     $(".loading").addClass("off");
@@ -174,25 +183,3 @@ function getList(opt){
         console.err("데이터를 호출하는데 실패했습니다"); 
     });
 }
-
-
-
-
-
-$("body").on("click", "#gallery ul li", function(e){
-    e.preventDefault(); 
-
-    let imgSrc = $(this).children("a").attr("href"); 
-
-    $("body").append(
-        $("<div class='pop'>")
-            .append(
-                $("<img>").attr({ src : imgSrc}),
-                $("<span>").text("close")
-            )
-    )
-});
-
-$("body").on("click", ".pop span", function(){
-    $(".pop").remove(); 
-});

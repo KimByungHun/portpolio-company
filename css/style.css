@@ -1489,10 +1489,12 @@ a {
     background: gray;
     margin-bottom: 50px;
     text-align: center;
-    padding-top: 200px; }
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .content .sub_visual h1 {
       display: inline-block;
-      font: bold 54px/1 'poppins';
+      font: bold 64px/1 'poppins';
       color: #fff; }
       .content .sub_visual h1::after {
         content: '';
@@ -1504,7 +1506,8 @@ a {
     .content .sub_visual h2 {
       font: bold 26px/1 'Gothic A1';
       letter-spacing: 1px;
-      color: #fff; }
+      color: #fff;
+      display: none; }
   .content .inner {
     width: 1180px;
     min-height: 500px;
@@ -5157,13 +5160,14 @@ a {
       position: relative;
       margin: 0 auto; }
       .gallery .inner #gallery .loading {
-        width: 200px;
-        height: 200px;
+        width: 400px;
+        height: 400px;
         position: absolute;
-        top: 150px;
+        top: 100px;
         left: 50%;
         transform: translateX(-50%);
-        transition: 0.5s; }
+        transition: 0.5s;
+        background-size: 150%; }
         .gallery .inner #gallery .loading.off {
           opacity: 0; }
       .gallery .inner #gallery ul {
