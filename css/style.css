@@ -5166,8 +5166,7 @@ a {
         top: 100px;
         left: 50%;
         transform: translateX(-50%);
-        transition: 0.5s;
-        background-size: 150%; }
+        transition: 0.5s; }
         .gallery .inner #gallery .loading.off {
           opacity: 0; }
       .gallery .inner #gallery ul {
