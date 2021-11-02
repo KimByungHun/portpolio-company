@@ -1,5 +1,5 @@
 getList({
-    type : "userid",
+    type : "user_id",
     user_id: "194107799@N07"
 })
 
@@ -78,7 +78,7 @@ function getList(opt){
     
     if(opt.type =="search"){
         result_opt={
-            url:"https://www.flickr.com/services/rest/?method=flickr.photos.search",
+            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search",
             dataType:"json", 
             data:{
                 api_key:"e4dac3c336f1aa366b20a39011946539", 
@@ -91,9 +91,9 @@ function getList(opt){
         }
     }
     
-    if(opt.type =="userid"){
+    if(opt.type =="user_id"){
         result_opt={
-            url:"https://www.flickr.com/services/rest/?method=flickr.photos.search",
+            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search",
             dataType:"json", 
             data:{
                 api_key:"e4dac3c336f1aa366b20a39011946539", 
@@ -109,7 +109,7 @@ function getList(opt){
     .success(function(data){    
         
         console.log(data);
-        let items = data.photos.photo; 
+        let items = data.photos.photo;
        
         $("#gallery").append("<ul>");
        
