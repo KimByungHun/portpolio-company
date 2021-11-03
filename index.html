@@ -10,6 +10,7 @@
     <script defer src="js/main.js"></script>
     <script defer src="js/client.js"></script>
     <script defer src="js/popup.js"></script>
+    <script defer src="js/scroll.js"></script>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script  src="js/jquery-1.8.3.min.js"></script>	
@@ -18,7 +19,7 @@
 </head>
 <body>
     <!-- header scroll -->
-    <header id="header">
+    <header id="header"  class="myScroll">
         <div class="top">
             <ul class="left">
                 <li><a href="#">FAQ</a></li>
@@ -163,7 +164,7 @@
 		</div>
     </figure>
 
-    <section id="news">
+    <section id="news"  class="myScroll">
 		<div class="inner">
 			<h1>RECENT NEWS</h1>
             <div class="topnews">
@@ -239,7 +240,7 @@
 		</div>
 	</section>
 
-    <section id="brand">
+    <section id="brand"  class="myScroll">
 		<div class="inner">
 			<h1>BRAND IDENTITY</h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore labore maxime a rerum, culpa, odit soluta, aut voluptatum et voluptatem quos inventore ratione maiores nisi.</p>
@@ -303,7 +304,7 @@
 
 	</section>
 
-    <section id="comment">
+    <section id="comment"  class="myScroll">
 		<div class="inner">
 			<h1>RECENT NOTICE</h1>
 			<ul>
@@ -445,6 +446,13 @@
 
         </div>
     </aside>
+
+    <ul id="navi">
+        <li><a href="#header" class="on"></a></li>
+        <li><a href="#news"></a></li>
+        <li><a href="#brand"></a></li>
+        <li><a href="#comment"></a></li>
+    </ul>
     
 </body>
 </html>
