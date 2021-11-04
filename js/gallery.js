@@ -1,14 +1,14 @@
 getList({
-    type : "user_id",
+    type : "userid",
     user_id: "194107799@N07"
 })
 
 //검색창 구동
 $("#searchBox button").on("click",function(){
-    let searchTag = $("#searchBox input").val();
+    var inputs = $("#searchBox input").val();
     getList({
         type: "search",
-        tags: searchTag
+        tag: inputs
     });
 
     $("#gallery ul").removeClass("on");
@@ -19,16 +19,26 @@ $("#searchBox button").on("click",function(){
 //enter 검색 구동
 $(window).on("keypress",function(e){
     if(e.keyCode == 13){
-        let searchTag = $("#searchBox input").val();
+        var inputs = $("#searchBox input").val();
         getList({
             type: "search",
-            tags: searchTag
+            tag: inputs
         });
     
         $("#gallery ul").removeClass("on");
         $(".loading").removeClass("off");
         $("#searchBox input").val("");
     }
+});
+
+$(".inner h1").on("click", function(){
+    $("#gallery ul").removeClass("on");
+    $(".loading").removeClass("off");
+
+    getList({
+        type: "userid",
+        user_id: "194107799@N07"
+    });
 });
 
 
@@ -51,6 +61,9 @@ $("body").on("click", "#gallery ul li", function(e){
 });
 
 // pop창 닫기 버튼
+// e4dac3c336f1aa366b20a39011946539
+//                 user_id: "194107799@N07"
+
 
 
 $("body").on("click", ".pop span", function(){
@@ -59,25 +72,24 @@ $("body").on("click", ".pop span", function(){
 
 
 function getList(opt){
-    var result_opt = {};
+    let result_opt = {};
 
-    
     if(opt.type =="interest"){
-        result_opt={
-            url:"https://www.flickr.com/services/rest/?method=flickr.interestingness.getList", 
-            dataType:"json", 
+        result_opt = {
+            url:"https://www.flickr.com/services/rest/?method=flickr.interestingness.getList",
+            dataType:"json",
             data:{
-                api_key:"e4dac3c336f1aa366b20a39011946539", 
-                per_page:100, 
+                api_key:"e4dac3c336f1aa366b20a39011946539",
+                per_page:12,
                 format:"json",
-                nojsoncallback:1, 
-                privacy_filter : 1, 
+                nojsoncallback:1,
+                privacy_filter: 1,
             }
         }
     }
-    
-    if(opt.type =="search"){
-        result_opt={
+
+    if(opt.type == "search"){
+        result_opt = {
             url: "https://www.flickr.com/services/rest/?method=flickr.photos.search",
             dataType:"json", 
             data:{
@@ -85,32 +97,34 @@ function getList(opt){
                 per_page:100, 
                 format:"json",
                 nojsoncallback:1, 
-                privacy_filter : 1, 
-                tags :opt.tag
+                privacy_filter : 1,
+                tags: opt.tag
             }
         }
     }
-    
-    if(opt.type =="user_id"){
-        result_opt={
-            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search",
-            dataType:"json", 
+
+    if(opt.type == "userid"){
+        result_opt = {
+            url:"https://www.flickr.com/services/rest/?method=flickr.people.getPhotos",
+            dataType:"json",
             data:{
-                api_key:"e4dac3c336f1aa366b20a39011946539", 
-                per_page:100, 
+                api_key:"e4dac3c336f1aa366b20a39011946539",
+                per_page:1000,
                 format:"json",
-                nojsoncallback:1, 
-                privacy_filter : 1, 
-                user_id: "194107799@N07"
+                nojsoncallback:1,
+                privacy_filter: 1,
+                user_id: opt.user_id
             }
         }
     }
+
     $.ajax(result_opt)
     .success(function(data){    
         
         console.log(data);
         let items = data.photos.photo;
        
+        $("#gallery ul").empty();
         $("#gallery").append("<ul>");
        
         $(items).each(function(index, data){
@@ -167,14 +181,14 @@ function getList(opt){
                
                 if(imgNum === total){   
                     $(".loading").addClass("off");
+                    $("#gallery ul").addClass("on");
+
     
                     new Isotope("#gallery ul",{
                         itemSelector : "#gallery ul li",
                         columnWidth: "#galley ul li",                  
                         transitionDuration: "0.5s"
                     });   
-                    
-                    $("#gallery ul").addClass("on");
                 }
             }        
         }); 
