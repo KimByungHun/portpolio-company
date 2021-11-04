@@ -481,19 +481,70 @@
 
 #visual{
     width: 100%;
-    height: calc(100vh - 112px);
-    background: #000;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
 
-    video{
-        width: 4000px;
-        height: 100%;
-        object-fit: cover;
-        opacity: .4;
+    .visual_wrap{
+        background: #111;
         z-index: 1;
-
+        // flex-shrink: 1;
+        display: block;
+        margin: 0px;
+        position: relative;
+        height: 1600px;
+    
+        .visual_inner{
+            transform: translate(0px, 0px);
+            width: 100%;
+    
+            .v_cont{
+                .v_header{
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+    
+                    .v_title{
+                        position: relative;
+                        font-family: poppins;
+                        font-weight: 500;
+                        font-size: 72px;
+                        padding-left: 30px;
+                        color: #fff;
+    
+                    }
+                }
+                .v_video{
+                    clip: rect(30vh, 90vw, 70vh, 10vw);
+    
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100vh;
+                    overflow: hidden;
+                    video{
+                        opacity: .7;
+                        filter: blur(5px);
+                    }
+                }
+                .v_title{
+                    position: absolute;
+                    left: 31px;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
+                    mix-blend-mode: overlay;
+                    .v_title{
+                        position: relative;
+                        font-family: poppins;
+                        font-weight: 500;
+                        font-size: 72px;
+                        color: #3182F6;
+                    }
+                }
+            }
+        }
     }
 
     .inner{
