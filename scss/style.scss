@@ -725,12 +725,13 @@
             margin-bottom: 30px;
 
         }
-        >img{
+        .signiture{
             display: block;
             // 사진
             display: block;
             margin: 0 auto;
             margin-bottom: 60px;
+            opacity: 0;
         }
         .wrap{
             width: 100%;
@@ -1394,12 +1395,13 @@
           transition:0.5s; 
 
           &:hover{
-              background: red;
+              background: #3183f6a9;
 
           }
  
           &.on{ 
-             background:#3182F6; 
+             background:#3182F6;
+             transform: scale(1.2); 
 
             // &::before{
             //     position: absolute;
@@ -1494,12 +1496,14 @@
                 .left{
                     width: 100%;
                     height: 100%;
-                    float: left;                    margin-right: 1%;
+                    float: left;                    
+                    margin-right: 1%;
     
                     &::after{display: block; content: ''; clear: both;}
                     article{
                         width: 49%;    
-                        float: left;                    margin-right: 2%;
+                        float: left;                    
+                        margin-right: 2%;
 
                         &:last-of-type{
                             margin-right: 0;

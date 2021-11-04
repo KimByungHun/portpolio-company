@@ -541,11 +541,12 @@ a {
       margin: 0 auto;
       color: #666666;
       margin-bottom: 30px; }
-    #brand .inner > img {
+    #brand .inner .signiture {
       display: block;
       display: block;
       margin: 0 auto;
-      margin-bottom: 60px; }
+      margin-bottom: 60px;
+      opacity: 0; }
     #brand .inner .wrap {
       width: 100%; }
       #brand .inner .wrap .left {
@@ -1047,9 +1048,10 @@ a {
       background: rgba(0, 0, 0, 0.2);
       transition: 0.5s; }
       #navi li a:hover {
-        background: red; }
+        background: #3183f6a9; }
       #navi li a.on {
-        background: #3182F6; }
+        background: #3182F6;
+        transform: scale(1.2); }
 
 @media screen and (max-width: 1179px) {
   #header .top {
@@ -3585,7 +3587,7 @@ a {
           position: sticky;
           top: 300px;
           padding-top: 300px;
-          padding-bottom: 60px;
+          padding-bottom: 100px;
           top: 0px;
           right: 0px; }
           .community .inner #cm0 .wrap .right .floating h1 {

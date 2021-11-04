@@ -40,3 +40,19 @@ $("#navi li a").on("click", function(e){{
         scrollTop : targetPos
     }, 1000);
 }});
+
+var sign = $("#brand .inner .signiture");
+
+$(window).on("scroll",function(){
+    var scroll = $(this).scrollTop();
+    
+
+    if(scroll >= posArr[2] + baseLine){
+        var current_scroll = scroll - posArr[2]-baseLine;
+        var opacity_scroll = current_scroll/700;
+
+        console.log(current_scroll)
+
+       sign.css({opacity : 0+opacity_scroll, transform:"scale("+(1+current_scroll/3000)+")"});
+    }
+})
