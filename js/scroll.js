@@ -45,6 +45,21 @@ var sign = $("#brand .inner .signiture");
 
 $(window).on("scroll",function(){
     var scroll = $(this).scrollTop();
+
+    if(scroll >= posArr[0] && scroll <= posArr[1]-300){
+        $("#news").css({background : "#111"}),
+        $("#news .inner h1").css({color : "#fff"}),
+        $("#news .inner h2").css({color : "#ddd"}),
+        $("#news .inner .topnews p").css({color : "#ccc"}),
+        $("#news .inner .topnews a").css({background : "#fff", color : "#111", fontWeight : "bold"})
+    }else{
+        $("#news").css({background : "#fff"}),
+        $("#news .inner h1").css({color : "#555"}),
+        $("#news .inner h2").css({color : "#111"}),
+        $("#news .inner .topnews p").css({color : "#555"}),
+        $("#news .inner .topnews a").css({background : "#111", color : "#fff", fontWeight : "bold"})
+    }
+
     
 
     if(scroll >= posArr[2] + baseLine){
@@ -55,4 +70,7 @@ $(window).on("scroll",function(){
 
        sign.css({opacity : 0+opacity_scroll, transform:"scale("+(1+current_scroll/3000)+")"});
     }
+
+    console.log(scroll);
+
 })

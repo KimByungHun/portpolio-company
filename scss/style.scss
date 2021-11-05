@@ -590,6 +590,8 @@
 #news{
     width: 100%;
     padding: 100px 0 50px;
+    transition: background 1s;
+
 
     .inner{
         width: 1180px;
@@ -636,12 +638,14 @@
                         color: #111;
                         letter-spacing: 2px;
                         margin-bottom: 20px;
+
                     }
                     p{
                         font: 14px/1.4'Poppins';
                         color: #555;
                         letter-spacing: 2px;
                         margin-bottom: 30px;
+
                     }
                     a{
                         position: absolute;

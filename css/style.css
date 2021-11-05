@@ -443,7 +443,8 @@ a {
 
 #news {
   width: 100%;
-  padding: 100px 0 50px; }
+  padding: 100px 0 50px;
+  transition: background 1s; }
   #news .inner {
     width: 1180px;
     margin: 0 auto; }

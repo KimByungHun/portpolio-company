@@ -32,7 +32,7 @@ $(window).on("scroll",function(){
 
         var trasnlate_scroll =scroll;
         (trasnlate_scroll >= section_height-video_height+111.25 ) ? trasnlate_scroll = section_height-video_height+111.25  : scroll = trasnlate_scroll;
-        console.log(trasnlate_scroll);
+        // console.log(trasnlate_scroll);
 
         $(".v_video").css({
             clip : "rect("+scroll_vh1+"vh, "+(scroll_vw1)+"vw, "+(scroll_vh2)+"vh, "+(scroll_vw2)+"vw)"
