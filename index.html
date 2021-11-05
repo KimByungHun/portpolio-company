@@ -11,7 +11,7 @@
     <script defer src="js/client.js"></script>
     <script defer src="js/popup.js"></script>
     <script defer src="js/scroll.js"></script>
-
+    <script defer src="js/video_scroll.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script  src="js/jquery-1.8.3.min.js"></script>	
     <script src="https://kit.fontawesome.com/6e561f56c7.js" crossorigin="anonymous"></script>
@@ -155,13 +155,25 @@
     </header>
 
     <figure id="visual">
-        <video src="img/pexels-kindel-media-7578552.mp4" autoplay loop muted></video>
-		<div class="inner">			 
-			<h1>LOREM, IPSUM.
-            </h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam odit animi, blanditiis illum esse facilis dolorum voluptas nulla voluptatibus deleniti minima.</p>
-			<a href="#">PURCHASE NOW</a>		 
-		</div>
+        <div class="visual_wrap">
+            <section class="visual_inner">
+                <div class="v_cont">
+                    <div class="v_header">
+                        <h1 class="v_title">
+                            Lorem ipsum <br> dolor sit <br> amet consectetur.
+                        </h1>
+                    </div>
+                    <div class="v_video">
+                        <video src="/img/pexels-kindel-media-7578552.mp4" autoplay="autoplay" muted="muted" loop="loop" ></video>
+                        <div class="v_title">
+                            <h1 class="v_title">
+                                Lorem ipsum <br> dolor sit <br> amet consectetur.
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </figure>
 
     <section id="news"  class="myScroll">
