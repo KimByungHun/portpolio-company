@@ -1,4 +1,4 @@
-var boxs = $("#visual");
+var boxs = $("#visual_sub");
 var pos = [];
 
 boxs.each(function(_,box){
