@@ -492,15 +492,20 @@
     .slider{
         width: 100%; height: 100%;
         background-position: 18%;
-        div{
+        background-position: center;
+        background-size: cover;
+        article{
             width: 100%; height: 100%; 
             position: absolute; top: 0; left: 0;
-            transition: 2s;
+            transition: 2s cubic-bezier(.42,0,.58,1);
             opacity: 0;
 
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+
+        filter : background blur(5px);
+
             
 
             &:nth-of-type(1) {
@@ -529,6 +534,57 @@
                 opacity: 1;
                 clip-path: circle(130% at 82% 85%);
 
+            }
+
+            .inner{
+                width: 1180px;
+                margin: 0 auto;
+                position: absolute;
+                padding-left: 50px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                text-align:left;
+
+                &::after{
+                    content: ''; display: block;
+                    width: 28px; height: 96px;
+                    position: absolute;
+                    top: 0px; left: 0px;
+                    // background: red;
+                background-color: rgba(255,255,255,.3);
+                backdrop-filter: blur(5px);
+                }
+        
+                h1{
+                    width: 40%;
+                    font: normal 100px/1 'poppins';
+                    color: #fff;
+                }
+                p{
+                    width: 40%;
+                    font: normal 20px/1.6 'Poppins';
+                    color: #fff;
+                    padding: 60px 0;
+                }
+                a{
+                    display: inline-block;
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 200px;
+                    height: 50px;
+                    border: 1px solid #a2a2a2;
+                    color: #111;
+                    font: bold 14px/50px 'poppins';
+                    background: #fff;
+                    letter-spacing: 1px;
+                    transition: .5s;
+        
+                    &:hover{
+                        background: #111;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
@@ -563,20 +619,20 @@
 
         div{
             position: absolute;
-            top: 85%; left: 80%;
-            width: 50px; height: 50px; cursor: pointer;
+            top: 85%; left: 76%;
+            width: 70px; height: 70px; cursor: pointer;
             // background-color: red;
 
             
             &:last-child{
-                left: 84%;
+                left: 80%;
             }
 
             span{
                 position: absolute;
                 left: 50%; top: 50%;
                 transform: translate(-50%, -50%);
-                font-size: 38px;
+                font-size: 44px;
                 // font-weight: normal;
                 color: #fff;
 
@@ -586,44 +642,7 @@
 
     }
 
-    .inner{
-        width: 1180px;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% , -50%);
-        text-align: center;
 
-        h1{
-            font: normal 100px/1 'poppins';
-            color: #fff;
-            margin-bottom: 30px;
-        }
-        p{
-            font: normal 20px/1 'Poppins';
-            color: #fff;
-            margin: 50px;
-            padding: 0 20px;
-        }
-        a{
-            display: block;
-            margin: 0 auto;
-            width: 200px;
-            height: 50px;
-            border: 1px solid #a2a2a2;
-            color: #111;
-            font: bold 14px/50px 'poppins';
-            background: #fff;
-            letter-spacing: 1px;
-            transition: .5s;
-
-            &:hover{
-                background: #111;
-                color: #fff;
-            }
-        }
-    }
 }
 
 #news{

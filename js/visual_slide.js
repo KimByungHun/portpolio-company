@@ -8,7 +8,7 @@ pageBtn.on("click", function(){
     var index = $(this).index();
     var slider = $(this).parent().parent();
     var current = slider.find(".slider .active");
-    var post = slider.find(".slider div").eq(index);
+    var post = slider.find(".slider article").eq(index);
 
 
     
