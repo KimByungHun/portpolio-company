@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
     <script defer src="js/youtube.js"></script>
+    <script defer src="js/yotube_video_scroll.js"></script>
+    <script defer src="js/scroll_youtub.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e561f56c7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
-    <header id="header_sub">
+    <header id="header_sub" class="sub_Scroll">
         <div class="inner">
             <h1><a href="index.html">LOREM</a></h1>
 
@@ -131,16 +134,35 @@
         </div>
     </header>
 
-    <section class="content youtube">
-        <div class="sub_visual">
-            <h1>YOUTUBE</h1>
-            <h2></h2>
+    <figure id="visual_sub">
+        <div class="visual_wrap">
+            <section class="visual_inner">
+                <div class="v_cont">
+                    <div class="v_header">
+                        <h1 class="v_title">
+                            Lorem ipsum <br> dolor sit <br> amet consectetur.
+                        </h1>
+                    </div>
+                    <div class="v_video">
+                        <video src="./img/pexels-kindel-media-7578552.mp4" autoplay="autoplay" muted="muted" loop="loop" ></video>
+                        <div class="v_title">
+                            <h1 class="v_title">
+                                Lorem ipsum <br> dolor sit <br> amet consectetur.
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+    </figure>
+
+    <section class="content youtube sub_Scroll">
         <div class="inner">
             <!-- <h1>INFORMATION</h1> -->
-
-            <div id="video">
-
+            <div class="video_wrap">
+                <div id="video">
+                <h2>YOUTUBE</h2>                    
+            </div>
             <!-- 
                 <article>
                     <a href="#"><img src="#" alt="#"></a>

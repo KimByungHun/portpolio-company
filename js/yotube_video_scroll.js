@@ -1,4 +1,4 @@
-var boxs = $("#visual");
+var boxs = $("#visual_sub");
 var pos = [];
 
 boxs.each(function(_,box){
@@ -9,7 +9,7 @@ $(window).on("scroll",function(){
     var scroll = $(this).scrollTop();
 
     if(scroll >= pos[0]){
-        var real_scroll = scroll-$("#header").css("height").replace(/[^-\d\.]/g, '');
+        var real_scroll = scroll-$("#header_sub").css("height").replace(/[^-\d\.]/g, '');
 
         var section_height = $(".visual_wrap").css("height").replace(/[^-\d\.]/g, '');
         var video_height = $(".v_header").css("height").replace(/[^-\d\.]/g, '');

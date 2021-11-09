@@ -360,86 +360,142 @@ a {
         left: 0; }
 
 #visual {
-  width: 100%; }
-  #visual .visual_wrap {
-    background: #111;
-    z-index: 1;
-    display: block;
-    margin: 0px;
-    position: relative;
-    height: 1600px; }
-    #visual .visual_wrap .visual_inner {
-      transform: translate(0px, 0px);
-      width: 100%; }
-      #visual .visual_wrap .visual_inner .v_cont .v_header {
-        height: 100vh;
-        display: flex;
-        align-items: center; }
-        #visual .visual_wrap .visual_inner .v_cont .v_header .v_title {
-          position: relative;
-          font-family: poppins;
-          font-weight: 500;
-          font-size: 72px;
-          padding-left: 30px;
+  width: 100%;
+  height: calc(100vh - 112px);
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+  #visual .slider {
+    width: 100%;
+    height: 100%;
+    background-position: 18%;
+    background-position: center;
+    background-size: cover; }
+    #visual .slider article {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 2s cubic-bezier(0.42, 0, 0.58, 1);
+      opacity: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      #visual .slider article:nth-of-type(1) {
+        background-image: url(/img/visual/pic1.jpg);
+        clip-path: circle(0% at 82% 85%); }
+      #visual .slider article:nth-of-type(2) {
+        background-image: url(/img/visual/pic2.jpg);
+        clip-path: circle(0% at 82% 85%); }
+      #visual .slider article:nth-of-type(3) {
+        background-image: url(/img/visual/pic3.jpg);
+        clip-path: circle(0% at 82% 85%); }
+      #visual .slider article:nth-of-type(4) {
+        background-image: url(/img/visual/pic4.jpg);
+        clip-path: circle(0% at 82% 85%); }
+      #visual .slider article.active {
+        opacity: 1;
+        clip-path: circle(130% at 82% 85%); }
+      #visual .slider article .inner {
+        width: 1180px;
+        margin: 0 auto;
+        position: absolute;
+        padding-left: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left; }
+        #visual .slider article .inner::after {
+          content: '';
+          display: block;
+          width: 28px;
+          height: 96px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          background-color: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(5px); }
+        #visual .slider article .inner h1 {
+          width: 40%;
+          font: normal 100px/1 'poppins';
           color: #fff; }
-      #visual .visual_wrap .visual_inner .v_cont .v_video {
-        clip: rect(30vh, 90vw, 70vh, 10vw);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden; }
-        #visual .visual_wrap .visual_inner .v_cont .v_video video {
-          opacity: .7;
-          filter: blur(5px); }
-      #visual .visual_wrap .visual_inner .v_cont .v_title {
-        position: absolute;
-        left: 31px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 3;
-        display: flex;
-        align-items: center;
-        mix-blend-mode: overlay; }
-        #visual .visual_wrap .visual_inner .v_cont .v_title .v_title {
-          position: relative;
-          font-family: poppins;
-          font-weight: 500;
-          font-size: 72px;
-          color: #3182F6; }
-  #visual .inner {
-    width: 1180px;
-    margin: 0 auto;
+        #visual .slider article .inner p {
+          width: 40%;
+          font: normal 20px/1.6 'Poppins';
+          color: #fff;
+          padding: 60px 0; }
+        #visual .slider article .inner a {
+          display: inline-block;
+          text-align: center;
+          margin: 0 auto;
+          width: 200px;
+          height: 50px;
+          border: 1px solid #a2a2a2;
+          color: #111;
+          font: bold 14px/50px 'poppins';
+          background: #fff;
+          letter-spacing: 1px;
+          transition: .5s; }
+          #visual .slider article .inner a:hover {
+            background: #111;
+            color: #fff; }
+  #visual .page-btns {
+    z-index: 5;
+    text-align: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-    #visual .inner h1 {
-      font: normal 100px/1 'poppins';
-      color: #fff;
-      margin-bottom: 30px; }
-    #visual .inner p {
-      font: normal 20px/1 'Poppins';
-      color: #fff;
-      margin: 50px;
-      padding: 0 20px; }
-    #visual .inner a {
-      display: block;
-      margin: 0 auto;
-      width: 200px;
-      height: 50px;
-      border: 1px solid #a2a2a2;
-      color: #111;
-      font: bold 14px/50px 'poppins';
-      background: #fff;
-      letter-spacing: 1px;
-      transition: .5s; }
-      #visual .inner a:hover {
-        background: #111;
+    bottom: 5vh;
+    left: 0;
+    width: 100%; }
+    #visual .page-btns div {
+      width: 70px;
+      height: 5px;
+      margin-right: 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      cursor: pointer;
+      transition: .3s; }
+      #visual .page-btns div.active {
+        background-color: white; }
+  #visual .side-btns {
+    z-index: 5; }
+    #visual .side-btns div {
+      position: absolute;
+      top: 85%;
+      left: 76%;
+      width: 70px;
+      height: 70px;
+      cursor: pointer; }
+      #visual .side-btns div:last-child {
+        left: 80%; }
+      #visual .side-btns div span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 44px;
         color: #fff; }
+  #visual .play-btns {
+    z-index: 5; }
+    #visual .play-btns div {
+      position: absolute;
+      top: 85%;
+      left: 20%;
+      width: 70px;
+      height: 70px;
+      cursor: pointer; }
+      #visual .play-btns div:last-child {
+        left: 24%; }
+      #visual .play-btns div span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        color: #fff; }
+        #visual .play-btns div span.on {
+          color: #000; }
 
 #news {
   width: 100%;
@@ -4569,8 +4625,88 @@ a {
 @media screen and (max-width: 539px) {
   #header_sub .inner .menuWeb .util2 {
     display: none; } }
-.youtube .sub_visual {
-  background: url(./../img/banner10.jpg) no-repeat center/cover; }
+#visual_sub {
+  width: 100%; }
+  #visual_sub .visual_wrap {
+    background: #111;
+    z-index: 1;
+    display: block;
+    margin: 0px;
+    position: relative;
+    height: 3000px; }
+    #visual_sub .visual_wrap .visual_inner {
+      transform: translate(0px, 0px);
+      width: 100%; }
+      #visual_sub .visual_wrap .visual_inner .v_cont .v_header {
+        height: 100vh;
+        display: flex;
+        align-items: center; }
+        #visual_sub .visual_wrap .visual_inner .v_cont .v_header .v_title {
+          position: relative;
+          font-family: poppins;
+          font-weight: 500;
+          font-size: 72px;
+          padding-left: 30px;
+          color: #fff; }
+      #visual_sub .visual_wrap .visual_inner .v_cont .v_video {
+        clip: rect(30vh, 90vw, 70vh, 10vw);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden; }
+        #visual_sub .visual_wrap .visual_inner .v_cont .v_video video {
+          opacity: .7;
+          filter: blur(5px); }
+      #visual_sub .visual_wrap .visual_inner .v_cont .v_title {
+        position: absolute;
+        left: 31px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        mix-blend-mode: overlay; }
+        #visual_sub .visual_wrap .visual_inner .v_cont .v_title .v_title {
+          position: relative;
+          font-family: poppins;
+          font-weight: 500;
+          font-size: 72px;
+          color: #3182F6; }
+  #visual_sub .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    #visual_sub .inner h1 {
+      font: normal 100px/1 'poppins';
+      color: #fff;
+      margin-bottom: 30px; }
+    #visual_sub .inner p {
+      font: normal 20px/1 'Poppins';
+      color: #fff;
+      margin: 50px;
+      padding: 0 20px; }
+    #visual_sub .inner a {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 50px;
+      border: 1px solid #a2a2a2;
+      color: #111;
+      font: bold 14px/50px 'poppins';
+      background: #fff;
+      letter-spacing: 1px;
+      transition: .5s; }
+      #visual_sub .inner a:hover {
+        background: #111;
+        color: #fff; }
+
 .youtube .inner {
   width: 100%;
   min-height: 500px;
@@ -4579,10 +4715,20 @@ a {
   border: none;
   background-color: #fff;
   border-bottom: 4px solid #000; }
+  .youtube .inner .video_wrap {
+    width: 100%;
+    background: #111;
+    transition: 0.7s; }
   .youtube .inner #video {
     width: 1180px;
     margin: 0 auto;
-    padding: 50px 0 100px 0; }
+    padding: 100px 0 100px 0; }
+    .youtube .inner #video > h2 {
+      display: block;
+      height: 100px;
+      font: bold 72px/1 'poppins';
+      color: #fff;
+      margin-bottom: 100px; }
     .youtube .inner #video::after {
       content: '';
       display: block;
@@ -4603,7 +4749,7 @@ a {
           text-align: right;
           padding-top: 0px;
           border-top: none;
-          border-bottom: 4px solid #000; }
+          border-bottom: 4px solid #E47157; }
       .youtube .inner #video article a {
         display: block;
         width: 100%;
@@ -4633,24 +4779,25 @@ a {
         left: 0;
         bottom: -210px;
         padding-top: 20px;
-        border-top: 4px solid #333; }
-        .youtube .inner #video article .con h2 {
+        border-top: 4px solid #E47157; }
+        .youtube .inner #video article .con h3 {
           width: 95%;
           font: 36px/1.2 'poppins';
           margin-bottom: 20px;
           font-weight: 500;
-          color: #333333; }
+          color: #eee; }
         .youtube .inner #video article .con p {
           width: 99%;
           font: 18px/1.3 'poppins';
-          color: #555555;
+          color: #ddd;
           margin-bottom: 20px; }
         .youtube .inner #video article .con span {
           font: bold 16px/1 'poppins';
           color: #E47157; }
       .youtube .inner #video article:hover a img {
         filter: grayscale(0%) contrast(100%);
-        background-image: red; }
+        background-image: red;
+        transform: scale(1.05); }
       .youtube .inner #video article:hover a .icon {
         opacity: .7; }
       .youtube .inner #video article:hover .con {
