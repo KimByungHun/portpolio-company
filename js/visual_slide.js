@@ -20,7 +20,7 @@ pageBtn.on("click", function(){
 
     var background = $(this).closest("#visual").find(".slider");
 
-    background.css({ backgroundImage : "url(/img/visual/pic"+(index+1)+".jpg)"});
+    background.css({ backgroundImage : "url(../img/visual/pic"+(index+1)+".jpg)"});
 
 
 
