@@ -1,4 +1,3 @@
-
 var pageBtn = $("#visual .page-btns div");
 var sideBtn = $("#visual .side-btns div");
 
@@ -54,7 +53,27 @@ sideBtn.on("click", function(){
     post.click();
 });
 
-// setInterval(function(){
-//     $("#visual .side-btns div ").eq(1).click();
-// }, 5000);
 
+
+var btnPause = $("#visual .play-btns .btnPause");
+var btnPlay = $("#visual .play-btns .btnPlay");
+
+
+btnPlay.on("click", function(e){
+    e.preventDefault(); 
+
+    timer = setInterval(function(){
+        $("#visual .side-btns div ").eq(1).click();
+    },2000);
+
+    $(".btnPause").removeClass("on"); 
+    $(".btnPlay").addClass("on");
+});
+
+btnPause.on("click", function(e){
+    e.preventDefault(); 
+    clearInterval(timer); 
+
+    $(".btnPlay").removeClass("on"); 
+    $(".btnPause").addClass("on");
+});
