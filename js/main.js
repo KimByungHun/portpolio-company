@@ -54,3 +54,25 @@ $("#gnb>li").each(function(index){
         $("#gnb>li").eq(index).find(".sub").hide(); 
     })
 })
+
+
+/* 인덱스 브랜드 페이지 center-------------------*/
+
+$("#brand .inner .wrap .brand1").on("mouseenter",function(){
+
+    $(this).parent().parent().find(".imgCenter").attr({src:"img/brand/modern.jpg"})
+})
+$("#brand .inner .wrap .brand2").on("mouseenter",function(){
+
+    $(this).parent().parent().find(".imgCenter").attr({src:"img/brand/natural.jpg"})
+})
+$("#brand .inner .wrap .brand3").on("mouseenter",function(){
+
+    $(this).parent().parent().find(".imgCenter").attr({src:"img/brand/classic.jpg"})
+})
+$("#brand .inner .wrap .brand4").on("mouseenter",function(){
+
+    $(this).parent().parent().find(".imgCenter").attr({src:"img/brand/unique.jpg"})
+})
+
+
