@@ -24,8 +24,11 @@ a {
 
 #header {
   width: 100%;
-  border-bottom: 1px solid #ddd;
-  z-index: 10; }
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px) drop-shadow(4px 4px 10px blue); }
   #header .top {
     width: 1180px;
     height: 30px;
@@ -97,7 +100,7 @@ a {
       #header .inner > h1 a {
         font: bold 40px/1 'graduate';
         letter-spacing: 1px;
-        color: #000; }
+        color: #fff; }
     #header .inner .menuWeb #gnb {
       position: absolute;
       left: 20%;
@@ -114,8 +117,8 @@ a {
         #header .inner .menuWeb #gnb > li > a {
           display: block;
           padding: 30px 29px 29px;
-          color: #000;
-          font: normal 18px/1 'Poppins';
+          color: #fff;
+          font: bold 22px/1 'Poppins';
           transition: .3s; }
         #header .inner .menuWeb #gnb > li::after {
           content: '';
@@ -361,7 +364,7 @@ a {
 
 #visual {
   width: 100%;
-  height: calc(100vh - 112px);
+  height: 100vh;
   background: #000;
   position: relative;
   overflow: hidden;
@@ -379,25 +382,25 @@ a {
       top: 0;
       left: 0;
       transition: 2s cubic-bezier(0.42, 0, 0.58, 1);
-      opacity: 0;
+      opacity: 0.2;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover; }
       #visual .slider article:nth-of-type(1) {
         background-image: url(../img/visual/pic1.jpg);
-        clip-path: circle(0% at 82% 85%); }
+        clip-path: circle(0% at 80% 85%); }
       #visual .slider article:nth-of-type(2) {
         background-image: url(../img/visual/pic2.jpg);
-        clip-path: circle(0% at 82% 85%); }
+        clip-path: circle(0% at 80% 85%); }
       #visual .slider article:nth-of-type(3) {
         background-image: url(../img/visual/pic3.jpg);
-        clip-path: circle(0% at 82% 85%); }
+        clip-path: circle(0% at 80% 85%); }
       #visual .slider article:nth-of-type(4) {
         background-image: url(../img/visual/pic4.jpg);
-        clip-path: circle(0% at 82% 85%); }
+        clip-path: circle(0% at 80% 85%); }
       #visual .slider article.active {
         opacity: 1;
-        clip-path: circle(130% at 82% 85%); }
+        clip-path: circle(130% at 80% 85%); }
       #visual .slider article .inner {
         width: 1180px;
         margin: 0 auto;
@@ -420,12 +423,13 @@ a {
         #visual .slider article .inner h1 {
           width: 40%;
           font: normal 100px/1 'poppins';
-          color: #fff; }
+          color: #fff;
+          padding-bottom: 60px; }
         #visual .slider article .inner p {
           width: 40%;
           font: normal 20px/1.6 'Poppins';
           color: #fff;
-          padding: 60px 0; }
+          backdrop-filter: blur(2px); }
         #visual .slider article .inner a {
           display: inline-block;
           text-align: center;
@@ -437,7 +441,8 @@ a {
           font: bold 14px/50px 'poppins';
           background: #fff;
           letter-spacing: 1px;
-          transition: .5s; }
+          transition: .5s;
+          margin-top: 60px; }
           #visual .slider article .inner a:hover {
             background: #111;
             color: #fff; }
