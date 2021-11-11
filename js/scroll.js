@@ -68,7 +68,56 @@ $(window).on("scroll",function(){
         var opacity_scroll = current_scroll/700;
 
        sign.css({opacity : 0+opacity_scroll, transform:"scale("+(1+current_scroll/3000)+")"});
-    }
-
+    };
 
 })
+
+
+//svgMotion
+var boxs2 =$("body>section");
+var pos2 = [];
+var base2 = -500;
+
+var init = function(){
+    $("#client .svg1").css({strokeDashoffset : 1260});
+    $("#client .svg2").css({strokeDashoffset : 2295});
+    $("#client .svg3").css({strokeDashoffset : 1965});
+}
+
+var custom2 = [
+    function(scroll){
+        var current_scroll = (scroll - pos2[3]-base2)*4;
+        var svg_scroll1;
+        (current_scroll>=1260) ? svg_scroll1 = 1260 : svg_scroll1 = current_scroll;
+  
+        $(".svg1").css({strokeDashoffset : 1260 - svg_scroll1});
+
+        var svg_scroll2;
+        (current_scroll>=2295) ? svg_scroll2 = 2295 : svg_scroll2 = current_scroll;
+  
+        $(".svg2").css({strokeDashoffset : 2295 - svg_scroll2});
+
+        var svg_scroll3;
+        (current_scroll>=1965) ? svg_scroll3 = 1965 : svg_scroll3 = current_scroll;
+  
+        $(".svg3").css({strokeDashoffset : 1965 - svg_scroll3});
+
+        // console.log(current_scroll);
+
+     }
+]
+
+boxs2.each(function(_,box){
+    pos2.push($(box).offset().top);
+ });
+
+ $(window).on("scroll",function(){
+    var scroll = $(this).scrollTop();
+    init();
+ 
+    boxs2.each(function(index){   
+       if(scroll>=pos2[3]+base2){
+          custom2[0](scroll);
+       }
+    });
+ });
