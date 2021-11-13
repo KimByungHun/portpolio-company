@@ -880,180 +880,56 @@
             margin-bottom: 60px;
             opacity: 0;
         }
-        .wrap{
+
+        .grid {
             width: 100%;
-
-            .left{
-                width: 280px;
-                height: 600px;
-                float: left;
-                // background: #222;
-                margin-right: 20px;
-
-                article{
-                    width: 100%;
-                    cursor: pointer;
-
-                    img{
-                        // 사진
-                        background: #111;
-                        display: block;
-                        // 사진
-                        width: 100%;
-                        height: 260px;
-                        // border-radius: 20px;
-                        object-fit:  cover;
-                        opacity: .7;
-                        transition: .5s;
-                    }
-                   
-
-                    h2{
-                        height: 30px;
-                        text-align: center;
-                        margin-bottom: 10px;
-                        a{
-                            font: 16px/1 'poppins';
-                            color: #181818;
-                        }
-                    }
-                    &:hover img{
-                        transform: translateY(-10px);
-                        opacity: 1;
-                    }
-                    &:hover h2 a{
-                        font-weight: bold;
-                        color: #111;
-                    }
-                }
+      
+            &::after {
+               content: "";
+               display: block;
+               clear: both;
             }
-            .center{
-                width: 580px;
-                float: left;
-                // background: #222;
-                margin-right: 20px;
-                border-radius: 40px;
-
-
-
-                article{
-                    width: 100%;
-                    position: relative;
-                    transition: .5s;
-                    
-
-
-                    &::before{
-                        content: '';
-                        transition: .5s;
-                        position: absolute;
-                        width: 100%;
-                        height: 560px;
-                        // border-radius: 40px;
-                        background-color: rgba(119, 104, 104, 0);
-                    }
-
-                    img{
-                        // 사진
-                        background: #111;
-                        display: block;
-                        // 사진
-                        width: 100%;
-                        height: 560px;
-
-                        object-fit: cover;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        // border-radius: 40px;
-
-         
-                    }
-                    .links{
-                        display: block;
-                        text-align: center;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50% , -50%);
-                        opacity: 0;
-                        transition: .3s;
-                        >p{
-                            color: #fff;
-                            font-size: 19px;
-                            margin: 30px 0;
-                        }
-                        
-                        a{
-                            display: block;
-                            font: bold  18px/40px 'poppins';
-                            letter-spacing: 1px;
-                            color: #181818;
-                            // background: #efefefa7;
-                            width: 150px;
-                            height: 40px;
-                        }
-                        
-                    }
-                    &:hover{
-                        // transform: translateY(-20px);
-                        transform: scale(1.05);
-                        &::before{
-                          opacity:1;
-                        //   background-color:rgba(0,0,0,.4);
-                        }
-                        .links{
-                            opacity: 1;
-                        }
-                    }
-                }
-
-
-
+      
+            //최소박스의 넓이 설정용 더미 박스
+            //높이값은 설정하지 않고 숨김처리
+            .item-sizer {
+               width: 25%;
+               height: 0px;
+               opacity: 0;
             }
-            .right{
-                width: 280px;
-                height: 600px;
-                float: left;
-                // background: #222;
-
-                article{
-                    width: 100%;
-                    cursor: pointer;
-
-
-                    img{
-                        // 사진
-                        background: #111;
-                        display: block;
-                        // 사진
-                        width: 100%;
-                        height: 260px;
-                        // border-radius: 20px;
-                        object-fit:  cover;
-                        transition: .5s;
-                        opacity: .7;
-                    }
-                    h2{
-                        height: 30px;
-                        text-align: center;
-                        margin-bottom: 10px;
-                        a{
-                            font: 16px/1 'poppins';
-                            color: #181818;
-
-                        }
-                    }
-                    &:hover img{
-                        transform: translateY(-10px);
-                        opacity: 1;
-                    }
-                    &:hover h2 a{
-                        font-weight: bold;
-                        color: #111;
-                    }
-                }
+      
+            .item {
+               width: 25%;
+               height: 25vh;
+               img{
+                   width: 100%;height: 100%;
+                   background-size: contain;
+                   background-position: center;
+               }
+            //    padding: 15px;
+               float: left;
+      
+               //첫번째 박스 스타일
+               &:nth-of-type(2) {width: 50%;}
+      
+               //두번째 박스 스타일
+               &:nth-of-type(3) {width: 25%;}
+      
+               //3
+               &:nth-of-type(5) {width: 25%; height: 50vh;}
+               //네번째 박스 스타일
+            
+               //여섯번째 박스 스타일
+               &:nth-of-type(7) {width: 50%; height: 50vh;}
+      
+               .inner {
+                  width: 100%;
+                  height: 100%;
+                  background: #fff;
+                  box-shadow: 5px 5px 20px rgba(0,0,0,.1);
+               }
             }
-        }
+         }
     }
 }
 
@@ -1209,7 +1085,7 @@
                     }
     
                     >p{
-                        font-weight: bold;
+                        font: normal 18px/1 'arial';
                     }
                 }
                 
