@@ -660,28 +660,87 @@ a {
         opacity: 0; }
       #brand .inner .grid .item {
         width: 25%;
-        height: 25vh;
+        height: 20vh;
+        overflow: hidden;
         float: left; }
-        #brand .inner .grid .item img {
+        #brand .inner .grid .item .item-img {
           width: 100%;
           height: 100%;
-          background-size: contain;
-          background-position: center; }
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat; }
         #brand .inner .grid .item:nth-of-type(2) {
           width: 50%; }
+          #brand .inner .grid .item:nth-of-type(2) .item-img {
+            background-image: url(/img/brand/natural2.jpg);
+            transform: scale(1.05); }
         #brand .inner .grid .item:nth-of-type(3) {
           width: 25%; }
+        #brand .inner .grid .item:nth-of-type(4) .item-img {
+          background-image: url(/img/brand/Unique.jpg); }
         #brand .inner .grid .item:nth-of-type(5) {
           width: 25%;
-          height: 50vh; }
+          height: 40vh; }
+          #brand .inner .grid .item:nth-of-type(5) .inner .text a {
+            bottom: 2.5%; }
         #brand .inner .grid .item:nth-of-type(7) {
+          position: relative;
+          z-index: 1; }
+          #brand .inner .grid .item:nth-of-type(7) .item-img {
+            background-image: url(/img/brand/classic.jpg);
+            opacity: .5;
+            background-position: 50% 80%;
+            filter: contrast(70%) grayscale(80%); }
+          #brand .inner .grid .item:nth-of-type(7) .item-title {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font: normal 32px/1.4 'Georgia';
+            color: #000; }
+        #brand .inner .grid .item:nth-of-type(6) {
           width: 50%;
-          height: 50vh; }
+          height: 40vh; }
+          #brand .inner .grid .item:nth-of-type(6) .item-img {
+            background-image: url(/img/brand/modern2.jpg); }
+        #brand .inner .grid .item:nth-of-type(8) .inner .text a {
+          bottom: 5%; }
         #brand .inner .grid .item .inner {
           width: 100%;
           height: 100%;
           background: #fff;
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); }
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); }
+          #brand .inner .grid .item .inner .text {
+            padding: 30px; }
+            #brand .inner .grid .item .inner .text h2 {
+              font: bold 25px/1 'Poppins';
+              color: #111;
+              letter-spacing: 2px;
+              margin-bottom: 20px; }
+            #brand .inner .grid .item .inner .text p {
+              font: 14px/1.4 "Poppins";
+              color: #555;
+              letter-spacing: 2px;
+              margin-bottom: 30px; }
+            #brand .inner .grid .item .inner .text a {
+              position: absolute;
+              bottom: 5%;
+              left: 5%;
+              display: block;
+              border: 1px solid #555;
+              width: 140px;
+              height: 40px;
+              text-align: center;
+              background: #111;
+              color: #fff;
+              font: normal 14px/40px 'Poppins';
+              transition: .7s; }
+              #brand .inner .grid .item .inner .text a:hover {
+                background: #fff;
+                font-weight: bold;
+                color: #111; }
 
 #banner {
   width: 100%;
@@ -2854,13 +2913,14 @@ a {
         font: bold 52px/1 'Poppins';
         color: #555;
         text-align: center;
-        padding-bottom: 100px; }
+        padding-bottom: 50px; }
       .member .inner #member3 .inner .m3_txt {
         font: 20px/1.4 'Poppins';
         width: 70%;
         margin: 0 auto;
         color: #666666;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        text-align: center; }
       .member .inner #member3 .inner .wrap {
         width: 100%; }
         .member .inner #member3 .inner .wrap::after {
@@ -2904,7 +2964,7 @@ a {
         width: 60%;
         float: left; }
         .member .inner #member4 .wrap_mem4 .m4_left p, .member .inner #member4 .wrap_mem4 .m4_left strong {
-          font: 36px/1.2 'poppins';
+          font: 24px/1.2 'poppins';
           color: #fff; }
         .member .inner #member4 .wrap_mem4 .m4_left strong {
           font-size: 60px; }
