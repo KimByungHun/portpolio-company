@@ -26,7 +26,7 @@
                         position: relative;
                         font-family: poppins;
                         font-weight: 500;
-                        font-size: 72px;
+                        font-size: 64px;
                         padding-left: 30px;
                         color: #fff;
     
@@ -43,7 +43,8 @@
                     overflow: hidden;
                     video{
                         opacity: .7;
-                        filter: blur(5px);
+                        filter: blur(10px) grayscale(100%);
+                        
                     }
                 }
                 .v_title{
@@ -60,8 +61,7 @@
                         position: relative;
                         font-family: poppins;
                         font-weight: 500;
-                        font-size: 72px;
-                        color: #3182F6;
+                        font-size: 64px;                        color: #3182F6;
                     }
                 }
             }

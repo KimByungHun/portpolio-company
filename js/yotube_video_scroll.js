@@ -41,7 +41,8 @@ $(window).on("scroll",function(){
             transform : "translate(0px ,"+(-111.25+trasnlate_scroll)+"px)"
         });
         $(".v_video video").css({
-            filter : "blur("+(5-(scroll-111.25)/200)+"px)"
+            filter : "blur("+(10-(scroll-111.25)/200)+"px) grayscale("+(100-(scroll-111.25)/20)+"%)"
+
         })
     }else{
         $(".v_video").css({ clip : "rect(30vh, 90vw, 70vh, 10vw)"});
