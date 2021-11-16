@@ -919,7 +919,7 @@
                &:nth-of-type(2) {width: 50%;
 
                     .item-img{
-                        background-image: url(/img/brand/natural2.jpg);
+                        background-image: url(../img/brand/natural2.jpg);
                         transform: scale(1.05);
                     }
                 }
@@ -928,7 +928,7 @@
 
                &:nth-of-type(4) {
                 .item-img{
-                    background-image: url(/img/brand/Unique.jpg);
+                    background-image: url(../img/brand/Unique.jpg);
                 }
                }
 
@@ -943,7 +943,7 @@
                    position: relative;
                    z-index: 1;
                     .item-img{
-                        background-image: url(/img/brand/classic.jpg);
+                        background-image: url(../img/brand/classic.jpg);
                         opacity: .5;
                         background-position: 50% 80%;
                         filter: contrast(70%) grayscale(80%);
@@ -964,7 +964,7 @@
                //6
                &:nth-of-type(6) {width: 50%; height: 40vh;
                     .item-img{
-                        background-image: url(/img/brand/modern2.jpg);
+                        background-image: url(../img/brand/modern2.jpg);
                     }
                 }
 
@@ -1248,7 +1248,7 @@
                         display:block; 
                         width:70%; 
                         height:100%; 
-                        background:url(/img/banner3.jpg); 
+                        background:url(../img/banner3.jpg); 
                         background-size: cover;
                         background-repeat: no-repeat;
                         position:absolute; 
