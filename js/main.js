@@ -76,3 +76,23 @@ $("#brand .inner .wrap .brand4").on("mouseenter",function(){
 })
 
 
+/* 공지사항 클릭시 */
+
+
+const $ul = $("#comment .inner ul"); 
+const $li = $ul.find("li"); 
+
+$li.on("click", function(e){
+    e.preventDefault(); 
+
+    const $index = $(this).index();
+
+
+    let isOn = $(this).hasClass("on"); 
+    if(isOn) return; 
+
+    $li.removeClass("on"); 
+
+    $(this).addClass("on");
+
+});

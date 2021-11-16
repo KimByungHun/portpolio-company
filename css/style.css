@@ -537,7 +537,7 @@ a {
           opacity: .9; }
         #news .inner .topnews article .text {
           padding: 30px; }
-          #news .inner .topnews article .text h2 {
+          #news .inner .topnews article .text > h2 {
             font: bold 25px/1 'Poppins';
             color: #111;
             letter-spacing: 2px;
@@ -561,9 +561,9 @@ a {
             font: normal 14px/40px 'Poppins';
             transition: .7s; }
             #news .inner .topnews article .text a:hover {
-              background: #fff;
+              background: #fff !important;
               font-weight: bold;
-              color: #111; }
+              color: #111 !important; }
     #news .inner .wrap {
       width: 100%; }
       #news .inner .wrap article {
@@ -600,13 +600,15 @@ a {
           opacity: 0;
           transition: .4s; }
           #news .inner .wrap .pic .links h2 {
-            color: #fff; }
+            color: #fff !important; }
           #news .inner .wrap .pic .links i {
             font-size: 48px;
             color: #fff;
             margin: 0 auto;
             position: relative;
             padding-bottom: 20px; }
+          #news .inner .wrap .pic .links p {
+            color: #fff !important; }
         #news .inner .wrap .pic:hover::before {
           opacity: 1;
           background-color: rgba(0, 0, 0, 0.4); }
@@ -614,15 +616,6 @@ a {
           opacity: 1; }
         #news .inner .wrap .pic:hover img {
           object-position: 1%; }
-      #news .inner .wrap h2 {
-        margin-bottom: 10px;
-        color: #fff;
-        font: bold 24px/1 'Poppins';
-        color: #fff; }
-      #news .inner .wrap p {
-        font: 14px/1.4 'Poppins';
-        color: #fff;
-        word-break: break-all; }
 
 #brand {
   width: 100%;
@@ -866,6 +859,60 @@ a {
   #comment .inner {
     width: 1180px;
     margin: 0 auto; }
+    #comment .inner .wrap {
+      width: 100%;
+      padding-bottom: 50px; }
+      #comment .inner .wrap article {
+        width: 480px;
+        position: relative; }
+        #comment .inner .wrap article:nth-of-type(1) {
+          padding: 60px 0 40px 0;
+          float: left; }
+          #comment .inner .wrap article:nth-of-type(1) p {
+            font: 16px/1.1 'arial';
+            color: #333; }
+        #comment .inner .wrap article:nth-of-type(2) {
+          padding: 40px 0;
+          float: right; }
+          #comment .inner .wrap article:nth-of-type(2) h2 {
+            font: bold 18px/1 'arial';
+            color: #555;
+            margin-bottom: 10px;
+            position: relative; }
+          #comment .inner .wrap article:nth-of-type(2) p {
+            font: 14px/1.2 'arial';
+            color: #888;
+            margin-bottom: 20px;
+            position: relative; }
+          #comment .inner .wrap article:nth-of-type(2) .pic {
+            width: 160px;
+            height: 160px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 40px;
+            top: -30px; }
+          #comment .inner .wrap article:nth-of-type(2)::before {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 100%;
+            background: url(/img/banner3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+          #comment .inner .wrap article:nth-of-type(2) a.btn {
+            display: block;
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            font: 12px/30px 'arial';
+            text-align: center;
+            color: #888;
+            position: relative; }
     #comment .inner h1 {
       font: bold 32px/1 'Poppins';
       color: #555;
@@ -876,11 +923,11 @@ a {
       #comment .inner ul li {
         width: 100%;
         border: 1px solid #111;
-        background-color: #efefef;
         margin-bottom: 20px;
         padding: 15px 20px;
         box-sizing: border-box;
-        transition: 0.5s; }
+        transition: 0.5s;
+        cursor: pointer; }
         #comment .inner ul li::after {
           content: '';
           display: block;
@@ -900,6 +947,12 @@ a {
           #comment .inner ul li:hover a {
             color: #fff; }
           #comment .inner ul li:hover span {
+            color: #ddd; }
+        #comment .inner ul li.on {
+          background: #444; }
+          #comment .inner ul li.on a {
+            color: #fff; }
+          #comment .inner ul li.on span {
             color: #ddd; }
 
 #contact {
@@ -2892,26 +2945,33 @@ a {
         .member .inner #member2 .m2_left .m2_inner .m2_txt {
           letter-spacing: 2px;
           padding: 15px 0px 25px 0px; }
-        .member .inner #member2 .m2_left .m2_inner img {
-          padding-right: 0px;
-          filter: grayscale(60%);
-          transition: 0.5s; }
-          .member .inner #member2 .m2_left .m2_inner img:hover {
-            filter: grayscale(0); }
+        .member .inner #member2 .m2_left .m2_inner div {
+          overflow: hidden; }
+          .member .inner #member2 .m2_left .m2_inner div img {
+            padding-left: 0px;
+            filter: grayscale(60%);
+            transition: 0.5s; }
+            .member .inner #member2 .m2_left .m2_inner div img:hover {
+              filter: grayscale(0);
+              transform: scale(1.05); }
     .member .inner #member2 .m2_right {
       width: 50%;
       background: #fff;
-      float: left; }
+      float: left;
+      overflow: hidden; }
       .member .inner #member2 .m2_right .m2_inner {
         width: 100%;
         padding: 50px 0px 50px 50px;
         box-sizing: border-box; }
-        .member .inner #member2 .m2_right .m2_inner img {
-          padding-left: 0px;
-          filter: grayscale(60%);
-          transition: 0.5s; }
-          .member .inner #member2 .m2_right .m2_inner img:hover {
-            filter: grayscale(0); }
+        .member .inner #member2 .m2_right .m2_inner div {
+          overflow: hidden; }
+          .member .inner #member2 .m2_right .m2_inner div img {
+            padding-left: 0px;
+            filter: grayscale(60%);
+            transition: 0.5s; }
+            .member .inner #member2 .m2_right .m2_inner div img:hover {
+              filter: grayscale(0);
+              transform: scale(1.05); }
   .member .inner #member3 {
     width: 100%;
     background: #efefef;
