@@ -537,7 +537,7 @@ a {
           opacity: .9; }
         #news .inner .topnews article .text {
           padding: 30px; }
-          #news .inner .topnews article .text h2 {
+          #news .inner .topnews article .text > h2 {
             font: bold 25px/1 'Poppins';
             color: #111;
             letter-spacing: 2px;
@@ -561,9 +561,9 @@ a {
             font: normal 14px/40px 'Poppins';
             transition: .7s; }
             #news .inner .topnews article .text a:hover {
-              background: #fff;
+              background: #fff !important;
               font-weight: bold;
-              color: #111; }
+              color: #111 !important; }
     #news .inner .wrap {
       width: 100%; }
       #news .inner .wrap article {
@@ -600,13 +600,15 @@ a {
           opacity: 0;
           transition: .4s; }
           #news .inner .wrap .pic .links h2 {
-            color: #fff; }
+            color: #fff !important; }
           #news .inner .wrap .pic .links i {
             font-size: 48px;
             color: #fff;
             margin: 0 auto;
             position: relative;
             padding-bottom: 20px; }
+          #news .inner .wrap .pic .links p {
+            color: #fff !important; }
         #news .inner .wrap .pic:hover::before {
           opacity: 1;
           background-color: rgba(0, 0, 0, 0.4); }
@@ -614,15 +616,6 @@ a {
           opacity: 1; }
         #news .inner .wrap .pic:hover img {
           object-position: 1%; }
-      #news .inner .wrap h2 {
-        margin-bottom: 10px;
-        color: #fff;
-        font: bold 24px/1 'Poppins';
-        color: #fff; }
-      #news .inner .wrap p {
-        font: 14px/1.4 'Poppins';
-        color: #fff;
-        word-break: break-all; }
 
 #brand {
   width: 100%;
@@ -648,115 +641,99 @@ a {
       margin: 0 auto;
       margin-bottom: 60px;
       opacity: 0; }
-    #brand .inner .wrap {
+    #brand .inner .grid {
       width: 100%; }
-      #brand .inner .wrap .left {
-        width: 280px;
-        height: 600px;
-        float: left;
-        margin-right: 20px; }
-        #brand .inner .wrap .left article {
+      #brand .inner .grid::after {
+        content: "";
+        display: block;
+        clear: both; }
+      #brand .inner .grid .item-sizer {
+        width: 25%;
+        height: 0px;
+        opacity: 0; }
+      #brand .inner .grid .item {
+        width: 25%;
+        height: 20vh;
+        overflow: hidden;
+        float: left; }
+        #brand .inner .grid .item .item-img {
           width: 100%;
-          cursor: pointer; }
-          #brand .inner .wrap .left article img {
-            background: #111;
-            display: block;
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            opacity: .7;
-            transition: .5s; }
-          #brand .inner .wrap .left article h2 {
-            height: 30px;
-            text-align: center;
-            margin-bottom: 10px; }
-            #brand .inner .wrap .left article h2 a {
-              font: 16px/1 'poppins';
-              color: #181818; }
-          #brand .inner .wrap .left article:hover img {
-            transform: translateY(-10px);
-            opacity: 1; }
-          #brand .inner .wrap .left article:hover h2 a {
-            font-weight: bold;
-            color: #111; }
-      #brand .inner .wrap .center {
-        width: 580px;
-        float: left;
-        margin-right: 20px;
-        border-radius: 40px; }
-        #brand .inner .wrap .center article {
-          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat; }
+        #brand .inner .grid .item:nth-of-type(2) {
+          width: 50%; }
+          #brand .inner .grid .item:nth-of-type(2) .item-img {
+            background-image: url(/img/brand/natural2.jpg);
+            transform: scale(1.05); }
+        #brand .inner .grid .item:nth-of-type(3) {
+          width: 25%; }
+        #brand .inner .grid .item:nth-of-type(4) .item-img {
+          background-image: url(/img/brand/Unique.jpg); }
+        #brand .inner .grid .item:nth-of-type(5) {
+          width: 25%;
+          height: 40vh; }
+          #brand .inner .grid .item:nth-of-type(5) .inner .text a {
+            bottom: 2.5%; }
+        #brand .inner .grid .item:nth-of-type(7) {
           position: relative;
-          transition: .5s; }
-          #brand .inner .wrap .center article::before {
-            content: '';
-            transition: .5s;
-            position: absolute;
-            width: 100%;
-            height: 560px;
-            background-color: rgba(119, 104, 104, 0); }
-          #brand .inner .wrap .center article img {
-            background: #111;
-            display: block;
-            width: 100%;
-            height: 560px;
-            object-fit: cover;
-            background-repeat: no-repeat;
-            background-position: center; }
-          #brand .inner .wrap .center article .links {
-            display: block;
-            text-align: center;
+          z-index: 1; }
+          #brand .inner .grid .item:nth-of-type(7) .item-img {
+            background-image: url(/img/brand/classic.jpg);
+            opacity: .5;
+            background-position: 50% 80%;
+            filter: contrast(70%) grayscale(80%); }
+          #brand .inner .grid .item:nth-of-type(7) .item-title {
+            z-index: 2;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: .3s; }
-            #brand .inner .wrap .center article .links > p {
-              color: #fff;
-              font-size: 19px;
-              margin: 30px 0; }
-            #brand .inner .wrap .center article .links a {
-              display: block;
-              font: bold  18px/40px 'poppins';
-              letter-spacing: 1px;
-              color: #181818;
-              width: 150px;
-              height: 40px; }
-          #brand .inner .wrap .center article:hover {
-            transform: scale(1.05); }
-            #brand .inner .wrap .center article:hover::before {
-              opacity: 1; }
-            #brand .inner .wrap .center article:hover .links {
-              opacity: 1; }
-      #brand .inner .wrap .right {
-        width: 280px;
-        height: 600px;
-        float: left; }
-        #brand .inner .wrap .right article {
-          width: 100%;
-          cursor: pointer; }
-          #brand .inner .wrap .right article img {
-            background: #111;
-            display: block;
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            transition: .5s;
-            opacity: .7; }
-          #brand .inner .wrap .right article h2 {
-            height: 30px;
             text-align: center;
-            margin-bottom: 10px; }
-            #brand .inner .wrap .right article h2 a {
-              font: 16px/1 'poppins';
-              color: #181818; }
-          #brand .inner .wrap .right article:hover img {
-            transform: translateY(-10px);
-            opacity: 1; }
-          #brand .inner .wrap .right article:hover h2 a {
-            font-weight: bold;
-            color: #111; }
+            font: normal 32px/1.4 'Georgia';
+            color: #000; }
+        #brand .inner .grid .item:nth-of-type(6) {
+          width: 50%;
+          height: 40vh; }
+          #brand .inner .grid .item:nth-of-type(6) .item-img {
+            background-image: url(/img/brand/modern2.jpg); }
+        #brand .inner .grid .item:nth-of-type(8) .inner .text a {
+          bottom: 5%; }
+        #brand .inner .grid .item .inner {
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); }
+          #brand .inner .grid .item .inner .text {
+            padding: 30px; }
+            #brand .inner .grid .item .inner .text h2 {
+              font: bold 25px/1 'Poppins';
+              color: #111;
+              letter-spacing: 2px;
+              margin-bottom: 20px; }
+            #brand .inner .grid .item .inner .text p {
+              font: 14px/1.4 "Poppins";
+              color: #555;
+              letter-spacing: 2px;
+              margin-bottom: 30px; }
+            #brand .inner .grid .item .inner .text a {
+              position: absolute;
+              bottom: 5%;
+              left: 5%;
+              display: block;
+              border: 1px solid #555;
+              width: 140px;
+              height: 40px;
+              text-align: center;
+              background: #111;
+              color: #fff;
+              font: normal 14px/40px 'Poppins';
+              transition: .7s; }
+              #brand .inner .grid .item .inner .text a:hover {
+                background: #fff;
+                font-weight: bold;
+                color: #111; }
 
 #banner {
   width: 100%;
@@ -873,7 +850,7 @@ a {
             #client .inner .svgMotion .wrap article:nth-of-type(3) svg {
               width: 43%; }
           #client .inner .svgMotion .wrap article > p {
-            font-weight: bold; }
+            font: normal 18px/1 'arial'; }
 
 #comment {
   width: 100%;
@@ -882,6 +859,60 @@ a {
   #comment .inner {
     width: 1180px;
     margin: 0 auto; }
+    #comment .inner .wrap {
+      width: 100%;
+      padding-bottom: 50px; }
+      #comment .inner .wrap article {
+        width: 480px;
+        position: relative; }
+        #comment .inner .wrap article:nth-of-type(1) {
+          padding: 60px 0 40px 0;
+          float: left; }
+          #comment .inner .wrap article:nth-of-type(1) p {
+            font: 16px/1.1 'arial';
+            color: #333; }
+        #comment .inner .wrap article:nth-of-type(2) {
+          padding: 40px 0;
+          float: right; }
+          #comment .inner .wrap article:nth-of-type(2) h2 {
+            font: bold 18px/1 'arial';
+            color: #555;
+            margin-bottom: 10px;
+            position: relative; }
+          #comment .inner .wrap article:nth-of-type(2) p {
+            font: 14px/1.2 'arial';
+            color: #888;
+            margin-bottom: 20px;
+            position: relative; }
+          #comment .inner .wrap article:nth-of-type(2) .pic {
+            width: 160px;
+            height: 160px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 40px;
+            top: -30px; }
+          #comment .inner .wrap article:nth-of-type(2)::before {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 100%;
+            background: url(/img/banner3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+          #comment .inner .wrap article:nth-of-type(2) a.btn {
+            display: block;
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            font: 12px/30px 'arial';
+            text-align: center;
+            color: #888;
+            position: relative; }
     #comment .inner h1 {
       font: bold 32px/1 'Poppins';
       color: #555;
@@ -892,11 +923,11 @@ a {
       #comment .inner ul li {
         width: 100%;
         border: 1px solid #111;
-        background-color: #efefef;
         margin-bottom: 20px;
         padding: 15px 20px;
         box-sizing: border-box;
-        transition: 0.5s; }
+        transition: 0.5s;
+        cursor: pointer; }
         #comment .inner ul li::after {
           content: '';
           display: block;
@@ -916,6 +947,12 @@ a {
           #comment .inner ul li:hover a {
             color: #fff; }
           #comment .inner ul li:hover span {
+            color: #ddd; }
+        #comment .inner ul li.on {
+          background: #444; }
+          #comment .inner ul li.on a {
+            color: #fff; }
+          #comment .inner ul li.on span {
             color: #ddd; }
 
 #contact {
@@ -1656,17 +1693,19 @@ a {
   padding: 0px 0px; }
   .content .sub_visual {
     width: 100%;
-    height: 550px;
+    height: calc(100vh - 81px);
     background: gray;
     margin-bottom: 50px;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: left; }
     .content .sub_visual h1 {
-      display: inline-block;
-      font: bold 64px/1 'poppins';
-      color: #fff; }
+      display: block;
+      font: bold 54px/1 'poppins';
+      color: #fff;
+      margin-left: 10vw;
+      text-align: left; }
       .content .sub_visual h1::after {
         content: '';
         display: block;
@@ -1675,10 +1714,11 @@ a {
         background: #ddd;
         margin: 20px 0; }
     .content .sub_visual h2 {
-      font: bold 26px/1 'Gothic A1';
+      font: bold 16px/1 'Gothic A1';
       letter-spacing: 1px;
       color: #fff;
-      display: none; }
+      text-align: left;
+      margin-left: 10vw; }
   .content .inner {
     width: 1180px;
     min-height: 500px;
@@ -2905,22 +2945,41 @@ a {
         .member .inner #member2 .m2_left .m2_inner .m2_txt {
           letter-spacing: 2px;
           padding: 15px 0px 25px 0px; }
-        .member .inner #member2 .m2_left .m2_inner img {
-          padding-right: 0px; }
+        .member .inner #member2 .m2_left .m2_inner div {
+          overflow: hidden; }
+          .member .inner #member2 .m2_left .m2_inner div img {
+            padding-left: 0px;
+            filter: grayscale(60%);
+            transition: 0.5s; }
+            .member .inner #member2 .m2_left .m2_inner div img:hover {
+              filter: grayscale(0);
+              transform: scale(1.05); }
     .member .inner #member2 .m2_right {
       width: 50%;
       background: #fff;
-      float: left; }
+      float: left;
+      overflow: hidden; }
       .member .inner #member2 .m2_right .m2_inner {
         width: 100%;
         padding: 50px 0px 50px 50px;
         box-sizing: border-box; }
-        .member .inner #member2 .m2_right .m2_inner img {
-          padding-left: 0px; }
+        .member .inner #member2 .m2_right .m2_inner div {
+          overflow: hidden; }
+          .member .inner #member2 .m2_right .m2_inner div img {
+            padding-left: 0px;
+            filter: grayscale(60%);
+            transition: 0.5s; }
+            .member .inner #member2 .m2_right .m2_inner div img:hover {
+              filter: grayscale(0);
+              transform: scale(1.05); }
   .member .inner #member3 {
     width: 100%;
     background: #efefef;
-    padding: 100px; }
+    padding: 100px;
+    background-image: url(/img/backgournd.svg);
+    background-size: 50%;
+    background-position: 98% 2%;
+    background-repeat: no-repeat; }
     .member .inner #member3 .inner {
       width: 1180px;
       margin: 0 auto;
@@ -2929,13 +2988,14 @@ a {
         font: bold 52px/1 'Poppins';
         color: #555;
         text-align: center;
-        padding-bottom: 100px; }
+        padding-bottom: 50px; }
       .member .inner #member3 .inner .m3_txt {
         font: 20px/1.4 'Poppins';
         width: 70%;
         margin: 0 auto;
         color: #666666;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        text-align: center; }
       .member .inner #member3 .inner .wrap {
         width: 100%; }
         .member .inner #member3 .inner .wrap::after {
@@ -2979,7 +3039,7 @@ a {
         width: 60%;
         float: left; }
         .member .inner #member4 .wrap_mem4 .m4_left p, .member .inner #member4 .wrap_mem4 .m4_left strong {
-          font: 36px/1.2 'poppins';
+          font: 24px/1.2 'poppins';
           color: #fff; }
         .member .inner #member4 .wrap_mem4 .m4_left strong {
           font-size: 60px; }
@@ -4694,7 +4754,7 @@ a {
           position: relative;
           font-family: poppins;
           font-weight: 500;
-          font-size: 72px;
+          font-size: 64px;
           padding-left: 30px;
           color: #fff; }
       #visual_sub .visual_wrap .visual_inner .v_cont .v_video {
@@ -4707,7 +4767,7 @@ a {
         overflow: hidden; }
         #visual_sub .visual_wrap .visual_inner .v_cont .v_video video {
           opacity: .7;
-          filter: blur(5px); }
+          filter: blur(10px) grayscale(100%); }
       #visual_sub .visual_wrap .visual_inner .v_cont .v_title {
         position: absolute;
         left: 31px;
@@ -4722,7 +4782,7 @@ a {
           position: relative;
           font-family: poppins;
           font-weight: 500;
-          font-size: 72px;
+          font-size: 64px;
           color: #3182F6; }
   #visual_sub .inner {
     width: 1180px;
@@ -5385,7 +5445,6 @@ a {
   width: 100%; }
   .gallery .sub_visual {
     background: url(./../img/banner8.jpg) no-repeat center/cover fixed;
-    background-position-y: -100px;
     background-position-x: 0px; }
   .gallery .inner {
     width: 1180px;
@@ -5455,12 +5514,12 @@ a {
           .gallery .inner #gallery ul li:hover .li_in a img {
             filter: grayscale(0%) contrast(100%); }
           .gallery .inner #gallery ul li .li_in {
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s; }
             .gallery .inner #gallery ul li .li_in > a {
               display: block;
               width: 100%;
-              height: auto;
-              margin-bottom: 10px; }
+              height: auto; }
               .gallery .inner #gallery ul li .li_in > a img {
                 width: 100%;
                 height: 100%;
@@ -5475,7 +5534,7 @@ a {
             .gallery .inner #gallery ul li .li_in > h2 {
               font: 20px/1 'poppins';
               color: #868686;
-              margin: 20px 0 10px 0;
+              margin: 00px 0 10px 0;
               padding: 10px 20px;
               border-bottom: 1px solid #86868654; }
             .gallery .inner #gallery ul li .li_in:hover h2 {
@@ -5510,6 +5569,8 @@ a {
                   top: 50%;
                   transform: translateY(-50%);
                   right: 10px; }
+            .gallery .inner #gallery ul li .li_in:hover {
+              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); }
 
 .pop {
   width: 100%;
@@ -6095,22 +6156,56 @@ a {
     border: none; }
     .location .inner .loc1 {
       width: 1180px;
-      height: 700px;
       margin: 100px auto; }
-      .location .inner .loc1 > p {
-        margin-top: 50px;
-        width: 80%;
-        margin: 50px auto;
-        font: 22px/1.8 'poppins';
-        text-align: center; }
+      .location .inner .loc1::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .location .inner .loc1 .title {
+        float: right;
+        height: 360px; }
+        .location .inner .loc1 .title h2 {
+          font: 24px/1.8 'poppins';
+          text-align: right; }
+        .location .inner .loc1 .title > p {
+          margin-top: 20px;
+          font: 16px/1.8 'poppins';
+          text-align: right; }
+      .location .inner .loc1 .title_img {
+        width: 100%; }
+        .location .inner .loc1 .title_img::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .location .inner .loc1 .title_img .img1 {
+          float: left;
+          width: 50%;
+          margin-top: -30px;
+          display: block; }
+          .location .inner .loc1 .title_img .img1 img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover; }
+        .location .inner .loc1 .title_img .img2 {
+          float: right;
+          width: 35%;
+          display: block; }
+          .location .inner .loc1 .title_img .img2 img {
+            width: 100%;
+            height: 100%;
+            background-position: center; }
       .location .inner .loc1 .top_img {
         width: 100%;
         height: 400px;
         background: url(./../img/location1.jpg) no-repeat center/cover; }
     .location .inner .loc2 {
       width: 100%;
-      padding: 70px 0;
-      background-color: #efefef; }
+      padding-bottom: 70px;
+      background-image: url(/img/backgournd.svg);
+      background-size: 50%;
+      background-position: 2% 98%;
+      background-repeat: no-repeat; }
       .location .inner .loc2 .main {
         width: 1180px;
         margin: 0 auto; }
@@ -6132,11 +6227,11 @@ a {
           float: left;
           padding: 20px 20px 20px 20px; }
           .location .inner .loc2 .main .right h3 {
-            font: bold 30px/1.3 'poppins';
+            font: bold 24px/1.3 'poppins';
             color: #333333;
             margin-bottom: 20px; }
           .location .inner .loc2 .main .right p {
-            font: 20px/1.4 'Poppins';
+            font: 18px/1.4 'Poppins';
             color: #666666;
             margin-bottom: 40px; }
           .location .inner .loc2 .main .right dl {
@@ -6157,7 +6252,7 @@ a {
               width: 80%;
               display: block;
               height: 50px;
-              font: 18px/50px 'poppins'; }
+              font: 16px/50px 'poppins'; }
             .location .inner .loc2 .main .right dl i {
               font-size: 22px;
               color: #666666; }
@@ -6175,7 +6270,7 @@ a {
         margin-bottom: 40px;
         text-align: center;
         padding: 0 65px;
-        font-size: 42px;
+        font-size: 32px;
         position: relative; }
         .location .inner .loc2_2 h2::before {
           position: absolute;
@@ -6214,7 +6309,7 @@ a {
           height: 550px;
           background: url(./../img/location4.jpg) no-repeat center/cover; }
       .location .inner .loc2_2 h3 {
-        font: bold 30px/1.3 'poppins';
+        font: bold 24px/1.3 'poppins';
         color: #333333;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -6238,7 +6333,7 @@ a {
           width: 80%;
           display: block;
           height: 50px;
-          font: 18px/50px 'poppins'; }
+          font: 16px/50px 'poppins'; }
         .location .inner .loc2_2 dl i {
           font-size: 22px;
           color: #666666; }
@@ -6294,9 +6389,10 @@ a {
       width: 220px;
       height: 40px;
       text-align: center;
-      font: 18px/40px 'poppins';
-      color: #333333;
-      background: none;
+      font: 16px/40px 'poppins';
+      color: #fff;
+      background: #111;
+      transition: 0.5s;
       border: 1px solid #666666; }
       .location .inner .location_btn i {
         font-size: 20px;
@@ -6307,6 +6403,9 @@ a {
         margin: 20px auto; }
       .location .inner .location_btn.loc_A {
         margin: 20px 0px 0px 0px; }
+      .location .inner .location_btn:hover {
+        background: #fff;
+        color: #111; }
 
 @media screen and (max-width: 1179px) {
   .location .inner {
