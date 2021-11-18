@@ -903,7 +903,7 @@
       
             .item {
                width: 25%;
-               height: 20vh;
+               height: 300px;
                overflow: hidden;
 
                .item-img{
@@ -934,7 +934,7 @@
 
 
                //4
-               &:nth-of-type(5) {width: 25%; height: 40vh;
+               &:nth-of-type(5) {width: 25%; height: 600px;
                 .inner .text a{
                     bottom: 2.5%;
                 }
@@ -962,7 +962,7 @@
                }   
                 
                //6
-               &:nth-of-type(6) {width: 50%; height: 40vh;
+               &:nth-of-type(6) {width: 50%; height: 600px;
                     .item-img{
                         background-image: url(../img/brand/modern2.jpg);
                     }
