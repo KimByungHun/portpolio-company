@@ -14,8 +14,8 @@ let visualNum = 0;
 let enableClick = true; 
 
 
-init($slider1); 
-init($slider2);  
+visualInit($slider1); 
+visualInit($slider2);  
 
 $next.on("click", function(e){
 e.preventDefault();    
@@ -46,7 +46,7 @@ e.preventDefault();
 
 }); 
 
-function init(el){
+function visualInit(el){
 let len = el.children("ul").find("li").length; 
 el.children("ul").css({ width: 100 * len +"%"}); 
 el.children("ul").find("li").css({ width: 100 / len +"%"}); 

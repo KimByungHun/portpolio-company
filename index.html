@@ -19,6 +19,9 @@
     <script  src="js/jquery-1.8.3.min.js"></script>	
     <script src="https://kit.fontawesome.com/6e561f56c7.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <!-- header scroll -->
@@ -277,59 +280,6 @@
          <a href="#" class="next"><span></span></a>
 
 
-
-        <!-- <main class="slider">
-            <article class="active">
-                <div class="inner">			 
-                    <h1>Lifestyle
-                    </h1>
-                    <p>사람과 생활, 그리고 공간을 조화롭게 연결하기 위해 항상 고민합니다. 일과 휴식이 조화로운 삶을 위해 언제나 함께하겠습니다.</p>
-                    <a href="#">제품 둘러보기</a>		 
-                </div>
-            </article>
-            <article>
-                <div class="inner">			 
-                    <h1>Beyond Space
-                    </h1>
-                    <p>자연의 영감을 삶속에서 느끼다.</p>
-                    <a href="#">상담 신청하기</a>		 
-                </div>
-            </article>
-            <article>
-                <div class="inner">			 
-                    <h1>Brand Identity
-                    </h1>
-                    <p>브랜드 소식과 인테리어에 대한 우리의 다양한 이야기를 기록합니다.</p>
-                    <a href="#">더 알아보기</a>		 
-                </div>
-            </article>
-            <article>
-                <div class="inner">			 
-                    <h1>Show Room
-                    </h1>
-                    <p>고객의 소중한 공간에 가치를 더합니다.</p>
-                    <a href="location.html">쇼룸 안내</a>		 
-                </div>
-            </article>
-        </main>
-    
-        <div class="page-btns">
-            <div class="active"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    
-        <div class="side-btns">
-            <div>
-                <span>←</span>
-            </div>
-            <div>
-                <span>→</span>
-            </div>
-        </div> -->
-
-
     </figure>
 
     <section id="news"  class="myScroll">
@@ -352,57 +302,109 @@
             </div>
 			<div class="wrap">
 			
-                <article>
-					<div class="pic">
-						<img src="img/news1.jpg" alt="뉴스4 이미지">
-                        <div class="links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <h2 class="title">
-                                Lorem, ipsum.
-                            </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellat dolorum quae expedita id quam enim, aliquid beatae doloremque quidem.</p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-prev">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic1.jpg" class="img1">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Panoramic windows<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
                         </div>
-					</div>
-				</article>
-
-                <article>
-					<div class="pic">
-						<img src="img/news2.jpg" alt="뉴스4 이미지">
-                        <div class="links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <h2>
-                                Lorem, ipsum.
-                            </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellat dolorum quae expedita id quam enim, aliquid beatae doloremque quidem.</p>
+                        <div class="swiper-slide swiper-slide-active">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic2.jpg" class="img2">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Full kitchen<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
                         </div>
-					</div>
-				</article>
-
-                <article>
-					<div class="pic">
-						<img src="img/news3.jpg" alt="뉴스4 이미지">
-                        <div class="links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <h2>
-                               Lorem, ipsum.
-                            </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellat dolorum quae expedita id quam enim, aliquid beatae doloremque quidem.</p>
+                        <div class="swiper-slide swiper-slide-next">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic3.jpg" class="img3">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Optional washer/dryer<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
                         </div>
-					</div>
-				</article>
-
-                <article>
-					<div class="pic">
-						<img src="img/news5.jpg" alt="뉴스4 이미지">
-                        <div class="links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <h2>
-                                Lorem, ipsum.
-                            </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellat dolorum quae expedita id quam enim, aliquid beatae doloremque quidem.</p>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic4.jpg" class="img1">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Floors and ceilings<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
                         </div>
-					</div>
-				</article>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic5.jpg" class="img2">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Open, flexible floor plan <br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic6.jpg" class="img1">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Full-sized bathroom<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic7.jpg" class="img3" >
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Bathroom detail<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic8.jpg" class="img2">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Stylish storage<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__container">
+                                <div id="slide1" class="swiper__image">
+                                    <img src="/img/swiper_news/pic9.jpg" class="img1">
+                                </div>
+                                <div class="swiper__copy">
+                                    <h5>Beautiful and useful<br></h5>
+                                    <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus aliquam blanditiis inventore ad molestiae error? Quia aut voluptatem ex? "</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
 
 			</div>
 		</div>
@@ -681,5 +683,25 @@
         <li><a href="#comment"></a></li>
     </ul>
     
+
+    <script>
+
+        var swiper1 = new Swiper('.swiper-container', {
+            slidesPerView: "auto",
+            grabCursor: false,
+            spaceBetween: 0,
+            loop: true,
+            speed: 2000,
+            mousewheel: {
+                enabled: true,
+                forceToAxis: true,
+            },
+            autoplay :{
+                delay:3000, 
+                disableOnInteraction : false 
+            }
+        });
+    
+    </script>
 </body>
 </html>
