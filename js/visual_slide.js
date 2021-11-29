@@ -1,79 +1,128 @@
-var pageBtn = $("#visual .page-btns div");
-var sideBtn = $("#visual .side-btns div");
+const $slider1 = $("#slider1"); 
+const $slider2 = $("#slider2"); 
+const $prev = $(".prev"); 
+const $next = $(".next"); 
+let speed = 1000; 
+let rollingSpeed = 4000; 
+
+let visual_timer;
+
+const $txtBoxs = $("#sliderTxt .inner");
+let visualNum = 0;
 
 
-
-pageBtn.on("click", function(){
-    var index = $(this).index();
-    var slider = $(this).parent().parent();
-    var current = slider.find(".slider .active");
-    var post = slider.find(".slider article").eq(index);
+let enableClick = true; 
 
 
-    
-    $(this).addClass("active");
-    $(this).siblings(".active").removeClass("active");
+visualInit($slider1); 
+visualInit($slider2);  
 
-    current.removeClass("active");
-    post.addClass("active");
+$next.on("click", function(e){
+e.preventDefault();    
+if(enableClick){
+
+    enableClick=false;
+    next($slider1); 
+    next($slider2); 
+
+    nextTxt();
+
+}
+
+}); 
+
+$prev.on("click", function(e){
+e.preventDefault();     
+
+    if(enableClick){
+
+        enableClick=false;
+        prev($slider1); 
+        prev($slider2); 
+
+        prevTxt();
+    }
 
 
-    var background = $(this).closest("#visual").find(".slider");
+}); 
 
-    background.css({ backgroundImage : "url(./img/visual/pic"+(index+1)+".jpg)"});
+function visualInit(el){
+let len = el.children("ul").find("li").length; 
+el.children("ul").css({ width: 100 * len +"%"}); 
+el.children("ul").find("li").css({ width: 100 / len +"%"}); 
+el.children("ul").find("li").last().prependTo(el.children("ul")); 
+}
 
-
-
+function next(el){
+el.children("ul").animate({ marginLeft : "-200%"}, speed, function(){
+    $(this).css({ marginLeft : "-100%"}); 
+    $(this).children("li").first().appendTo(this); 
+    enableClick = true;
 });
+}
 
 
+function prev(el){
+el.children("ul").animate({marginLeft : "0%"},speed, function(){
+    $(this).css({ marginLeft : "-100%"}); 
+    $(this).children("li").last().prependTo(this); 
+    enableClick = true;
+}); 
+}
 
-sideBtn.on("click", function(){
-    var slider = $(this).closest("#visual");
-    var index = $(this).index();
-    var isLeft = index == 0;
-    var current = slider.find(".page-btns div.active");
-    var post;
+function nextTxt(){
+    $txtBoxs.children(".title").removeClass("on");
+    setTimeout(function(){
+   
 
-
-    if(isLeft){
-        post = current.prev();
-    }else{
-        post = current.next();
-    };
-
-    if(post.length == 0){
-        if(isLeft){
-            post = slider.find(".page-btns div:last-child");
-        }else{
-            post = slider.find(".page-btns div:first-child");
+        if(visualNum<3){
+            $txtBoxs.children(".title").eq(visualNum+1).addClass("on");
+            visualNum++;
+        } else {
+            visualNum=0;
+            $txtBoxs.children(".title").eq(visualNum).addClass("on");
         }
-    };
-
-    post.click();
-});
-
-
-
-var btnPause = $("#visual .play-btns .btnPause");
-var btnPlay = $("#visual .play-btns .btnPlay");
+    },1000);
+}
+function prevTxt(){
+    $txtBoxs.children(".title").removeClass("on");
+    setTimeout(function(){
 
 
-btnPlay.on("click", function(e){
+        if(visualNum>0){
+            $txtBoxs.children(".title").eq(visualNum-1).addClass("on");
+            visualNum--;
+        } else {
+            visualNum=3;
+            $txtBoxs.children(".title").eq(visualNum).addClass("on");
+        }
+    },1000);
+}
+
+
+$(".start").on("click", function(e){
     e.preventDefault(); 
 
-    timer = setInterval(function(){
-        $("#visual .side-btns div ").eq(1).click();
-    },2000);
+    visual_timer = setInterval(function(){
+        next($slider1); 
+        next($slider2); 
+        nextTxt();
+    },rollingSpeed);
+    
+    $(".start").addClass("on"); 
+    $(".stop").removeClass("on"); 
+}); 
 
-    $(".btnPause").removeClass("on"); 
-    $(".btnPlay").addClass("on");
-});
-
-btnPause.on("click", function(e){
+$(".stop").on("click", function(e){
     e.preventDefault(); 
-    clearInterval(timer); 
+    clearInterval(visual_timer); 
 
-    $(".btnPlay").removeClass("on"); 
-    $(".btnPause").addClass("on");
+    $(".start").removeClass("on"); 
+    $(".stop").addClass("on");
 });
+
+visual_timer = setInterval(function(){
+    next($slider1); 
+    next($slider2); 
+    nextTxt();
+},rollingSpeed);
