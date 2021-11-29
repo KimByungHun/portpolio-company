@@ -3,7 +3,13 @@ const $slider2 = $("#slider2");
 const $prev = $(".prev"); 
 const $next = $(".next"); 
 let speed = 1000; 
+let rollingSpeed = 4000; 
+
 let visual_timer;
+
+const $txtBoxs = $("#sliderTxt .inner");
+let visualNum = 0;
+
 
 let enableClick = true; 
 
@@ -18,6 +24,9 @@ if(enableClick){
     enableClick=false;
     next($slider1); 
     next($slider2); 
+
+    nextTxt();
+
 }
 
 }); 
@@ -30,6 +39,8 @@ e.preventDefault();
         enableClick=false;
         prev($slider1); 
         prev($slider2); 
+
+        prevTxt();
     }
 
 
@@ -59,13 +70,44 @@ el.children("ul").animate({marginLeft : "0%"},speed, function(){
 }); 
 }
 
+function nextTxt(){
+    $txtBoxs.children(".title").removeClass("on");
+    setTimeout(function(){
+   
+
+        if(visualNum<3){
+            $txtBoxs.children(".title").eq(visualNum+1).addClass("on");
+            visualNum++;
+        } else {
+            visualNum=0;
+            $txtBoxs.children(".title").eq(visualNum).addClass("on");
+        }
+    },1000);
+}
+function prevTxt(){
+    $txtBoxs.children(".title").removeClass("on");
+    setTimeout(function(){
+
+
+        if(visualNum>0){
+            $txtBoxs.children(".title").eq(visualNum-1).addClass("on");
+            visualNum--;
+        } else {
+            visualNum=3;
+            $txtBoxs.children(".title").eq(visualNum).addClass("on");
+        }
+    },1000);
+}
+
+
 $(".start").on("click", function(e){
     e.preventDefault(); 
 
     visual_timer = setInterval(function(){
         next($slider1); 
         next($slider2); 
-    },4000);
+        nextTxt();
+    },rollingSpeed);
     
     $(".start").addClass("on"); 
     $(".stop").removeClass("on"); 
@@ -78,3 +120,9 @@ $(".stop").on("click", function(e){
     $(".start").removeClass("on"); 
     $(".stop").addClass("on");
 });
+
+visual_timer = setInterval(function(){
+    next($slider1); 
+    next($slider2); 
+    nextTxt();
+},rollingSpeed);

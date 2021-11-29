@@ -606,23 +606,37 @@
             position: relative;
             .title{
                 opacity: 0; transition: 0.5s;
+                
                 >p,a{
                     font-family: "poppins"; color: #fff;
                 }
                 .in_1{
                   position: absolute; top: 20vh;left: 45%;    
+                  overflow: hidden;
                   font-weight: 700;
                   font-size: 72px;
+                  >span{
+                      position: relative; top: 100px;
+                      transition: 1s;
+                      opacity: 0;
+                  }
                 }
                 .in_2{
                   position: absolute; top: 30vh;left: 45%;    
+                  overflow: hidden;
                   padding-right: 100px;
                   font-size: 24px;
+                  >span{
+                    position: relative; top: 150px;
+                    opacity: 0;
+                    transition: 1s;
+                }
                 }
                 .in_3{
                   z-index: 3;
                   position: absolute; top: 70vh;left: 12%;    
                   transform: translateX(-12%);
+                  overflow: hidden;
                   font-size: 90px;
                   writing-mode: vertical-lr;
                   // text-orientation: upright;
@@ -630,15 +644,21 @@
                   -webkit-text-fill-color: transparent;
                   -webkit-text-stroke-color: #fff;
                   -webkit-text-stroke-width: 1px;
+                  >span{
+                    position: relative; right: 100px;
+                    opacity: 0;
+                    transition: 1s;
+                 }
                 }
-                >.titleBtn{
+                .titleBtn{
                   position: absolute; top: 80vh;left: 45%;    
                   color: #111;
                   // border: 1px solid #111;
                   background: #fff;
                   padding: 10px 20px;
-                  transition: 0.5s;
-    
+                  opacity: 0;
+                  transition: 1s;
+                  z-index: 1;
                   &:hover{
                       color: #fff;
                       background: #111;
@@ -646,7 +666,28 @@
                 }
 
                 &.on{
-                    opacity: 1;
+                    opacity: 1; 
+                    .in_1{
+                        >span{
+                            top: 0px;
+                            opacity: 1;
+                        }
+                    }
+                    .in_2{
+                        >span{
+                            top: 0px;
+                            opacity: 1;
+                        }
+                    }
+                    .in_3{
+                        >span{
+                            right: 0px;
+                            opacity: 1;
+                        }
+                    }
+                    .titleBtn{
+                        opacity: 1;
+                    }
                 }
             }
         }

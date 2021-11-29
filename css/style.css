@@ -491,39 +491,70 @@ a {
           position: absolute;
           top: 20vh;
           left: 45%;
+          overflow: hidden;
           font-weight: 700;
           font-size: 72px; }
+          #visual #sliderTxt .inner .title .in_1 > span {
+            position: relative;
+            top: 100px;
+            transition: 1s;
+            opacity: 0; }
         #visual #sliderTxt .inner .title .in_2 {
           position: absolute;
           top: 30vh;
           left: 45%;
+          overflow: hidden;
           padding-right: 100px;
           font-size: 24px; }
+          #visual #sliderTxt .inner .title .in_2 > span {
+            position: relative;
+            top: 150px;
+            opacity: 0;
+            transition: 1s; }
         #visual #sliderTxt .inner .title .in_3 {
           z-index: 3;
           position: absolute;
           top: 70vh;
           left: 12%;
           transform: translateX(-12%);
+          overflow: hidden;
           font-size: 90px;
           writing-mode: vertical-lr;
           font-weight: bold;
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-color: #fff;
           -webkit-text-stroke-width: 1px; }
-        #visual #sliderTxt .inner .title > .titleBtn {
+          #visual #sliderTxt .inner .title .in_3 > span {
+            position: relative;
+            right: 100px;
+            opacity: 0;
+            transition: 1s; }
+        #visual #sliderTxt .inner .title .titleBtn {
           position: absolute;
           top: 80vh;
           left: 45%;
           color: #111;
           background: #fff;
           padding: 10px 20px;
-          transition: 0.5s; }
-          #visual #sliderTxt .inner .title > .titleBtn:hover {
+          opacity: 0;
+          transition: 1s;
+          z-index: 1; }
+          #visual #sliderTxt .inner .title .titleBtn:hover {
             color: #fff;
             background: #111; }
         #visual #sliderTxt .inner .title.on {
           opacity: 1; }
+          #visual #sliderTxt .inner .title.on .in_1 > span {
+            top: 0px;
+            opacity: 1; }
+          #visual #sliderTxt .inner .title.on .in_2 > span {
+            top: 0px;
+            opacity: 1; }
+          #visual #sliderTxt .inner .title.on .in_3 > span {
+            right: 0px;
+            opacity: 1; }
+          #visual #sliderTxt .inner .title.on .titleBtn {
+            opacity: 1; }
   #visual .controls {
     position: absolute;
     left: 5%;
