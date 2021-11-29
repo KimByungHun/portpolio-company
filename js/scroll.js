@@ -1,6 +1,6 @@
 let posArr = [];
 const $boxs = $(".myScroll");
-const $inner = $(".myScroll .inner");
+const $inner = $(".myScroll .ScrollTransfrom");
 const $btns = $("#navi li");
 let len = $btns.length;
 let baseLine = -600;
@@ -30,6 +30,9 @@ $(window).on("scroll", function(){
             $boxs.eq(i).addClass("on");
 
             $inner.eq(i).addClass("on");
+        }
+        if(scroll == 0){
+            $inner.eq(i).removeClass("on");
         }
     }
 })

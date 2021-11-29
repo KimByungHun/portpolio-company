@@ -646,8 +646,8 @@ a {
     #news .inner .wrap {
       transform: translateY(200px);
       opacity: 0;
-      transition: 0.8s;
-      transition-delay: 0.7s; }
+      transition: 1s;
+      transition-delay: 1.5s; }
       #news .inner .wrap .swiper-container {
         cursor: move;
         touch-action: pan-y;
@@ -1018,6 +1018,10 @@ a {
     #comment .inner .wrap {
       width: 100%;
       padding-bottom: 50px; }
+      #comment .inner .wrap .notice_content {
+        display: none; }
+        #comment .inner .wrap .notice_content.content_on {
+          display: block; }
       #comment .inner .wrap article {
         width: 480px;
         position: relative; }
@@ -1049,19 +1053,8 @@ a {
             margin-bottom: 20px;
             position: relative; }
           #comment .inner .wrap article:nth-of-type(2) .pic {
-            width: 160px;
-            height: 160px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: absolute;
-            right: 40px;
-            top: -30px; }
-          #comment .inner .wrap article:nth-of-type(2)::before {
-            content: '';
-            display: block;
             width: 70%;
             height: 100%;
-            background: url(../img/banner3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             position: absolute;
@@ -1121,15 +1114,15 @@ a {
             color: #fff; }
           #comment .inner ul li.on span {
             color: #ddd; }
-  #comment.on h1 {
-    transform: translateY(0px);
-    opacity: 1; }
-  #comment.on .wrap article:nth-of-type(1) {
-    opacity: 1;
-    transform: translateX(0px); }
-  #comment.on .wrap article:nth-of-type(2) {
-    opacity: 1;
-    transform: translateX(0px); }
+    #comment .inner.on h1 {
+      transform: translateY(0px);
+      opacity: 1; }
+    #comment .inner.on .wrap article:nth-of-type(1) {
+      opacity: 1;
+      transform: translateX(0px); }
+    #comment .inner.on .wrap article:nth-of-type(2) {
+      opacity: 1;
+      transform: translateX(0px); }
 
 #contact {
   width: 100%;
