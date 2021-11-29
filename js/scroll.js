@@ -1,5 +1,6 @@
 let posArr = [];
 const $boxs = $(".myScroll");
+const $inner = $(".myScroll .inner");
 const $btns = $("#navi li");
 let len = $btns.length;
 let baseLine = -600;
@@ -27,6 +28,8 @@ $(window).on("scroll", function(){
 
             $boxs.removeClass("on");
             $boxs.eq(i).addClass("on");
+
+            $inner.eq(i).addClass("on");
         }
     }
 })
@@ -52,13 +55,18 @@ $(window).on("scroll",function(){
         $("#news .inner h1").css({color : "#fff"}),
         $("#news .inner h2").css({color : "#ddd"}),
         $("#news .inner .topnews p").css({color : "#ccc"}),
-        $("#news .inner .topnews a").css({background : "#fff", color : "#111", fontWeight : "bold"})
+        $("#news .inner .topnews a").css({background : "#fff", color : "#111", fontWeight : "bold"}),
+        $(".swiper__copy h5").css({color : "#fff"}),
+        $(".swiper__copy p").css({color : "#ddd"})
+
     }else{
         $("#news").css({background : "#fff"}),
         $("#news .inner h1").css({color : "#555"}),
         $("#news .inner h2").css({color : "#111"}),
         $("#news .inner .topnews p").css({color : "#555"}),
-        $("#news .inner .topnews a").css({background : "#111", color : "#fff", fontWeight : "bold"})
+        $("#news .inner .topnews a").css({background : "#111", color : "#fff", fontWeight : "bold"}),
+        $(".swiper__copy h5").css({color : "#111"}),
+        $(".swiper__copy p").css({color : "#555"})
     }
 
     
