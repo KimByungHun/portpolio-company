@@ -27,8 +27,7 @@ a {
   z-index: 10;
   position: absolute;
   top: 0;
-  left: 0;
-  backdrop-filter: blur(2px) drop-shadow(4px 4px 10px blue); }
+  left: 0; }
   #header .top {
     width: 1180px;
     height: 30px;
@@ -484,33 +483,31 @@ a {
       #visual #sliderTxt .inner .title {
         opacity: 0;
         transition: 0.5s; }
-        #visual #sliderTxt .inner .title > p, #visual #sliderTxt .inner .title a {
-          font-family: "poppins";
-          color: #fff; }
-        #visual #sliderTxt .inner .title .in_1 {
+        #visual #sliderTxt .inner .title .title_in_text {
           position: absolute;
           top: 20vh;
-          left: 45%;
-          overflow: hidden;
-          font-weight: 700;
-          font-size: 72px; }
-          #visual #sliderTxt .inner .title .in_1 > span {
-            position: relative;
-            top: 100px;
-            transition: 1s;
-            opacity: 0; }
-        #visual #sliderTxt .inner .title .in_2 {
-          position: absolute;
-          top: 30vh;
-          left: 45%;
-          overflow: hidden;
-          padding-right: 100px;
-          font-size: 24px; }
-          #visual #sliderTxt .inner .title .in_2 > span {
-            position: relative;
-            top: 150px;
-            opacity: 0;
-            transition: 1s; }
+          left: 45%; }
+          #visual #sliderTxt .inner .title .title_in_text > p, #visual #sliderTxt .inner .title .title_in_text a {
+            font-family: "poppins";
+            color: #fff; }
+          #visual #sliderTxt .inner .title .title_in_text .in_1 {
+            overflow: hidden;
+            font-weight: 700;
+            font-size: 72px; }
+            #visual #sliderTxt .inner .title .title_in_text .in_1 > span {
+              position: relative;
+              top: 100px;
+              transition: 1s;
+              opacity: 0; }
+          #visual #sliderTxt .inner .title .title_in_text .in_2 {
+            overflow: hidden;
+            padding-right: 100px;
+            font-size: 20px; }
+            #visual #sliderTxt .inner .title .title_in_text .in_2 > span {
+              position: relative;
+              top: 150px;
+              opacity: 0;
+              transition: 1s; }
         #visual #sliderTxt .inner .title .in_3 {
           z-index: 3;
           position: absolute;
@@ -646,8 +643,8 @@ a {
     #news .inner .wrap {
       transform: translateY(200px);
       opacity: 0;
-      transition: 0.8s;
-      transition-delay: 0.7s; }
+      transition: 1s;
+      transition-delay: 1.5s; }
       #news .inner .wrap .swiper-container {
         cursor: move;
         touch-action: pan-y;
@@ -1018,6 +1015,10 @@ a {
     #comment .inner .wrap {
       width: 100%;
       padding-bottom: 50px; }
+      #comment .inner .wrap .notice_content {
+        display: none; }
+        #comment .inner .wrap .notice_content.content_on {
+          display: block; }
       #comment .inner .wrap article {
         width: 480px;
         position: relative; }
@@ -1049,19 +1050,8 @@ a {
             margin-bottom: 20px;
             position: relative; }
           #comment .inner .wrap article:nth-of-type(2) .pic {
-            width: 160px;
-            height: 160px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: absolute;
-            right: 40px;
-            top: -30px; }
-          #comment .inner .wrap article:nth-of-type(2)::before {
-            content: '';
-            display: block;
             width: 70%;
             height: 100%;
-            background: url(../img/banner3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             position: absolute;
@@ -1121,15 +1111,15 @@ a {
             color: #fff; }
           #comment .inner ul li.on span {
             color: #ddd; }
-  #comment.on h1 {
-    transform: translateY(0px);
-    opacity: 1; }
-  #comment.on .wrap article:nth-of-type(1) {
-    opacity: 1;
-    transform: translateX(0px); }
-  #comment.on .wrap article:nth-of-type(2) {
-    opacity: 1;
-    transform: translateX(0px); }
+    #comment .inner.on h1 {
+      transform: translateY(0px);
+      opacity: 1; }
+    #comment .inner.on .wrap article:nth-of-type(1) {
+      opacity: 1;
+      transform: translateX(0px); }
+    #comment .inner.on .wrap article:nth-of-type(2) {
+      opacity: 1;
+      transform: translateX(0px); }
 
 #contact {
   width: 100%;
@@ -1318,7 +1308,7 @@ a {
   transform: translate(-50%, -50%);
   margin: 0 auto;
   box-shadow: 10px 10px 10px rgba(17, 17, 17, 0.4);
-  z-index: 3; }
+  z-index: 10; }
   #popup::after {
     display: block;
     content: '';
