@@ -21,7 +21,8 @@ $next.on("click", function(e){
 e.preventDefault();    
 if(enableClick){
 
-    enableClick=false;
+    enableClick = false;
+     
     next($slider1); 
     next($slider2); 
 
@@ -36,7 +37,8 @@ e.preventDefault();
 
     if(enableClick){
 
-        enableClick=false;
+        enableClick = false;
+        
         prev($slider1); 
         prev($slider2); 
 
@@ -83,6 +85,7 @@ function nextTxt(){
             $txtBoxs.children(".title").eq(visualNum).addClass("on");
         }
     },1000);
+    
 }
 function prevTxt(){
     $txtBoxs.children(".title").removeClass("on");
@@ -114,6 +117,24 @@ $(".start").on("click", function(e){
 }); 
 
 $(".stop").on("click", function(e){
+    e.preventDefault(); 
+    clearInterval(visual_timer); 
+
+    $(".start").removeClass("on"); 
+    $(".stop").addClass("on");
+});
+
+
+$prev.on("click", function(e){
+    e.preventDefault(); 
+    clearInterval(visual_timer); 
+
+    $(".start").removeClass("on"); 
+    $(".stop").addClass("on");
+});
+
+
+$next.on("click", function(e){
     e.preventDefault(); 
     clearInterval(visual_timer); 
 
