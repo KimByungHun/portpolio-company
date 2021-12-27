@@ -96,3 +96,16 @@ $li.on("click", function(e){
     $(this).addClass("on");
 
 });
+
+
+//스킵네비게이션 이벤트 
+const btns = document.querySelectorAll("#skip a");
+btns.forEach((btn, index)=>{
+    btn.addEventListener("focusin",e=>{
+        e.currentTarget.classList.add("on");
+    })
+    btn.addEventListener("focusout",e=>{
+        e.currentTarget.classList.remove("on");
+    })
+})
+
